@@ -86,6 +86,19 @@ h2 em{font-style:italic;font-weight:300;color:var(--brasa)}
 .selo .s{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;opacity:.75;margin-top:6px}
 .selo .estrelas{color:#f0b48f;letter-spacing:3px;font-size:.85rem}
 @media (max-width:860px){.selo{display:none}}
+@media (max-width:600px){
+  .hero{min-height:calc(100svh - 31px)}
+  .hero img{object-position:42% 65%}
+  .hero::after{background:linear-gradient(180deg,rgba(20,16,13,.6) 0%,rgba(20,16,13,.1) 22%,rgba(20,16,13,.35) 42%,rgba(20,16,13,.82) 62%,rgba(20,16,13,.96) 100%)}
+  .hero .wrap{padding-bottom:104px}
+  .hero .eyebrow{font-size:.64rem;letter-spacing:.16em;white-space:nowrap;margin-bottom:12px}
+  .hero .eyebrow::before{display:none}
+  .hero h1{font-size:clamp(5.6rem,30vw,8rem)}
+  .hero .lema{font-size:1.18rem;margin-top:16px}
+  .hero .acoes{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:26px}
+  .hero .acoes .btn{justify-content:center;padding:15px 10px;font-size:.86rem;white-space:nowrap}
+  .rolar{display:none}
+}
 .rolar{position:absolute;left:50%;bottom:28px;z-index:2;transform:translateX(-50%);width:1px;height:46px;background:linear-gradient(rgba(245,237,225,0),rgba(245,237,225,.7));animation:desce 2.4s ease-in-out infinite}
 @keyframes desce{0%,100%{opacity:.2;transform:translate(-50%,-6px)}50%{opacity:1;transform:translate(-50%,0)}}
 
