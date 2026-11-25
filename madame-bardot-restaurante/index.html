@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Madame Bardot · Restaurante à beira-mar em Búzios</title>
+<meta name="description" content="Madame Bardot Restaurante, à beira-mar no Triângulo de Búzios. Pratos brasileiros e internacionais, drinques e música. Todos os dias a partir das 11h30.">
+<meta name="theme-color" content="#0c1b2e">
+<link rel="preload" as="image" href="img/foto-3-p.jpg" imagesrcset="img/foto-3-p.jpg 800w, img/foto-3.jpg 1600w" imagesizes="100vw">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --noite:#0c1b2e; --noite2:#132a45; --ouro:#e2b43c; --ouro2:#f3d27a;
+  --creme:#f8f3ea; --pedra:#e9e0d0; --tinta:#1c2633; --cinza:#6a7382;
+  --serif:"Cormorant Garamond",Georgia,serif; --sans:"Jost",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);font-weight:300;color:var(--tinta);background:var(--creme);line-height:1.7;font-size:17px;padding-bottom:calc(78px + env(safe-area-inset-bottom))}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1120px,100% - 40px);margin-inline:auto}
+.sobrelinha{font-family:var(--sans);font-size:.72rem;font-weight:500;letter-spacing:.32em;text-transform:uppercase;color:var(--ouro)}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.05;letter-spacing:-.01em}
+h2{font-size:clamp(2.4rem,7vw,3.8rem);margin:.6rem 0 1.4rem}
+h2 i{color:var(--ouro);font-weight:400}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;font-family:var(--sans);font-weight:500;font-size:.82rem;letter-spacing:.16em;text-transform:uppercase;padding:1.05rem 1.6rem;border-radius:2px;transition:background .25s,color .25s,transform .2s}
+.btn svg{width:18px;height:18px;flex:none}
+.btn:active{transform:scale(.98)}
+.btn-ouro{background:var(--ouro);color:var(--noite)}
+.btn-ouro:hover{background:var(--ouro2)}
+.btn-linha{border:1px solid rgba(255,255,255,.55);color:#fff}
+.btn-linha:hover{background:#fff;color:var(--noite)}
+.btn-escuro{background:var(--noite);color:#fff}
+.btn-escuro:hover{background:var(--noite2)}
+
+/* prévia */
+.previa{position:relative;z-index:30;background:#000;color:rgba(255,255,255,.75);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;text-align:center;padding:6px 12px}
+
+/* topo */
+.topo{position:relative;min-height:100svh;color:#fff;display:flex;flex-direction:column;overflow:hidden;background:var(--noite)}
+.topo>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 50%;animation:zoom 18s ease-out both}
+@keyframes zoom{from{transform:scale(1.08)}to{transform:scale(1)}}
+.topo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,27,46,.6) 0%,rgba(12,27,46,0) 22%,rgba(12,27,46,.35) 45%,rgba(12,27,46,.95) 82%)}
+@media (min-width:820px){.topo::after{background:linear-gradient(90deg,rgba(12,27,46,.85) 0%,rgba(12,27,46,.35) 55%,rgba(12,27,46,0) 80%),linear-gradient(180deg,rgba(12,27,46,.5) 0%,rgba(12,27,46,0) 25%,rgba(12,27,46,.6) 100%)}}
+.barra{position:relative;z-index:2;display:flex;justify-content:space-between;align-items:center;padding:22px 0}
+.marca{font-family:var(--serif);font-size:1.35rem;font-style:italic;letter-spacing:.02em}
+.barra nav{display:none;gap:2rem;font-size:.75rem;letter-spacing:.2em;text-transform:uppercase}
+.barra nav a{opacity:.85}
+.barra nav a:hover{opacity:1;color:var(--ouro2)}
+.barra .tel{font-size:.78rem;letter-spacing:.12em;border-bottom:1px solid var(--ouro);padding-bottom:2px}
+.heroi{position:relative;z-index:2;margin-top:auto;padding-bottom:56px}
+.heroi h1{font-size:clamp(3.6rem,17vw,8.5rem);font-weight:500;margin:.9rem 0 .4rem;text-shadow:0 2px 30px rgba(0,0,0,.25)}
+.heroi h1 i{display:block;font-weight:400;color:var(--ouro2);font-size:.42em;letter-spacing:0;margin-top:.35rem}
+.heroi p{max-width:34rem;font-size:1.08rem;color:rgba(255,255,255,.88)}
+.heroi .acoes{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.selo{display:inline-flex;align-items:center;gap:.6rem;font-size:.82rem;color:rgba(255,255,255,.9);margin-top:26px}
+.selo b{font-family:var(--serif);font-size:1.5rem;font-weight:600;color:var(--ouro2)}
+.selo .estr{color:var(--ouro);letter-spacing:2px}
+
+/* botão fixo celular */
+.fixo{position:fixed;z-index:40;left:0;right:0;bottom:0;padding:12px 16px calc(12px + env(safe-area-inset-bottom));background:rgba(12,27,46,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);display:flex;gap:10px;border-top:1px solid rgba(226,180,60,.25)}
+.fixo .btn{flex:1;padding:.95rem 1rem}
+.fixo .btn-linha{flex:0 0 auto}
+
+/* sobre */
+.sobre{padding:96px 0 80px}
+.sobre .grade{display:grid;gap:44px}
+.sobre .texto p{font-size:1.08rem;color:#3a4453;margin-bottom:1.1rem;max-width:34rem}
+.sobre .lead{font-family:var(--serif);font-size:1.7rem;line-height:1.3;font-style:italic;color:var(--noite);margin-bottom:1.4rem}
+.fatos{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:2.2rem;border-top:1px solid var(--pedra)}
+.fatos div{padding:1.1rem .4rem 0 0}
+.fatos b{display:block;font-family:var(--serif);font-size:1.9rem;font-weight:500;color:var(--noite);line-height:1.1}
+.fatos span{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--cinza)}
+.sobre figure{position:relative}
+.sobre figure img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:2px}
+.sobre figure::before{content:"";position:absolute;inset:18px -14px -14px 18px;border:1px solid var(--ouro);z-index:-1}
+
+/* galeria */
+.galeria{background:var(--noite);color:#fff;padding:96px 0}
+.galeria .cab{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:1rem;margin-bottom:2.4rem}
+.galeria .cab h2{margin-bottom:0}
+.galeria .cab p{color:rgba(255,255,255,.65);max-width:22rem;font-size:.95rem}
+.fotos{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+.fotos button{all:unset;cursor:zoom-in;position:relative;overflow:hidden;border-radius:2px;aspect-ratio:1}
+.fotos button:first-child,.fotos button:last-child{grid-column:span 2;aspect-ratio:16/10}
+.fotos img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.2,1),filter .4s}
+.fotos button:hover img{transform:scale(1.05)}
+.fotos button:focus-visible{outline:2px solid var(--ouro);outline-offset:3px}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:60;background:rgba(6,12,22,.96);display:none;align-items:center;justify-content:center;padding:20px}
+.lb.on{display:flex}
+.lb img{max-height:86vh;max-width:100%;object-fit:contain}
+.lb button{all:unset;cursor:pointer;position:absolute;color:#fff;font-size:2rem;width:52px;height:52px;display:grid;place-items:center;font-family:var(--serif)}
+.lb .fechar{top:14px;right:14px}
+.lb .ant{left:6px;top:50%;transform:translateY(-50%)}
+.lb .prox{right:6px;top:50%;transform:translateY(-50%)}
+
+/* horários + nota */
+.info{padding:96px 0}
+.info .grade{display:grid;gap:56px}
+.horas{list-style:none;border-top:1px solid var(--pedra)}
+.horas li{display:flex;justify-content:space-between;align-items:baseline;padding:.95rem 0;border-bottom:1px solid var(--pedra);font-size:1.02rem}
+.horas li span:first-child{text-transform:capitalize}
+.horas li span:last-child{font-family:var(--serif);font-size:1.25rem;font-weight:500;color:var(--noite)}
+.horas li.hoje span{color:#a4790f;font-weight:500}
+.horas li.hoje span:first-child::after{content:"hoje";margin-left:.6rem;font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;background:var(--ouro);color:var(--noite);padding:3px 8px;border-radius:99px;vertical-align:2px}
+.nota{background:#fff;padding:44px 32px;text-align:center;border:1px solid var(--pedra);position:relative}
+.nota .num{font-family:var(--serif);font-size:6.5rem;line-height:.9;color:var(--noite);font-weight:500}
+.nota .estr{color:var(--ouro);font-size:1.3rem;letter-spacing:6px;margin:.6rem 0 .3rem}
+.nota p{color:var(--cinza);margin-bottom:1.6rem}
+.nota .g{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--cinza);margin-bottom:1rem;display:block}
+
+/* local */
+.local{position:relative;background:var(--pedra);padding:96px 0}
+.local .grade{display:grid;gap:36px;align-items:center}
+.local address{font-style:normal;font-size:1.1rem;color:#3a4453;margin-bottom:1.8rem}
+.mapa{position:relative;aspect-ratio:4/3;background:#d6dde2;border-radius:2px;overflow:hidden;box-shadow:0 30px 60px -30px rgba(12,27,46,.45)}
+.mapa iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:grayscale(.25) contrast(1.05)}
+
+/* fim */
+.fim{position:relative;color:#fff;text-align:center;padding:120px 0;overflow:hidden;background:var(--noite)}
+.fim img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.38}
+.fim .wrap{position:relative}
+.fim h2{margin-bottom:1.8rem}
+footer{background:#070f1b;color:rgba(255,255,255,.55);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;text-align:center;padding:28px 20px}
+footer b{color:var(--ouro2);font-weight:500}
+
+/* entrada suave */
+.surge{opacity:0;transform:translateY(24px);transition:opacity .9s ease,transform .9s ease}
+.surge.vis{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.surge{opacity:1;transform:none}.topo>img{animation:none}}
+
+@media (min-width:820px){
+  body{padding-bottom:0}
+  .fixo{display:none}
+  .barra nav{display:flex}
+  .heroi{padding-bottom:90px}
+  .sobre .grade{grid-template-columns:1.1fr .9fr;gap:80px;align-items:center}
+  .fotos{grid-template-columns:repeat(4,1fr);grid-auto-rows:220px}
+  .fotos button,.fotos button:first-child{aspect-ratio:auto}
+  .fotos button:first-child{grid-column:span 2;grid-row:span 2}
+  .fotos button:nth-child(4),.fotos button:nth-child(5),.fotos button:last-child{grid-column:span 2}
+  .info .grade{grid-template-columns:1.2fr .8fr;gap:90px;align-items:start}
+  .local .grade{grid-template-columns:.8fr 1.2fr;gap:70px}
+  .mapa{aspect-ratio:16/11}
+}
+@media (max-width:380px){.fatos b{font-size:1.5rem}}
+</style>
+</head>
+<body>
+
+<div class="previa">Prévia feita pela Liberon</div>
+
+<header class="topo">
+  <img src="img/foto-3-p.jpg" srcset="img/foto-3-p.jpg 800w, img/foto-3.jpg 1600w" sizes="100vw" alt="Mesas do Madame Bardot de frente para o mar de Búzios ao pôr do sol" fetchpriority="high">
+  <div class="wrap barra">
+    <span class="marca">Madame Bardot</span>
+    <nav aria-label="Seções">
+      <a href="#sobre">Sobre</a><a href="#fotos">Fotos</a><a href="#horarios">Horários</a><a href="#local">Como chegar</a>
+    </nav>
+    <a class="tel" href="tel:+552233018073">(22) 3301-8073</a>
+  </div>
+  <div class="wrap heroi">
+    <span class="sobrelinha">Restaurante · Búzios</span>
+    <h1>Madame Bardot<i>à beira-mar, no Triângulo de Búzios</i></h1>
+    <p>Pratos brasileiros e internacionais, drinques e música, num espaço descontraído de frente para o mar.</p>
+    <div class="acoes">
+      <a class="btn btn-ouro" href="https://wa.me/552233018073?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20fazer%20uma%20reserva." target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2a9.9 9.9 0 0 0-8.5 14.98L2 22l5.16-1.5A9.92 9.92 0 1 0 12.04 2zm0 18.1a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.06.89.9-2.98-.2-.31a8.19 8.19 0 1 1 6.84 3.73zm4.5-6.13c-.25-.12-1.46-.72-1.69-.8-.23-.08-.39-.12-.56.12-.16.25-.64.8-.78.96-.14.17-.29.19-.53.06a6.7 6.7 0 0 1-3.32-2.9c-.25-.43.25-.4.71-1.33.08-.16.04-.3-.02-.43-.06-.12-.56-1.34-.76-1.83-.2-.48-.4-.41-.56-.42h-.47a.9.9 0 0 0-.66.31 2.76 2.76 0 0 0-.86 2.05 4.8 4.8 0 0 0 1 2.55 11 11 0 0 0 4.2 3.7c1.56.68 2.18.73 2.96.62.48-.07 1.46-.6 1.67-1.18.2-.58.2-1.08.14-1.18-.06-.1-.22-.16-.47-.29z"/></svg>
+        Reservar no WhatsApp
+      </a>
+      <a class="btn btn-linha" href="#local">Como chegar</a>
+    </div>
+    <a class="selo" href="https://maps.google.com/?cid=930057849173651837" target="_blank" rel="noopener">
+      <b>4,7</b><span class="estr" aria-hidden="true">★★★★★</span><span>5.997 avaliações no Google</span>
+    </a>
+  </div>
+</header>
+
+<div class="fixo">
+  <a class="btn btn-ouro" href="https://wa.me/552233018073?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20fazer%20uma%20reserva." target="_blank" rel="noopener" aria-label="Reservar pelo WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2a9.9 9.9 0 0 0-8.5 14.98L2 22l5.16-1.5A9.92 9.92 0 1 0 12.04 2zm0 18.1a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.06.89.9-2.98-.2-.31a8.19 8.19 0 1 1 6.84 3.73zm4.5-6.13c-.25-.12-1.46-.72-1.69-.8-.23-.08-.39-.12-.56.12-.16.25-.64.8-.78.96-.14.17-.29.19-.53.06a6.7 6.7 0 0 1-3.32-2.9c-.25-.43.25-.4.71-1.33.08-.16.04-.3-.02-.43-.06-.12-.56-1.34-.76-1.83-.2-.48-.4-.41-.56-.42h-.47a.9.9 0 0 0-.66.31 2.76 2.76 0 0 0-.86 2.05 4.8 4.8 0 0 0 1 2.55 11 11 0 0 0 4.2 3.7c1.56.68 2.18.73 2.96.62.48-.07 1.46-.6 1.67-1.18.2-.58.2-1.08.14-1.18-.06-.1-.22-.16-.47-.29z"/></svg>
+    Reservar no WhatsApp
+  </a>
+  <a class="btn btn-linha" href="https://www.google.com/maps/dir/?api=1&amp;destination=Madame+Bardot+Restaurante&amp;destination_place_id=ChIJXy3oJIhVlgARfTGPqK866Aw" target="_blank" rel="noopener" aria-label="Como chegar">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+  </a>
+</div>
+
+<main>
+  <section class="sobre" id="sobre">
+    <div class="wrap grade">
+      <div class="texto surge">
+        <span class="sobrelinha">Sobre a casa</span>
+        <h2>Pé na grama, <i>vista para o mar</i></h2>
+        <p class="lead">Um espaço descontraído e natural, à beira-mar, no coração do Triângulo de Búzios.</p>
+        <p>No cardápio, pratos brasileiros e internacionais. Para acompanhar, drinques e música, do almoço até a noite.</p>
+        <p>Abre todos os dias a partir das 11h30, na Av. José Bento Ribeiro Dantas.</p>
+        <div class="fatos">
+          <div><b>7 dias</b><span>por semana</span></div>
+          <div><b>11h30</b><span>abre às</span></div>
+          <div><b>4,7</b><span>no Google</span></div>
+        </div>
+      </div>
+      <figure class="surge">
+        <img src="img/foto-1-p.jpg" srcset="img/foto-1-p.jpg 800w, img/foto-1.jpg 1600w" sizes="(min-width:820px) 45vw, 100vw" alt="Jardim e bar do Madame Bardot com a placa da casa" loading="lazy" style="object-position:30% 50%">
+      </figure>
+    </div>
+  </section>
+
+  <section class="galeria" id="fotos">
+    <div class="wrap">
+      <div class="cab surge">
+        <div><span class="sobrelinha">Galeria</span><h2>Do fim de tarde <i>à noite</i></h2></div>
+        <p>O jardim, o bar e as mesas de frente para a baía, em fotos da própria casa.</p>
+      </div>
+      <div class="fotos" id="grade-fotos">
+        <button data-i="0" aria-label="Ampliar foto"><img src="img/foto-7-p.jpg" alt="Jardim com caminho de pedras e o bar ao entardecer" loading="lazy"></button>
+        <button data-i="1" aria-label="Ampliar foto"><img src="img/foto-4-p.jpg" alt="Bar iluminado à noite" loading="lazy"></button>
+        <button data-i="2" aria-label="Ampliar foto"><img src="img/foto-2-p.jpg" alt="Casarão branco com caminho iluminado à noite" loading="lazy"></button>
+        <button data-i="3" aria-label="Ampliar foto"><img src="img/foto-6-p.jpg" alt="Jardim e quiosques de frente para o mar ao pôr do sol" loading="lazy"></button>
+        <button data-i="4" aria-label="Ampliar foto"><img src="img/foto-5-p.jpg" alt="Jardim iluminado à noite" loading="lazy"></button>
+        <button data-i="5" aria-label="Ampliar foto"><img src="img/foto-1-p.jpg" alt="Placa do Madame Bardot e o bar" loading="lazy"></button>
+      </div>
+    </div>
+  </section>
+
+  <section class="info" id="horarios">
+    <div class="wrap grade">
+      <div class="surge">
+        <span class="sobrelinha">Horários</span>
+        <h2>Aberto <i>todos os dias</i></h2>
+        <ul class="horas" id="horas">
+          <li data-d="1"><span>segunda</span><span>11h30 – 23h</span></li>
+          <li data-d="2"><span>terça</span><span>11h30 – 23h</span></li>
+          <li data-d="3"><span>quarta</span><span>11h30 – 23h</span></li>
+          <li data-d="4"><span>quinta</span><span>11h30 – 23h</span></li>
+          <li data-d="5"><span>sexta</span><span>11h30 – 0h</span></li>
+          <li data-d="6"><span>sábado</span><span>11h30 – 0h</span></li>
+          <li data-d="0"><span>domingo</span><span>11h30 – 23h</span></li>
+        </ul>
+      </div>
+      <div class="nota surge">
+        <span class="g">Nota no Google</span>
+        <div class="num">4,7</div>
+        <div class="estr" aria-hidden="true">★★★★★</div>
+        <p>5.997 avaliações</p>
+        <a class="btn btn-escuro" href="https://maps.google.com/?cid=930057849173651837" target="_blank" rel="noopener">Ver no Google Maps</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="local" id="local">
+    <div class="wrap grade">
+      <div class="surge">
+        <span class="sobrelinha">Onde fica</span>
+        <h2>Triângulo <i>de Búzios</i></h2>
+        <address>Av. José Bento Ribeiro Dantas, 805<br>Armação dos Búzios – RJ, 28950-000</address>
+        <a class="btn btn-escuro" href="https://www.google.com/maps/dir/?api=1&amp;destination=Madame+Bardot+Restaurante&amp;destination_place_id=ChIJXy3oJIhVlgARfTGPqK866Aw" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+          Como chegar
+        </a>
+      </div>
+      <div class="mapa surge">
+        <iframe title="Mapa do Madame Bardot Restaurante" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Madame%20Bardot%20Restaurante%2C%20Av.%20Jos%C3%A9%20Bento%20Ribeiro%20Dantas%2C%20805%2C%20Arma%C3%A7%C3%A3o%20dos%20B%C3%BAzios&amp;z=16&amp;hl=pt-BR&amp;output=embed"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section class="fim">
+    <img src="img/foto-4-p.jpg" alt="" loading="lazy">
+    <div class="wrap surge">
+      <span class="sobrelinha">Reservas</span>
+      <h2>Sua mesa <i>de frente para o mar</i></h2>
+      <a class="btn btn-ouro" href="https://wa.me/552233018073?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20fazer%20uma%20reserva." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2a9.9 9.9 0 0 0-8.5 14.98L2 22l5.16-1.5A9.92 9.92 0 1 0 12.04 2zm0 18.1a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.06.89.9-2.98-.2-.31a8.19 8.19 0 1 1 6.84 3.73zm4.5-6.13c-.25-.12-1.46-.72-1.69-.8-.23-.08-.39-.12-.56.12-.16.25-.64.8-.78.96-.14.17-.29.19-.53.06a6.7 6.7 0 0 1-3.32-2.9c-.25-.43.25-.4.71-1.33.08-.16.04-.3-.02-.43-.06-.12-.56-1.34-.76-1.83-.2-.48-.4-.41-.56-.42h-.47a.9.9 0 0 0-.66.31 2.76 2.76 0 0 0-.86 2.05 4.8 4.8 0 0 0 1 2.55 11 11 0 0 0 4.2 3.7c1.56.68 2.18.73 2.96.62.48-.07 1.46-.6 1.67-1.18.2-.58.2-1.08.14-1.18-.06-.1-.22-.16-.47-.29z"/></svg> WhatsApp · (22) 3301-8073</a>
+    </div>
+  </section>
+</main>
+
+<footer>Site feito pela <b>Liberon</b></footer>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Foto ampliada">
+  <img alt="">
+  <button class="fechar" aria-label="Fechar">×</button>
+  <button class="ant" aria-label="Foto anterior">‹</button>
+  <button class="prox" aria-label="Próxima foto">›</button>
+</div>
+
+<script>
+(function(){
+  var h=document.querySelector('#horas li[data-d="'+new Date().getDay()+'"]');if(h)h.classList.add('hoje');
+  var els=document.querySelectorAll('.surge');
+  if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vis');io.unobserve(e.target)}})},{threshold:.12});els.forEach(function(e){io.observe(e)})}else{els.forEach(function(e){e.classList.add('vis')})}
+  var bs=[].slice.call(document.querySelectorAll('#grade-fotos button')),lb=document.getElementById('lb'),im=lb.querySelector('img'),i=0;
+  function abre(n){i=(n+bs.length)%bs.length;var s=bs[i].querySelector('img');im.src=s.getAttribute('src').replace('-p.jpg','.jpg');im.alt=s.alt;lb.classList.add('on')}
+  bs.forEach(function(b,n){b.addEventListener('click',function(){abre(n)})});
+  lb.querySelector('.fechar').onclick=function(){lb.classList.remove('on')};
+  lb.querySelector('.ant').onclick=function(e){e.stopPropagation();abre(i-1)};
+  lb.querySelector('.prox').onclick=function(e){e.stopPropagation();abre(i+1)};
+  lb.addEventListener('click',function(e){if(e.target===lb)lb.classList.remove('on')});
+  document.addEventListener('keydown',function(e){if(!lb.classList.contains('on'))return;if(e.key==='Escape')lb.classList.remove('on');if(e.key==='ArrowLeft')abre(i-1);if(e.key==='ArrowRight')abre(i+1)});
+})();
+</script>
+</body>
+</html>

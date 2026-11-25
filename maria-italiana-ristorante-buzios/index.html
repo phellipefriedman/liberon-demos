@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Maria Italiana · Ristorante e pizza napolitana em Búzios</title>
+<meta name="description" content="Maria Italiana Ristorante, de frente para a baía no Triângulo de Búzios. Pizza napolitana, massas e vinhos. Todos os dias a partir das 17h30.">
+<meta name="theme-color" content="#12264a">
+<link rel="preload" as="image" href="img/cliente-1-p.jpg" imagesrcset="img/cliente-1-p.jpg 900w, img/cliente-1.jpg 1600w" imagesizes="100vw">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400;1,6..96,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blu:#12264a; --blu2:#1b3563; --notte:#0a1630;
+  --panna:#f7f1e6; --carta:#efe6d6; --pomodoro:#c63a2b; --pomodoro2:#de5240;
+  --basilico:#3f6b3a; --ambra:#e6a640; --ambra2:#f4c77a;
+  --tinta:#1d2230; --cinza:#6b6f7a;
+  --serif:"Bodoni Moda",Didot,"Times New Roman",serif; --sans:"DM Sans",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);font-weight:300;color:var(--tinta);background:var(--panna);line-height:1.7;font-size:17px;padding-bottom:calc(80px + env(safe-area-inset-bottom))}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1140px,100% - 40px);margin-inline:auto}
+.occhiello{display:inline-flex;align-items:center;gap:.7rem;font-size:.7rem;font-weight:500;letter-spacing:.32em;text-transform:uppercase;color:var(--pomodoro)}
+.occhiello::before{content:"";width:26px;height:2px;background:linear-gradient(90deg,var(--basilico) 33%,#fff 33% 66%,var(--pomodoro) 66%);box-shadow:0 0 0 .5px rgba(0,0,0,.08)}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.02;letter-spacing:-.015em}
+h2{font-size:clamp(2.4rem,7.5vw,4rem);margin:.7rem 0 1.4rem;color:var(--blu)}
+h2 i{font-style:italic;color:var(--pomodoro)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;font-family:var(--sans);font-weight:500;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;padding:1.05rem 1.6rem;border-radius:999px;transition:background .25s,color .25s,transform .2s,border-color .25s}
+.btn svg{width:18px;height:18px;flex:none}
+.btn:active{transform:scale(.98)}
+.btn-rosso{background:var(--pomodoro);color:#fff}
+.btn-rosso:hover{background:var(--pomodoro2)}
+.btn-linha{border:1px solid rgba(255,255,255,.6);color:#fff}
+.btn-linha:hover{background:#fff;color:var(--blu)}
+.btn-blu{background:var(--blu);color:#fff}
+.btn-blu:hover{background:var(--blu2)}
+.btn-contorno{border:1px solid var(--blu);color:var(--blu)}
+.btn-contorno:hover{background:var(--blu);color:#fff}
+
+/* prévia */
+.previa{position:relative;z-index:30;background:#000;color:rgba(255,255,255,.75);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;text-align:center;padding:6px 12px}
+
+/* topo */
+.topo{position:relative;min-height:100svh;color:#fff;display:flex;flex-direction:column;overflow:hidden;background:var(--notte)}
+.topo>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:28% 55%;animation:zoom 20s ease-out both}
+@keyframes zoom{from{transform:scale(1.1)}to{transform:scale(1)}}
+.topo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,22,48,.65) 0%,rgba(10,22,48,0) 24%,rgba(10,22,48,.15) 44%,rgba(10,22,48,.92) 84%)}
+@media (min-width:820px){.topo::after{background:linear-gradient(90deg,rgba(10,22,48,.88) 0%,rgba(10,22,48,.4) 50%,rgba(10,22,48,0) 78%),linear-gradient(180deg,rgba(10,22,48,.55) 0%,rgba(10,22,48,0) 25%,rgba(10,22,48,.5) 100%)}}
+.barra{position:relative;z-index:2;display:flex;justify-content:space-between;align-items:center;padding:22px 0}
+.marca{font-family:var(--serif);font-size:1.3rem;font-style:italic;letter-spacing:.01em}
+.marca small{font-family:var(--sans);font-style:normal;font-size:.58rem;letter-spacing:.34em;text-transform:uppercase;opacity:.75;display:block;margin-top:-2px}
+.barra nav{display:none;gap:2rem;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase}
+.barra nav a{opacity:.85;transition:opacity .2s,color .2s}
+.barra nav a:hover{opacity:1;color:var(--ambra2)}
+.barra .tel{font-size:.78rem;letter-spacing:.12em;border-bottom:1px solid var(--pomodoro2);padding-bottom:2px}
+.heroi{position:relative;z-index:2;margin-top:auto;padding-bottom:104px}
+.heroi .pre{font-size:.7rem;font-weight:500;letter-spacing:.36em;text-transform:uppercase;color:var(--ambra2)}
+.heroi h1{font-size:clamp(3.7rem,18vw,9rem);margin:.8rem 0 .5rem;text-shadow:0 2px 40px rgba(0,0,0,.3)}
+.heroi h1 i{display:block;font-size:.36em;color:var(--ambra2);letter-spacing:.01em;margin-bottom:.15em}
+.heroi p{max-width:33rem;font-size:1.08rem;color:rgba(255,255,255,.9)}
+.heroi .acoes{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.selos{display:flex;flex-wrap:wrap;gap:10px 26px;margin-top:28px;font-size:.82rem;color:rgba(255,255,255,.9)}
+.selos a{display:inline-flex;align-items:center;gap:.55rem}
+.selos b{font-family:var(--serif);font-size:1.5rem;font-weight:500;color:var(--ambra2)}
+.selos .estr{color:var(--ambra);letter-spacing:2px}
+.selos .sep{display:none;width:1px;background:rgba(255,255,255,.3)}
+
+/* toldo listrado (assinatura: o teto listrado azul e branco da casa) */
+.toldo{height:34px;background:
+  radial-gradient(circle at 50% 0,transparent 15px,var(--panna) 16px) 0 18px/32px 16px repeat-x,
+  repeating-linear-gradient(90deg,var(--blu) 0 16px,#fbf7ef 16px 32px);}
+
+/* botão fixo celular */
+.fixo{position:fixed;z-index:40;left:0;right:0;bottom:0;padding:12px 16px calc(12px + env(safe-area-inset-bottom));background:rgba(10,22,48,.95);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);display:flex;gap:10px;border-top:1px solid rgba(244,199,122,.22)}
+.fixo .btn{flex:1;padding:.95rem 1rem}
+.fixo .btn-linha{flex:0 0 auto;width:54px;padding:0}
+
+/* sobre */
+.sobre{padding:72px 0 88px}
+.sobre .grade{display:grid;gap:48px}
+.sobre .texto p{font-size:1.06rem;color:#3a3f4c;margin-bottom:1.1rem;max-width:34rem}
+.sobre .lead{font-family:var(--serif);font-size:1.65rem;line-height:1.3;font-style:italic;color:var(--blu);margin-bottom:1.4rem}
+.fatos{display:grid;grid-template-columns:repeat(3,1fr);margin-top:2.2rem;border-top:1px solid #dccfb8}
+.fatos div{padding:1.1rem .4rem 0 0}
+.fatos b{display:block;font-family:var(--serif);font-size:1.9rem;font-weight:400;color:var(--blu);line-height:1.1}
+.fatos span{font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--cinza)}
+.sobre figure{position:relative;margin-right:14px}
+.sobre figure img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:180px 180px 4px 4px}
+.sobre figure::before{content:"";position:absolute;inset:16px -14px -14px 16px;border:1px solid var(--pomodoro);border-radius:180px 180px 4px 4px;z-index:-1}
+.sobre figcaption{position:absolute;left:-6px;bottom:22px;background:var(--panna);padding:.55rem 1rem;font-family:var(--serif);font-style:italic;font-size:1.05rem;color:var(--blu);box-shadow:0 10px 30px -14px rgba(0,0,0,.35)}
+
+/* napolitana */
+.napoli{background:var(--blu);color:#fff;position:relative;overflow:hidden}
+.napoli .grade{display:grid}
+.napoli .foto{position:relative;min-height:340px}
+.napoli .foto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:55% 50%}
+.napoli .txt{padding:64px 0 72px}
+.napoli h2{color:#fff}
+.napoli h2 i{color:var(--ambra2)}
+.napoli p{color:rgba(255,255,255,.82);max-width:30rem;margin-bottom:1.1rem}
+.napoli .occhiello{color:var(--ambra2)}
+.selo-avpn{position:absolute;z-index:2;right:18px;bottom:-46px;width:132px;height:132px;border-radius:50%;background:var(--panna);color:var(--blu);display:grid;place-items:center;box-shadow:0 20px 40px -18px rgba(0,0,0,.6)}
+.selo-avpn svg{position:absolute;inset:0;width:100%;height:100%;animation:gira 30s linear infinite}
+.selo-avpn text{font-family:var(--sans);font-size:9.4px;font-weight:500;letter-spacing:2.6px;fill:var(--blu);text-transform:uppercase}
+.selo-avpn b{font-family:var(--serif);font-size:1.9rem;font-weight:500;line-height:1;text-align:center}
+.selo-avpn b small{display:block;font-family:var(--sans);font-size:.55rem;letter-spacing:.24em;color:var(--pomodoro);margin-bottom:3px}
+@keyframes gira{to{transform:rotate(360deg)}}
+.napoli .acoes{display:flex;flex-wrap:wrap;gap:12px;margin-top:1.8rem}
+.napoli .btn-contorno{border-color:rgba(255,255,255,.55);color:#fff}
+.napoli .btn-contorno:hover{background:#fff;color:var(--blu)}
+
+/* galeria */
+.galeria{padding:104px 0 96px}
+.galeria .cab{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:1rem;margin-bottom:2.4rem}
+.galeria .cab h2{margin-bottom:0}
+.galeria .cab p{color:var(--cinza);max-width:22rem;font-size:.95rem}
+.fotos{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+.fotos button{all:unset;cursor:zoom-in;position:relative;overflow:hidden;border-radius:4px;aspect-ratio:1;background:var(--carta)}
+.fotos button.l{grid-column:span 2;aspect-ratio:16/10}
+.fotos button.t{aspect-ratio:3/4}
+.fotos img{width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.fotos button:hover img{transform:scale(1.05)}
+.fotos button:focus-visible{outline:2px solid var(--pomodoro);outline-offset:3px}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:60;background:rgba(6,12,26,.96);display:none;align-items:center;justify-content:center;padding:20px}
+.lb.on{display:flex}
+.lb img{max-height:86vh;max-width:100%;object-fit:contain}
+.lb button{all:unset;cursor:pointer;position:absolute;color:#fff;font-size:2.2rem;width:52px;height:52px;display:grid;place-items:center;font-family:var(--serif)}
+.lb .fechar{top:14px;right:14px}
+.lb .ant{left:6px;top:50%;transform:translateY(-50%)}
+.lb .prox{right:6px;top:50%;transform:translateY(-50%)}
+
+/* horários + nota */
+.info{background:var(--carta);padding:96px 0}
+.info .grade{display:grid;gap:56px}
+.horas{list-style:none;border-top:1px solid #d6c7ac}
+.horas li{display:flex;justify-content:space-between;align-items:baseline;padding:.95rem 0;border-bottom:1px solid #d6c7ac;font-size:1.02rem}
+.horas li span:first-child{text-transform:capitalize}
+.horas li span:last-child{font-family:var(--serif);font-size:1.25rem;color:var(--blu)}
+.horas li.hoje span{color:var(--pomodoro);font-weight:500}
+.horas li.hoje span:first-child::after{content:"hoje";margin-left:.6rem;font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;background:var(--pomodoro);color:#fff;padding:3px 8px;border-radius:99px;vertical-align:2px}
+.obs{font-size:.92rem;color:var(--cinza);margin-top:1.2rem}
+.nota{background:var(--panna);padding:46px 32px;text-align:center;position:relative;border-radius:4px;box-shadow:0 30px 60px -40px rgba(18,38,74,.5)}
+.nota::before{content:"";position:absolute;left:0;right:0;top:0;height:5px;border-radius:4px 4px 0 0;background:linear-gradient(90deg,var(--basilico) 33.3%,#fff 33.3% 66.6%,var(--pomodoro) 66.6%)}
+.nota .num{font-family:var(--serif);font-size:6.5rem;line-height:.9;color:var(--blu)}
+.nota .estr{color:var(--ambra);font-size:1.3rem;letter-spacing:6px;margin:.6rem 0 .3rem}
+.nota p{color:var(--cinza);margin-bottom:1.6rem}
+.nota .g{font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--cinza);margin-bottom:1rem;display:block}
+
+/* local */
+.local{padding:96px 0}
+.local .grade{display:grid;gap:36px;align-items:center}
+.local address{font-style:normal;font-size:1.1rem;color:#3a3f4c;margin-bottom:1.8rem}
+.mapa{position:relative;aspect-ratio:4/3;background:#d9dde3;border-radius:4px;overflow:hidden;box-shadow:0 30px 60px -30px rgba(18,38,74,.45)}
+.mapa iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:saturate(.85)}
+
+/* fim */
+.fim{position:relative;color:#fff;text-align:center;padding:128px 0;overflow:hidden;background:var(--notte)}
+.fim img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.42}
+.fim .wrap{position:relative}
+.fim h2{color:#fff;margin-bottom:1.8rem}
+.fim h2 i{color:var(--ambra2)}
+.fim .occhiello{color:var(--ambra2)}
+footer{background:#060e20;color:rgba(255,255,255,.55);font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;text-align:center;padding:28px 20px}
+footer b{color:var(--ambra2);font-weight:500}
+.insta-rod{display:inline-flex;align-items:center;gap:.5rem;color:#fff;letter-spacing:.08em;text-transform:none;font-size:.9rem;margin-bottom:.8rem;transition:color .2s}
+.insta-rod:hover,.insta-fim a:hover{color:var(--ambra2)}
+.insta-rod svg,.insta-fim svg{width:18px;height:18px}
+.insta-fim{margin-top:1.4rem}
+.insta-fim a{display:inline-flex;align-items:center;gap:.5rem;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.85);border-bottom:1px solid rgba(244,199,122,.5);padding-bottom:3px;transition:color .2s}
+
+/* entrada suave */
+.surge{opacity:0;transform:translateY(24px);transition:opacity .9s ease,transform .9s ease}
+.surge.vis{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.surge{opacity:1;transform:none}.topo>img,.selo-avpn svg{animation:none}}
+
+@media (min-width:820px){
+  body{padding-bottom:0}
+  .fixo{display:none}
+  .barra nav{display:flex}
+  .selos .sep{display:block}
+  .heroi{padding-bottom:96px}
+  .sobre{padding:96px 0 110px}
+  .sobre .grade{grid-template-columns:1.1fr .9fr;gap:90px;align-items:center}
+  .napoli .grade{grid-template-columns:1fr 1fr;min-height:620px}
+  .napoli .foto{min-height:0}
+  .napoli .txt{padding:96px 0 96px 72px;align-self:center}
+  .selo-avpn{right:-66px;bottom:auto;top:50%;transform:translateY(-50%);width:150px;height:150px}
+  .fotos{grid-template-columns:repeat(4,1fr);grid-auto-rows:210px;gap:10px}
+  .fotos button,.fotos button.l,.fotos button.t{aspect-ratio:auto}
+  .fotos button.big{grid-column:span 2;grid-row:span 2}
+  .fotos button.t{grid-row:span 2}
+  .fotos button.l{grid-column:span 2}
+  .info .grade{grid-template-columns:1.2fr .8fr;gap:90px;align-items:start}
+  .local .grade{grid-template-columns:.8fr 1.2fr;gap:70px}
+  .mapa{aspect-ratio:16/11}
+}
+@media (max-width:380px){.fatos b{font-size:1.5rem}}
+</style>
+</head>
+<body>
+
+<div class="previa">Prévia feita pela Liberon</div>
+
+<header class="topo">
+  <img src="img/cliente-1-p.jpg" srcset="img/cliente-1-p.jpg 900w, img/cliente-1.jpg 1600w" sizes="100vw" alt="Mesas do Maria Italiana de frente para a baía de Búzios ao pôr do sol" fetchpriority="high">
+  <div class="wrap barra">
+    <span class="marca">Maria Italiana<small>Ristorante</small></span>
+    <nav aria-label="Seções">
+      <a href="#sobre">A casa</a><a href="#pizza">Pizza</a><a href="#fotos">Fotos</a><a href="#horarios">Horários</a><a href="#local">Como chegar</a>
+    </nav>
+    <a class="tel" href="tel:+552233016144">(22) 3301-6144</a>
+  </div>
+  <div class="wrap heroi">
+    <span class="pre">Restaurante italiano · Búzios</span>
+    <h1><i>Ristorante</i>Maria Italiana</h1>
+    <p>Pizza napolitana, massas e vinhos, com mesas de frente para a baía, no Triângulo de Búzios.</p>
+    <div class="acoes">
+      <a class="btn btn-rosso" href="https://wa.me/552233016144?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20fazer%20uma%20reserva." target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2a9.9 9.9 0 0 0-8.5 14.98L2 22l5.16-1.5A9.92 9.92 0 1 0 12.04 2zm0 18.1a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.06.89.9-2.98-.2-.31a8.19 8.19 0 1 1 6.84 3.73zm4.5-6.13c-.25-.12-1.46-.72-1.69-.8-.23-.08-.39-.12-.56.12-.16.25-.64.8-.78.96-.14.17-.29.19-.53.06a6.7 6.7 0 0 1-3.32-2.9c-.25-.43.25-.4.71-1.33.08-.16.04-.3-.02-.43-.06-.12-.56-1.34-.76-1.83-.2-.48-.4-.41-.56-.42h-.47a.9.9 0 0 0-.66.31 2.76 2.76 0 0 0-.86 2.05 4.8 4.8 0 0 0 1 2.55 11 11 0 0 0 4.2 3.7c1.56.68 2.18.73 2.96.62.48-.07 1.46-.6 1.67-1.18.2-.58.2-1.08.14-1.18-.06-.1-.22-.16-.47-.29z"/></svg>
+        Reservar no WhatsApp
+      </a>
+      <a class="btn btn-linha" href="https://www.vucafood.com.br/mariaitaliana/2824/cardapio-digital" target="_blank" rel="noopener">Ver cardápio</a>
+    </div>
+    <div class="selos">
+      <a href="https://maps.google.com/?cid=13574279789585916480" target="_blank" rel="noopener"><b>4,7</b><span class="estr" aria-hidden="true">★★★★★</span><span>4.010 avaliações no Google</span></a>
+      <span class="sep" aria-hidden="true"></span>
+      <a href="#pizza"><b>nº 950</b><span>Verace Pizza Napoletana</span></a>
+    </div>
+  </div>
+</header>
+
+<div class="fixo">
+  <a class="btn btn-rosso" href="https://wa.me/552233016144?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20fazer%20uma%20reserva." target="_blank" rel="noopener" aria-label="Reservar pelo WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2a9.9 9.9 0 0 0-8.5 14.98L2 22l5.16-1.5A9.92 9.92 0 1 0 12.04 2zm0 18.1a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.06.89.9-2.98-.2-.31a8.19 8.19 0 1 1 6.84 3.73zm4.5-6.13c-.25-.12-1.46-.72-1.69-.8-.23-.08-.39-.12-.56.12-.16.25-.64.8-.78.96-.14.17-.29.19-.53.06a6.7 6.7 0 0 1-3.32-2.9c-.25-.43.25-.4.71-1.33.08-.16.04-.3-.02-.43-.06-.12-.56-1.34-.76-1.83-.2-.48-.4-.41-.56-.42h-.47a.9.9 0 0 0-.66.31 2.76 2.76 0 0 0-.86 2.05 4.8 4.8 0 0 0 1 2.55 11 11 0 0 0 4.2 3.7c1.56.68 2.18.73 2.96.62.48-.07 1.46-.6 1.67-1.18.2-.58.2-1.08.14-1.18-.06-.1-.22-.16-.47-.29z"/></svg>
+    Reservar no WhatsApp
+  </a>
+  <a class="btn btn-linha" href="https://www.google.com/maps/dir/?api=1&amp;destination=Maria+Italiana+Ristorante+B%C3%BAzios&amp;destination_place_id=ChIJafhp_uBVlgARQGIIjIyHYbw" target="_blank" rel="noopener" aria-label="Como chegar">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+  </a>
+</div>
+
+<main>
+  <div class="toldo" aria-hidden="true"></div>
+
+  <section class="sobre" id="sobre">
+    <div class="wrap grade">
+      <div class="texto surge">
+        <span class="occhiello">A casa</span>
+        <h2>Itália à mesa, <i>a baía à vista</i></h2>
+        <p class="lead">Um restaurante italiano aconchegante, com mesas ao ar livre voltadas para o mar de Búzios.</p>
+        <p>Pizza napolitana assada no estilo tradicional, massas e pratos da cozinha italiana. Para acompanhar, uma boa carta de vinhos, coquetéis e sobremesas.</p>
+        <p>Abre todos os dias a partir das 17h30, para o jantar, no Triângulo de Búzios. A casa aceita reservas.</p>
+        <div class="fatos">
+          <div><b>7 dias</b><span>por semana</span></div>
+          <div><b>17h30</b><span>abre às</span></div>
+          <div><b>4,7</b><span>no Google</span></div>
+        </div>
+      </div>
+      <figure class="surge">
+        <img src="img/dono-3-p.jpg" srcset="img/dono-3-p.jpg 640w, img/dono-3.jpg 1150w" sizes="(min-width:820px) 42vw, 100vw" alt="Pratos de massa servidos no Maria Italiana" loading="lazy">
+        <figcaption>Cucina italiana</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="napoli" id="pizza">
+    <div class="grade">
+      <div class="foto">
+        <img src="img/dono-1-p.jpg" srcset="img/dono-1-p.jpg 900w, img/dono-1.jpg 1600w" sizes="(min-width:820px) 50vw, 100vw" alt="Pizza napolitana margherita com taça de vinho tinto" loading="lazy">
+        <div class="selo-avpn" aria-label="Associado nº 950 da Associazione Verace Pizza Napoletana">
+          <svg viewBox="0 0 132 132" aria-hidden="true"><defs><path id="circ" d="M66,66 m-52,0 a52,52 0 1,1 104,0 a52,52 0 1,1 -104,0"/></defs><text><textPath href="#circ">Verace Pizza Napoletana · AVPN · </textPath></text></svg>
+          <b><small>nº</small>950</b>
+        </div>
+      </div>
+      <div class="wrap txt surge">
+        <span class="occhiello">Pizza napolitana</span>
+        <h2>A verdadeira, <i>de Nápoles</i></h2>
+        <p>O Maria Italiana é membro da Associazione Verace Pizza Napoletana, a associação de Nápoles que reconhece as pizzarias que seguem o método tradicional da pizza napolitana.</p>
+        <p>A casa é o associado de número 950 no mundo.</p>
+        <div class="acoes">
+          <a class="btn btn-rosso" href="https://www.vucafood.com.br/mariaitaliana/2824/cardapio-digital" target="_blank" rel="noopener">Ver cardápio</a>
+          <a class="btn btn-contorno" href="https://www.pizzanapoletana.org/" target="_blank" rel="noopener">Sobre a AVPN</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="galeria" id="fotos">
+    <div class="wrap">
+      <div class="cab surge">
+        <div><span class="occhiello">Galeria</span><h2>Do pôr do sol <i>ao jantar</i></h2></div>
+        <p>O deck de frente para o mar, o salão e a cozinha da casa.</p>
+      </div>
+      <div class="fotos" id="grade-fotos">
+        <button class="l big" aria-label="Ampliar foto"><img src="img/cliente-2-p.jpg" alt="Deck com mesas de frente para a baía, de dia" loading="lazy"></button>
+        <button class="t" aria-label="Ampliar foto"><img src="img/cliente-5-p.jpg" alt="Adega com garrafas de vinho" loading="lazy"></button>
+        <button class="t" aria-label="Ampliar foto"><img src="img/dono-3-p.jpg" alt="Massas servidas na mesa" loading="lazy"></button>
+        <button class="l" aria-label="Ampliar foto"><img src="img/dono-2-p.jpg" alt="Mesa com vários pratos italianos vista de cima" loading="lazy"></button>
+        <button class="l" aria-label="Ampliar foto"><img src="img/cliente-3-p.jpg" alt="Salão com luminárias e vista para o mar ao entardecer" loading="lazy"></button>
+        <button class="l" aria-label="Ampliar foto"><img src="img/dono-1-p.jpg" alt="Pizza napolitana margherita e vinho tinto" loading="lazy"></button>
+        <button class="l" aria-label="Ampliar foto"><img src="img/cliente-4-p.jpg" alt="Luminária colorida e janelas abertas para o mar" loading="lazy"></button>
+      </div>
+    </div>
+  </section>
+
+  <section class="info" id="horarios">
+    <div class="wrap grade">
+      <div class="surge">
+        <span class="occhiello">Horários</span>
+        <h2>Jantar <i>todos os dias</i></h2>
+        <ul class="horas" id="horas">
+          <li data-d="1"><span>segunda</span><span>17h30 – 23h30</span></li>
+          <li data-d="2"><span>terça</span><span>17h30 – 23h30</span></li>
+          <li data-d="3"><span>quarta</span><span>17h30 – 23h30</span></li>
+          <li data-d="4"><span>quinta</span><span>17h30 – 23h30</span></li>
+          <li data-d="5"><span>sexta</span><span>17h30 – 0h</span></li>
+          <li data-d="6"><span>sábado</span><span>17h30 – 0h</span></li>
+          <li data-d="0"><span>domingo</span><span>17h30 – 0h</span></li>
+        </ul>
+        <p class="obs">Aceita reservas pelo WhatsApp ou pelo telefone (22) 3301-6144.</p>
+      </div>
+      <div class="nota surge">
+        <span class="g">Nota no Google</span>
+        <div class="num">4,7</div>
+        <div class="estr" aria-hidden="true">★★★★★</div>
+        <p>4.010 avaliações</p>
+        <a class="btn btn-blu" href="https://maps.google.com/?cid=13574279789585916480" target="_blank" rel="noopener">Ver no Google Maps</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="local" id="local">
+    <div class="wrap grade">
+      <div class="surge">
+        <span class="occhiello">Onde fica</span>
+        <h2>Triângulo <i>de Búzios</i></h2>
+        <address>Av. José Bento Ribeiro Dantas, 468<br>Armação dos Búzios – RJ, 28950-230</address>
+        <a class="btn btn-blu" href="https://www.google.com/maps/dir/?api=1&amp;destination=Maria+Italiana+Ristorante+B%C3%BAzios&amp;destination_place_id=ChIJafhp_uBVlgARQGIIjIyHYbw" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+          Como chegar
+        </a>
+      </div>
+      <div class="mapa surge">
+        <iframe title="Mapa do Maria Italiana Ristorante" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Maria%20Italiana%20Ristorante%20B%C3%BAzios%2C%20Av.%20Jos%C3%A9%20Bento%20Ribeiro%20Dantas%2C%20468%2C%20Arma%C3%A7%C3%A3o%20dos%20B%C3%BAzios&amp;z=16&amp;hl=pt-BR&amp;output=embed"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section class="fim">
+    <img src="img/cliente-4-p.jpg" alt="" loading="lazy">
+    <div class="wrap surge">
+      <span class="occhiello">Reservas</span>
+      <h2>Uma mesa <i>com vista para o mar</i></h2>
+      <a class="btn btn-rosso" href="https://wa.me/552233016144?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20fazer%20uma%20reserva." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2a9.9 9.9 0 0 0-8.5 14.98L2 22l5.16-1.5A9.92 9.92 0 1 0 12.04 2zm0 18.1a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.06.89.9-2.98-.2-.31a8.19 8.19 0 1 1 6.84 3.73zm4.5-6.13c-.25-.12-1.46-.72-1.69-.8-.23-.08-.39-.12-.56.12-.16.25-.64.8-.78.96-.14.17-.29.19-.53.06a6.7 6.7 0 0 1-3.32-2.9c-.25-.43.25-.4.71-1.33.08-.16.04-.3-.02-.43-.06-.12-.56-1.34-.76-1.83-.2-.48-.4-.41-.56-.42h-.47a.9.9 0 0 0-.66.31 2.76 2.76 0 0 0-.86 2.05 4.8 4.8 0 0 0 1 2.55 11 11 0 0 0 4.2 3.7c1.56.68 2.18.73 2.96.62.48-.07 1.46-.6 1.67-1.18.2-.58.2-1.08.14-1.18-.06-.1-.22-.16-.47-.29z"/></svg> WhatsApp · (22) 3301-6144</a>
+      <p class="insta-fim"><a href="https://www.instagram.com/mariaitalianaristorante/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1" fill="currentColor" stroke="none"/></svg> Siga no Instagram</a></p>
+    </div>
+  </section>
+</main>
+
+<footer><a class="insta-rod" href="https://www.instagram.com/mariaitalianaristorante/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1" fill="currentColor" stroke="none"/></svg>@mariaitalianaristorante</a><br>Site feito pela <b>Liberon</b></footer>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Foto ampliada">
+  <img alt="">
+  <button class="fechar" aria-label="Fechar">×</button>
+  <button class="ant" aria-label="Foto anterior">‹</button>
+  <button class="prox" aria-label="Próxima foto">›</button>
+</div>
+
+<script>
+(function(){
+  var h=document.querySelector('#horas li[data-d="'+new Date().getDay()+'"]');if(h)h.classList.add('hoje');
+  var els=document.querySelectorAll('.surge');
+  if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vis');io.unobserve(e.target)}})},{threshold:.12});els.forEach(function(e){io.observe(e)})}else{els.forEach(function(e){e.classList.add('vis')})}
+  var bs=[].slice.call(document.querySelectorAll('#grade-fotos button')),lb=document.getElementById('lb'),im=lb.querySelector('img'),i=0;
+  function abre(n){i=(n+bs.length)%bs.length;var s=bs[i].querySelector('img');im.src=s.getAttribute('src').replace('-p.jpg','.jpg');im.alt=s.alt;lb.classList.add('on')}
+  bs.forEach(function(b,n){b.addEventListener('click',function(){abre(n)})});
+  lb.querySelector('.fechar').onclick=function(){lb.classList.remove('on')};
+  lb.querySelector('.ant').onclick=function(e){e.stopPropagation();abre(i-1)};
+  lb.querySelector('.prox').onclick=function(e){e.stopPropagation();abre(i+1)};
+  lb.addEventListener('click',function(e){if(e.target===lb)lb.classList.remove('on')});
+  document.addEventListener('keydown',function(e){if(!lb.classList.contains('on'))return;if(e.key==='Escape')lb.classList.remove('on');if(e.key==='ArrowLeft')abre(i-1);if(e.key==='ArrowRight')abre(i+1)});
+})();
+</script>
+</body>
+</html>
