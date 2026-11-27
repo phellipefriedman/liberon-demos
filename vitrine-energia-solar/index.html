@@ -6,256 +6,316 @@
 <title>Heliora Energia Solar · Campos, Macaé e Rio das Ostras</title>
 <meta name="description" content="Energia solar fotovoltaica residencial, comercial e rural em Campos dos Goytacazes, Macaé e Rio das Ostras. Modelo de demonstração Liberon.">
 <meta name="robots" content="noindex">
-<meta name="theme-color" content="#050914">
+<meta name="theme-color" content="#FAF7F0">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='7' fill='%23ffc53d'/%3E%3Cg stroke='%2322e3ff' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='M16 2v4M16 26v4M2 16h4M26 16h4M6 6l3 3M23 23l3 3M26 6l-3 3M9 23l-3 3'/%3E%3C/g%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='7' fill='%23F5A300'/%3E%3Cg stroke='%230B1F3A' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='M16 2v4M16 26v4M2 16h4M26 16h4M6 6l3 3M23 23l3 3M26 6l-3 3M9 23l-3 3'/%3E%3C/g%3E%3C/svg%3E">
 <style>
 :root{
-  --bg:#050914; --bg2:#08101f; --panel:#0c1528; --line:rgba(120,190,255,.12);
-  --text:#e8eefb; --muted:#93a3c0; --sun:#ffc53d; --sun2:#ff9f1c; --cyan:#22e3ff; --cyan2:#00a8e8;
-  --glow-sun:0 0 24px rgba(255,197,61,.45),0 0 60px rgba(255,159,28,.2);
-  --glow-cyan:0 0 22px rgba(34,227,255,.35),0 0 60px rgba(34,227,255,.12);
-  --r:18px; --max:1180px;
-  --fd:"Space Grotesk",system-ui,sans-serif; --fb:"Sora",system-ui,sans-serif;
+  --bg:#FAF7F0; --bg2:#F3EEE2; --card:#FFFFFF; --ink:#0B1F3A; --ink2:#2E3F5A; --muted:#66748B; --line:rgba(11,31,58,.09);
+  --sun:#F5A300; --sun2:#FFB82E; --sund:#C46E00; --sunsoft:#FFF0C7; --volt:#0091C2; --voltsoft:#E3F5FB;
+  --sh:0 1px 2px rgba(11,31,58,.04),0 12px 32px -12px rgba(11,31,58,.14);
+  --shh:0 2px 4px rgba(11,31,58,.05),0 30px 60px -20px rgba(11,31,58,.25);
+  --max:1200px; --fd:"Space Grotesk",system-ui,sans-serif; --fb:"Inter",system-ui,sans-serif;
+  --ease:cubic-bezier(.2,.8,.2,1);
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{background:var(--bg);color:var(--text);font-family:var(--fb);font-weight:300;line-height:1.65;font-size:16px;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+body{background:var(--bg);color:var(--ink);font-family:var(--fb);line-height:1.65;font-size:16px;overflow-x:hidden;-webkit-font-smoothing:antialiased}
 img{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
 button,input{font:inherit;color:inherit}
 .wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 20px}
-h1,h2,h3{font-family:var(--fd);font-weight:600;letter-spacing:-.02em;line-height:1.08}
-.eyebrow{font-family:var(--fd);font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;color:var(--cyan);display:inline-flex;align-items:center;gap:10px}
-.eyebrow::before{content:"";width:28px;height:1px;background:linear-gradient(90deg,transparent,var(--cyan));box-shadow:var(--glow-cyan)}
-.grad{background:linear-gradient(100deg,var(--sun) 10%,#ffe9a8 45%,var(--cyan) 95%);-webkit-background-clip:text;background-clip:text;color:transparent}
-section{position:relative;padding:96px 0}
-.sec-head{max-width:680px;margin-bottom:48px}
-.sec-head h2{font-size:clamp(2rem,4.6vw,3.2rem);margin:14px 0 14px}
-.sec-head p{color:var(--muted);font-size:1.05rem}
+h1,h2,h3{font-family:var(--fd);font-weight:600;letter-spacing:-.025em;line-height:1.05}
+.eyebrow{font-family:var(--fd);font-size:.78rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--sund);display:inline-flex;align-items:center;gap:10px}
+.eyebrow::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--sun);box-shadow:0 0 0 4px var(--sunsoft)}
+section{position:relative;padding:110px 0}
+.sec-head{max-width:720px;margin-bottom:56px}
+.sec-head h2{font-size:clamp(2.1rem,4.8vw,3.5rem);margin:16px 0}
+.sec-head p{color:var(--muted);font-size:1.08rem;max-width:560px}
 
-/* demo strip */
-.demo{position:relative;z-index:60;background:#0a0f1d;border-bottom:1px solid var(--line);text-align:center;font-size:.74rem;letter-spacing:.08em;color:#b8c4dc;padding:7px 12px;font-family:var(--fd)}
-.demo b{color:var(--sun);font-weight:600}
+.demo{background:var(--ink);color:#d6deea;text-align:center;font-size:.74rem;letter-spacing:.06em;padding:7px 12px;font-family:var(--fd)}
+.demo b{color:var(--sun2);font-weight:600}
 
-/* header */
-header{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px) saturate(1.4);-webkit-backdrop-filter:blur(14px) saturate(1.4);background:rgba(5,9,20,.62);border-bottom:1px solid var(--line)}
-.nav{display:flex;align-items:center;gap:22px;height:66px}
-.logo{display:flex;align-items:center;gap:10px;font-family:var(--fd);font-weight:700;font-size:1.22rem;letter-spacing:-.01em}
-.logo svg{width:30px;height:30px;filter:drop-shadow(0 0 8px rgba(255,197,61,.6))}
-.logo small{display:block;font-size:.6rem;letter-spacing:.28em;color:var(--muted);font-weight:500;text-transform:uppercase;margin-top:-3px}
-.links{display:flex;gap:26px;margin-left:auto;font-size:.88rem;color:var(--muted)}
-.links a{transition:color .2s}.links a:hover{color:var(--text)}
-.lang{display:flex;border:1px solid var(--line);border-radius:999px;padding:3px;background:rgba(255,255,255,.03)}
-.lang button{border:0;background:none;font-family:var(--fd);font-size:.74rem;font-weight:600;letter-spacing:.06em;padding:6px 10px;border-radius:999px;cursor:pointer;color:var(--muted);transition:.25s}
-.lang button[aria-pressed="true"]{background:var(--sun);color:#1a1200;box-shadow:var(--glow-sun)}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--fd);font-weight:600;font-size:.98rem;border-radius:999px;padding:15px 26px;cursor:pointer;border:1px solid transparent;transition:transform .25s,box-shadow .25s,background .25s;white-space:nowrap}
+header{position:sticky;top:0;z-index:50;background:rgba(250,247,240,.78);backdrop-filter:blur(16px) saturate(1.5);-webkit-backdrop-filter:blur(16px) saturate(1.5);border-bottom:1px solid transparent;transition:border-color .3s,background .3s}
+header.sc{border-bottom-color:var(--line);background:rgba(250,247,240,.92)}
+.nav{display:flex;align-items:center;gap:24px;height:70px}
+.logo{display:flex;align-items:center;gap:10px;font-family:var(--fd);font-weight:700;font-size:1.25rem;letter-spacing:-.02em}
+.logo svg{width:32px;height:32px}
+.logo svg .rays{transform-origin:16px 16px;animation:spin 24s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.logo small{display:block;font-size:.58rem;letter-spacing:.3em;color:var(--muted);font-weight:500;text-transform:uppercase;margin-top:-2px}
+.links{display:flex;gap:28px;margin-left:auto;font-size:.9rem;color:var(--ink2);font-weight:500}
+.links a{position:relative}
+.links a::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:2px;background:var(--sun);transform:scaleX(0);transform-origin:left;transition:transform .35s var(--ease)}
+.links a:hover::after{transform:scaleX(1)}
+.lang{display:flex;background:#fff;border:1px solid var(--line);border-radius:999px;padding:3px;box-shadow:var(--sh)}
+.lang button{border:0;background:none;font-family:var(--fd);font-size:.74rem;font-weight:600;letter-spacing:.06em;padding:6px 11px;border-radius:999px;cursor:pointer;color:var(--muted);transition:.25s}
+.lang button[aria-pressed="true"]{background:var(--ink);color:#fff}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--fd);font-weight:600;font-size:1rem;border-radius:999px;padding:16px 28px;cursor:pointer;border:1px solid transparent;transition:transform .3s var(--ease),box-shadow .3s,background .3s;white-space:nowrap;position:relative;overflow:hidden}
 .btn svg{width:19px;height:19px;flex:none}
-.btn-sun{background:linear-gradient(135deg,#ffd76a,var(--sun) 40%,var(--sun2));color:#1a1000;box-shadow:var(--glow-sun)}
-.btn-sun:hover{transform:translateY(-2px);box-shadow:0 0 34px rgba(255,197,61,.65),0 0 90px rgba(255,159,28,.3)}
-.btn-ghost{border-color:rgba(34,227,255,.4);color:var(--text);background:rgba(34,227,255,.05)}
-.btn-ghost:hover{border-color:var(--cyan);box-shadow:var(--glow-cyan);transform:translateY(-2px)}
-.nav .btn{padding:10px 18px;font-size:.85rem}
+.btn-sun{background:var(--sun);color:#231400;box-shadow:0 10px 30px -10px rgba(245,163,0,.8)}
+.btn-sun::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.55) 50%,transparent 70%);transform:translateX(-120%);transition:transform .8s var(--ease)}
+.btn-sun:hover{transform:translateY(-2px);box-shadow:0 16px 36px -10px rgba(245,163,0,.9)}
+.btn-sun:hover::after{transform:translateX(120%)}
+.btn-line{border-color:rgba(11,31,58,.18);background:#fff;color:var(--ink)}
+.btn-line:hover{border-color:var(--ink);transform:translateY(-2px)}
+.nav .btn{padding:11px 20px;font-size:.88rem}
 
-/* hero */
-.hero{min-height:calc(100svh - 96px);display:flex;align-items:center;padding:60px 0 80px;overflow:hidden;isolation:isolate}
-.hero-bg{position:absolute;inset:0;z-index:-2;background:
-  radial-gradient(60% 55% at 78% 30%,rgba(255,170,40,.20),transparent 60%),
-  radial-gradient(45% 40% at 70% 70%,rgba(34,227,255,.10),transparent 70%),
-  radial-gradient(80% 80% at 10% 100%,#0b1636,transparent 70%),var(--bg)}
-.hero-poster{position:absolute;inset:0;z-index:-2;background-size:cover;background-position:70% 40%;opacity:0;transition:opacity 1s}
-.hero.static .hero-poster{opacity:.9}
-#scene{position:absolute;inset:0;z-index:-1;width:100%;height:100%;opacity:0;transition:opacity 1.4s ease}
-#scene.ready{opacity:1}
-.hero::after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(90deg,rgba(5,9,20,.92) 0%,rgba(5,9,20,.55) 42%,transparent 70%),linear-gradient(0deg,var(--bg) 0%,transparent 22%)}
-.hero-grid{position:absolute;inset:auto 0 0 0;height:40%;z-index:-1;pointer-events:none;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:48px 48px;mask-image:linear-gradient(0deg,#000 10%,transparent);-webkit-mask-image:linear-gradient(0deg,#000 10%,transparent);transform:perspective(500px) rotateX(55deg);transform-origin:bottom}
-.hero-copy{max-width:600px}
-.chip{display:inline-flex;align-items:center;gap:8px;font-size:.8rem;color:#cfe9ff;border:1px solid rgba(34,227,255,.3);background:rgba(34,227,255,.06);padding:7px 14px;border-radius:999px;margin-bottom:26px}
-.chip i{width:7px;height:7px;border-radius:50%;background:var(--cyan);box-shadow:0 0 10px var(--cyan);animation:pulse 2s infinite}
-@keyframes pulse{50%{opacity:.35}}
-.hero h1{font-size:clamp(2.6rem,7vw,5rem);font-weight:700;margin-bottom:22px}
-.hero p.lead{font-size:clamp(1.02rem,1.6vw,1.2rem);color:#b9c6de;max-width:520px;margin-bottom:34px}
-.cta-row{display:flex;flex-wrap:wrap;gap:14px}
-.cities{margin-top:42px;display:flex;flex-wrap:wrap;gap:8px 22px;font-size:.84rem;color:var(--muted)}
-.cities span{display:inline-flex;align-items:center;gap:8px}
-.cities span::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--sun);box-shadow:0 0 8px var(--sun)}
+/* HERO */
+.hero{padding:40px 0 70px;overflow:hidden;isolation:isolate}
+.sunbg{position:absolute;z-index:-1;right:-22vw;top:-36vw;width:95vw;height:95vw;max-width:1300px;max-height:1300px;pointer-events:none}
+.sunbg::before{content:"";position:absolute;inset:0;border-radius:50%;background:radial-gradient(circle,rgba(255,206,92,.6) 0%,rgba(255,226,150,.38) 22%,rgba(255,240,205,.18) 42%,transparent 66%)}
+.sunbg::after{content:"";position:absolute;inset:0;border-radius:50%;background:repeating-conic-gradient(from 0deg,rgba(245,163,0,.12) 0deg 3deg,transparent 3deg 15deg);-webkit-mask:radial-gradient(circle,#000 0%,transparent 62%);mask:radial-gradient(circle,#000 0%,transparent 62%);animation:spin 140s linear infinite}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.08fr);gap:30px;align-items:center;min-height:calc(100svh - 150px)}
+.chip{display:inline-flex;align-items:center;gap:9px;font-size:.84rem;font-weight:500;color:var(--ink2);background:#fff;border:1px solid var(--line);padding:8px 16px 8px 10px;border-radius:999px;box-shadow:var(--sh);margin-bottom:28px}
+.chip i{width:22px;height:22px;border-radius:50%;background:var(--sunsoft);display:grid;place-items:center}
+.chip i::after{content:"";width:8px;height:8px;border-radius:50%;background:var(--sun);animation:pulse 2s infinite}
+@keyframes pulse{50%{transform:scale(.6);opacity:.6}}
+.hero h1{font-size:clamp(2.6rem,5vw,4.5rem);font-weight:600;margin-bottom:24px;letter-spacing:-.035em}
+.hero h1 .s{color:var(--sun)}
+.hero p.lead{font-size:clamp(1.05rem,1.5vw,1.2rem);color:var(--ink2);max-width:520px;margin-bottom:36px}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px}
+.trust{margin-top:44px;display:flex;flex-wrap:wrap;gap:10px}
+.trust span{font-size:.82rem;font-weight:500;color:var(--ink2);background:rgba(255,255,255,.7);border:1px solid var(--line);padding:7px 14px;border-radius:999px}
+.stage{position:relative;aspect-ratio:1/1;width:100%;max-width:680px;margin-left:auto;cursor:pointer;touch-action:pan-y;-webkit-tap-highlight-color:transparent}
+.stage canvas{position:absolute;inset:0;width:100%;height:100%;opacity:0;transition:opacity 1.2s}
+.stage canvas.ready{opacity:1}
+.stage .poster{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;transition:opacity .8s}
+.stage.live .poster{opacity:0}
+.tags{position:absolute;inset:0;pointer-events:none}
+.tag{position:absolute;left:0;top:0;display:flex;align-items:center;gap:0;font-size:.76rem;font-weight:600;font-family:var(--fd);color:var(--ink);white-space:nowrap;opacity:0;will-change:transform,opacity}
+.tag b{width:9px;height:9px;border-radius:50%;background:var(--sun);box-shadow:0 0 0 4px rgba(245,163,0,.22);flex:none}
+.tag i{width:28px;height:1px;background:var(--ink);opacity:.35}
+.tag span{background:#fff;border:1px solid var(--line);box-shadow:var(--sh);padding:5px 11px;border-radius:999px}
+.hint{position:absolute;left:50%;bottom:1%;transform:translateX(-50%);display:inline-flex;align-items:center;gap:8px;font-size:.8rem;font-weight:500;color:var(--muted);background:rgba(255,255,255,.88);border:1px solid var(--line);padding:7px 14px;border-radius:999px;white-space:nowrap;transition:opacity .4s}
+.hint svg{width:16px;height:16px;stroke:var(--sund);fill:none;stroke-width:2}
+.stage.open .hint{opacity:0}
 
-/* numbers */
-.numbers{padding:40px 0 90px}
-.num-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.num{position:relative;padding:30px 28px;border-radius:var(--r);background:linear-gradient(160deg,rgba(255,255,255,.045),rgba(255,255,255,.01));border:1px solid var(--line);overflow:hidden}
-.num::before{content:"";position:absolute;inset:-1px;border-radius:inherit;padding:1px;background:linear-gradient(140deg,rgba(255,197,61,.5),transparent 40%,transparent 60%,rgba(34,227,255,.45));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none}
-.num strong{display:block;font-family:var(--fd);font-weight:600;font-size:clamp(2.4rem,5vw,3.5rem);line-height:1;letter-spacing:-.03em}
-.num strong em{font-style:normal;font-size:.45em;color:var(--muted);margin-left:6px;letter-spacing:0}
-.num:nth-child(1) strong{color:var(--sun);text-shadow:0 0 28px rgba(255,197,61,.4)}
-.num:nth-child(2) strong{color:var(--cyan);text-shadow:0 0 28px rgba(34,227,255,.35)}
-.num:nth-child(3) strong{color:#fff;text-shadow:0 0 24px rgba(255,255,255,.25)}
+/* NUMBERS */
+.numbers{padding:20px 0 100px}
+.num-grid{display:grid;grid-template-columns:repeat(3,1fr);background:#fff;border:1px solid var(--line);border-radius:28px;box-shadow:var(--sh);overflow:hidden}
+.num{padding:38px 36px;position:relative}
+.num+.num{border-left:1px solid var(--line)}
+.num strong{display:flex;align-items:baseline;gap:8px;font-family:var(--fd);font-weight:600;font-size:clamp(2.6rem,5vw,3.8rem);line-height:1;letter-spacing:-.04em}
+.num strong em{font-style:normal;font-size:.4em;color:var(--muted);letter-spacing:0;font-weight:500}
+.num strong small{font-size:.38em;color:var(--muted);font-weight:500;letter-spacing:0}
 .num p{color:var(--muted);margin-top:12px;font-size:.95rem}
-.note{font-size:.78rem;color:#6e7d99;margin-top:16px}
+.num .bar{margin-top:22px;height:4px;border-radius:4px;background:var(--bg2);overflow:hidden}
+.num .bar i{display:block;height:100%;width:0;border-radius:inherit;background:linear-gradient(90deg,var(--sun),var(--sun2));transition:width 2.2s var(--ease)}
+.num:nth-child(2) .bar i{background:linear-gradient(90deg,var(--volt),#36c3ea)}
+.num.in .bar i{width:var(--w)}
+.note{font-size:.78rem;color:var(--muted);margin-top:14px;text-align:center}
 
-/* simulator */
-.sim{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:28px;align-items:stretch}.sim>*,.contact>*{min-width:0}
-.card{background:linear-gradient(165deg,#0d1730,#081022);border:1px solid var(--line);border-radius:24px;padding:34px;position:relative}
-.sim-in label{display:block;font-family:var(--fd);font-weight:500;margin-bottom:14px;font-size:1.05rem}
-.money{display:flex;align-items:center;gap:10px;border:1px solid rgba(255,197,61,.35);border-radius:16px;padding:6px 18px;background:rgba(255,197,61,.05);transition:.25s}
-.money:focus-within{border-color:var(--sun);box-shadow:var(--glow-sun)}
-.money span{font-family:var(--fd);color:var(--sun);font-size:1.5rem;font-weight:600}
-.money input{flex:1;min-width:0;width:100%;background:none;border:0;outline:0;font-family:var(--fd);font-size:2.3rem;font-weight:600;padding:8px 0;letter-spacing:-.02em}
-input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:6px;border-radius:9px;margin:28px 0 8px;background:linear-gradient(90deg,var(--sun) 0 var(--p,20%),rgba(255,255,255,.1) var(--p,20%));outline:0}
-input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:26px;height:26px;border-radius:50%;background:#fff;border:6px solid var(--sun);box-shadow:var(--glow-sun);cursor:pointer}
-input[type=range]::-moz-range-thumb{width:16px;height:16px;border-radius:50%;background:#fff;border:6px solid var(--sun);box-shadow:var(--glow-sun);cursor:pointer}
-.range-l{display:flex;justify-content:space-between;font-size:.78rem;color:#6e7d99}
-.sim-specs{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:30px}
-.sim-specs div{border:1px solid var(--line);border-radius:14px;padding:14px;background:rgba(255,255,255,.02)}
-.sim-specs b{display:block;font-family:var(--fd);font-size:1.25rem;font-weight:600;color:var(--cyan)}
-.sim-specs small{color:var(--muted);font-size:.76rem}
-.sim-out{display:flex;flex-direction:column;gap:14px;background:radial-gradient(120% 80% at 100% 0%,rgba(255,197,61,.14),transparent 60%),linear-gradient(165deg,#0d1730,#081022)}
-.res{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:18px 0;border-bottom:1px dashed rgba(255,255,255,.08)}
-.res span{color:var(--muted);font-size:.95rem}
-.res b{font-family:var(--fd);font-size:clamp(1.6rem,3.4vw,2.2rem);font-weight:600;letter-spacing:-.02em;white-space:nowrap}
-.res.big b{color:var(--sun);text-shadow:0 0 26px rgba(255,197,61,.4);font-size:clamp(2rem,4.6vw,2.9rem)}
-.res.pay b{color:var(--cyan);text-shadow:0 0 22px rgba(34,227,255,.35)}
-.disc{font-size:.8rem;color:#7d8cab;line-height:1.55;margin:6px 0 10px}
+/* SIMULATOR */
+.sim-sec{background:linear-gradient(180deg,var(--bg),var(--bg2))}
+.sim{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;align-items:stretch}
+.card{background:var(--card);border:1px solid var(--line);border-radius:28px;padding:38px;box-shadow:var(--sh);position:relative;min-width:0}
+.sim-in label{display:block;font-family:var(--fd);font-weight:600;margin-bottom:16px;font-size:1.05rem}
+.money{display:flex;align-items:center;gap:10px;border:2px solid var(--line);border-radius:18px;padding:4px 20px;background:var(--bg);transition:.25s}
+.money:focus-within{border-color:var(--sun);background:#fff;box-shadow:0 0 0 6px var(--sunsoft)}
+.money span{font-family:var(--fd);color:var(--sund);font-size:1.5rem;font-weight:600}
+.money input{flex:1;min-width:0;width:100%;background:none;border:0;outline:0;font-family:var(--fd);font-size:2.6rem;font-weight:600;padding:8px 0;letter-spacing:-.03em}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:8px;border-radius:9px;margin:30px 0 10px;background:linear-gradient(90deg,var(--sun) 0 var(--p,20%),var(--bg2) var(--p,20%));outline:0}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:28px;height:28px;border-radius:50%;background:#fff;border:7px solid var(--sun);box-shadow:0 4px 14px rgba(245,163,0,.5);cursor:pointer}
+input[type=range]::-moz-range-thumb{width:16px;height:16px;border-radius:50%;background:#fff;border:7px solid var(--sun);cursor:pointer}
+.range-l{display:flex;justify-content:space-between;font-size:.8rem;color:var(--muted)}
+.specs{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:30px}
+.specs div{border-radius:16px;padding:16px;background:var(--bg)}
+.specs b{display:block;font-family:var(--fd);font-size:1.3rem;font-weight:600}
+.specs small{color:var(--muted);font-size:.78rem}
+.sim-out{display:flex;flex-direction:column}
+.big{font-family:var(--fd);font-size:clamp(2.8rem,6vw,4.2rem);font-weight:600;letter-spacing:-.04em;line-height:1}
+.big-l{color:var(--muted);font-size:.95rem;margin-bottom:10px}
+.cmp{margin:28px 0 8px;display:flex;flex-direction:column;gap:12px}
+.cmp-row{display:grid;grid-template-columns:110px 1fr auto;gap:12px;align-items:center;font-size:.88rem}
+.cmp-row span{color:var(--muted)}
+.cmp-row b{font-family:var(--fd);font-weight:600;min-width:80px;text-align:right}
+.track{height:14px;border-radius:10px;background:var(--bg2);overflow:hidden}
+.track i{display:block;height:100%;border-radius:inherit;transition:width .9s var(--ease)}
+.track.a i{background:#c5ccd8}
+.track.b i{background:linear-gradient(90deg,var(--sun),var(--sun2))}
+.kpis{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:20px 0}
+.kpis div{background:var(--bg);border-radius:16px;padding:16px}
+.kpis small{display:block;color:var(--muted);font-size:.8rem}
+.kpis b{font-family:var(--fd);font-size:1.45rem;font-weight:600;letter-spacing:-.02em}
+.kpis .pay b{color:var(--volt)}
+.disc{font-size:.8rem;color:var(--muted);line-height:1.55;margin-bottom:22px}
 .sim-out .btn{margin-top:auto}
 
-/* services */
-.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;perspective:1100px}
-.svc{position:relative;padding:32px 28px 30px;border-radius:22px;background:linear-gradient(160deg,#101b36,#0a1226);border:1px solid var(--line);transform-style:preserve-3d;transition:transform .5s cubic-bezier(.2,.8,.2,1),box-shadow .4s,border-color .4s;overflow:hidden;will-change:transform}
-.svc::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:radial-gradient(420px circle at var(--mx,50%) var(--my,0%),rgba(255,214,110,.13),transparent 45%);opacity:0;transition:opacity .4s}
-.svc:hover{border-color:rgba(255,197,61,.35);box-shadow:0 30px 60px -20px rgba(0,0,0,.6),0 0 40px -10px rgba(255,197,61,.25)}
+/* SERVICES */
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;perspective:1200px}
+.svc{position:relative;background:#fff;border:1px solid var(--line);border-radius:26px;padding:34px 30px;box-shadow:var(--sh);transform-style:preserve-3d;transition:transform .6s var(--ease),box-shadow .5s;overflow:hidden;will-change:transform}
+.svc::before{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:linear-gradient(90deg,transparent,var(--sun),var(--volt),transparent);background-size:200% 100%;opacity:0;transition:opacity .4s}
+.svc:hover::before{opacity:1;animation:flow 1.6s linear infinite}
+@keyframes flow{from{background-position:100% 0}to{background-position:-100% 0}}
+.svc::after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(380px circle at var(--mx,50%) var(--my,0%),rgba(255,214,110,.22),transparent 50%);opacity:0;transition:opacity .4s}
+.svc:hover{box-shadow:var(--shh)}
 .svc:hover::after{opacity:1}
-.svc .ic{width:56px;height:56px;border-radius:16px;display:grid;place-items:center;margin-bottom:24px;background:rgba(34,227,255,.08);border:1px solid rgba(34,227,255,.25);box-shadow:inset 0 0 18px rgba(34,227,255,.12);transform:translateZ(40px)}
-.svc .ic svg{width:28px;height:28px;stroke:var(--cyan);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 0 6px rgba(34,227,255,.6))}
-.svc h3{font-size:1.35rem;margin-bottom:10px;transform:translateZ(30px)}
-.svc p{color:var(--muted);font-size:.95rem;transform:translateZ(20px)}
-.svc ul{list-style:none;margin-top:16px;display:flex;flex-wrap:wrap;gap:6px;transform:translateZ(20px)}
-.svc li{font-size:.74rem;border:1px solid var(--line);border-radius:999px;padding:4px 10px;color:#b8c6e0}
+.svc .ic{width:58px;height:58px;border-radius:18px;display:grid;place-items:center;margin-bottom:26px;background:var(--sunsoft);transform:translateZ(40px);transition:background .4s}
+.svc:hover .ic{background:var(--sun)}
+.svc .ic svg{width:28px;height:28px;stroke:var(--ink);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.svc h3{font-size:1.35rem;margin-bottom:10px;transform:translateZ(28px)}
+.svc p{color:var(--muted);font-size:.96rem;transform:translateZ(18px)}
+.svc ul{list-style:none;margin-top:18px;display:flex;flex-wrap:wrap;gap:6px;transform:translateZ(18px)}
+.svc li{font-size:.76rem;font-weight:500;background:var(--bg);border-radius:999px;padding:5px 11px;color:var(--ink2)}
 
-/* timeline */
-.tl{position:relative;max-width:900px;margin:0 auto}
-.tl-line{position:absolute;left:27px;top:10px;bottom:10px;width:2px;background:rgba(255,255,255,.07);border-radius:2px}
-.tl-line i{position:absolute;left:0;top:0;width:100%;height:calc(var(--prog,0)*100%);background:linear-gradient(180deg,var(--sun),var(--cyan));box-shadow:0 0 14px rgba(255,197,61,.6);border-radius:2px}
-.step{position:relative;display:grid;grid-template-columns:56px 1fr;gap:26px;padding:16px 0 34px}
-.dot{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;font-family:var(--fd);font-weight:600;background:var(--bg2);border:1px solid rgba(255,255,255,.12);color:var(--muted);position:relative;z-index:1;transition:.6s}
-.step.on .dot{border-color:var(--sun);color:#1a1000;background:var(--sun);box-shadow:var(--glow-sun)}
-.step h3{font-size:1.3rem;margin:12px 0 6px}
-.step p{color:var(--muted);max-width:560px}
-.step .when{font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);font-family:var(--fd)}
+/* TIMELINE */
+.how{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.tl{position:relative;display:grid;grid-template-columns:repeat(5,1fr);gap:20px}
+.cable{position:absolute;left:28px;right:calc(20% - 28px + 4px);top:28px;height:4px;border-radius:4px;background:var(--bg2)}
+.cable i{position:absolute;inset:0;transform-origin:left;transform:scaleX(var(--prog,0));border-radius:inherit;background:linear-gradient(90deg,var(--sun),var(--sun2) 60%,var(--volt))}
+.cable .spark{position:absolute;top:-4px;height:12px;width:70px;border-radius:12px;background:radial-gradient(closest-side,rgba(255,255,255,1),rgba(255,255,255,0));animation:spark 1.8s linear infinite;opacity:var(--sp,0);mix-blend-mode:screen}
+@keyframes spark{from{left:0}to{left:calc(var(--prog,0)*100% - 70px)}}
+.step .dot{position:relative;z-index:1;width:60px;height:60px;border-radius:50%;display:grid;place-items:center;background:#fff;border:2px solid var(--bg2);transition:all .6s var(--ease)}
+.step .dot svg{width:26px;height:26px;stroke:var(--muted);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;transition:stroke .6s}
+.step.on .dot{background:var(--sun);border-color:var(--sun);box-shadow:0 0 0 8px var(--sunsoft)}
+.step.on .dot svg{stroke:#231400}
+.step .n{display:block;margin-top:24px;font-family:var(--fd);font-size:.78rem;font-weight:600;letter-spacing:.16em;color:var(--sund)}
+.step h3{font-size:1.2rem;margin:8px 0}
+.step p{color:var(--muted);font-size:.93rem}
 
-/* why */
-.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.why{padding:26px;border-radius:20px;border:1px solid var(--line);background:rgba(255,255,255,.02)}
-.why b{font-family:var(--fd);font-size:2.4rem;line-height:1;display:block;margin-bottom:14px;background:linear-gradient(135deg,var(--sun),var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent}
-.why h3{font-size:1.1rem;margin-bottom:8px}
+/* WHY + ENERGY FLOW */
+.flow{background:#fff;border:1px solid var(--line);border-radius:30px;box-shadow:var(--sh);padding:34px 30px 26px;margin-bottom:24px;overflow:hidden}
+.flow svg{width:100%;height:auto;display:block}
+.flow .wire{fill:none;stroke:#ECE6D8;stroke-width:5;stroke-linecap:round}
+.flow .pulse{fill:none;stroke-width:5;stroke-linecap:round;stroke-dasharray:10 26;animation:dash 1.2s linear infinite}
+.flow .p-sun{stroke:var(--sun)}.flow .p-volt{stroke:var(--volt)}
+.flow .p-back{animation-direction:reverse;animation-duration:2.4s;stroke-dasharray:6 22}
+@keyframes dash{to{stroke-dashoffset:-36}}
+.flow circle.bg{fill:var(--bg)}
+.flow .ring{fill:none;stroke:var(--sun);stroke-width:2;transform-box:fill-box;transform-origin:center;animation:ring 2.6s ease-out infinite}
+@keyframes ring{from{transform:scale(.9);opacity:.7}to{transform:scale(1.45);opacity:0}}
+.flow text{font-family:var(--fd);font-weight:600;font-size:16px;fill:var(--ink)}
+.flow text.s{font-family:var(--fb);font-weight:400;font-size:13px;fill:var(--muted)}
+.flow .rays line{stroke:var(--sun);stroke-width:3;stroke-linecap:round}
+.flow .rays{transform-box:fill-box;transform-origin:center;animation:spin 18s linear infinite}
+.flow svg.flow-m{display:none}
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.why{padding:26px;border-radius:22px;background:#fff;border:1px solid var(--line)}
+.why .k{font-family:var(--fd);font-size:2rem;font-weight:600;letter-spacing:-.03em;color:var(--sund);line-height:1;display:block;margin-bottom:14px}
+.why h3{font-size:1.08rem;margin-bottom:6px}
 .why p{color:var(--muted);font-size:.92rem}
 
-/* faq */
-.faq{max-width:860px}
-.faq details{border-bottom:1px solid var(--line)}
-.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:24px 0;font-family:var(--fd);font-size:1.15rem;font-weight:500}
+/* FAQ */
+.faq-wrap{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:60px;align-items:start}
+.faq details{background:#fff;border:1px solid var(--line);border-radius:20px;margin-bottom:12px;transition:box-shadow .3s}
+.faq details[open]{box-shadow:var(--sh)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:22px 24px;font-family:var(--fd);font-size:1.1rem;font-weight:600}
 .faq summary::-webkit-details-marker{display:none}
-.faq summary::after{content:"";flex:none;width:30px;height:30px;border-radius:50%;border:1px solid rgba(34,227,255,.35);background:linear-gradient(var(--cyan),var(--cyan)) center/12px 1.5px no-repeat,linear-gradient(var(--cyan),var(--cyan)) center/1.5px 12px no-repeat;transition:transform .35s}
-.faq details[open] summary::after{transform:rotate(135deg);box-shadow:var(--glow-cyan)}
-.faq .a{color:var(--muted);padding:0 50px 24px 0;max-width:720px}
+.faq summary::after{content:"";flex:none;width:32px;height:32px;border-radius:50%;background:var(--bg) center/14px no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'%3E%3Cpath d='M7 1v12M1 7h12' stroke='%230B1F3A' stroke-width='1.8' stroke-linecap='round'/%3E%3C/svg%3E");transition:transform .35s var(--ease),background-color .3s}
+.faq details[open] summary::after{transform:rotate(135deg);background-color:var(--sunsoft)}
+.faq .a{color:var(--muted);padding:0 24px 22px}
 
-/* gallery */
-.gal{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:190px;gap:14px}
-.gal button{position:relative;border:0;padding:0;border-radius:18px;overflow:hidden;cursor:zoom-in;background:#0a1226}
-.gal button:nth-child(1){grid-column:span 4;grid-row:span 2}
-.gal button:nth-child(2){grid-column:span 2;grid-row:span 2}
-.gal button:nth-child(3),.gal button:nth-child(4),.gal button:nth-child(5){grid-column:span 2}
-.gal button:nth-child(6){grid-column:span 6;grid-row:span 1}
-.gal img{width:100%;height:100%;object-fit:cover;transition:transform 1s cubic-bezier(.2,.8,.2,1),filter .5s;filter:saturate(1.05)}
+/* GALLERY */
+.gal{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:120px;gap:14px}
+.gal button{position:relative;border:0;padding:0;border-radius:22px;overflow:hidden;cursor:zoom-in;background:var(--bg2)}
+.gal button:nth-child(1){grid-column:span 7;grid-row:span 4}
+.gal button:nth-child(2),.gal button:nth-child(3){grid-column:span 5;grid-row:span 2}
+.gal button:nth-child(4),.gal button:nth-child(5),.gal button:nth-child(6){grid-column:span 4;grid-row:span 3}
+.gal img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
 .gal button:hover img{transform:scale(1.06)}
-.gal span{position:absolute;left:14px;bottom:12px;font-size:.78rem;font-family:var(--fd);letter-spacing:.06em;background:rgba(5,9,20,.6);backdrop-filter:blur(6px);padding:5px 12px;border-radius:999px;border:1px solid var(--line)}
-dialog.lb{border:0;padding:0;background:rgba(3,6,14,.96);width:100vw;height:100vh;max-width:none;max-height:none;color:var(--text)}
-dialog.lb::backdrop{background:rgba(0,0,0,.8)}
-.lb-in{position:relative;width:100%;height:100%;display:grid;place-items:center;padding:60px 16px}
-.lb img{max-height:82vh;max-width:min(1200px,100%);border-radius:14px;box-shadow:0 0 80px rgba(34,227,255,.12)}
-.lb p{position:absolute;bottom:18px;left:0;right:0;text-align:center;color:var(--muted);font-size:.9rem}
-.lb button{position:absolute;width:48px;height:48px;border-radius:50%;border:1px solid var(--line);background:rgba(255,255,255,.05);cursor:pointer;font-size:1.4rem;display:grid;place-items:center}
-.lb .x{top:14px;right:14px}.lb .pv{left:14px;top:50%}.lb .nx{right:14px;top:50%}
+.gal span{position:absolute;left:14px;bottom:14px;font-size:.8rem;font-weight:600;font-family:var(--fd);background:rgba(255,255,255,.92);color:var(--ink);padding:6px 13px;border-radius:999px;max-width:calc(100% - 28px);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.credit{font-size:.78rem;color:var(--muted);margin-top:14px}
+dialog.lb{border:0;padding:0;background:rgba(250,247,240,.97);width:100vw;height:100vh;max-width:none;max-height:none;color:var(--ink)}
+dialog.lb::backdrop{background:rgba(11,31,58,.4)}
+.lb-in{position:relative;width:100%;height:100%;display:grid;place-items:center;padding:64px 16px}
+.lb img{max-height:80vh;max-width:min(1300px,100%);border-radius:18px;box-shadow:var(--shh)}
+.lb p{position:absolute;bottom:20px;left:0;right:0;text-align:center;color:var(--muted);font-size:.9rem}
+.lb button{position:absolute;width:50px;height:50px;border-radius:50%;border:1px solid var(--line);background:#fff;cursor:pointer;font-size:1.5rem;display:grid;place-items:center;box-shadow:var(--sh)}
+.lb .x{top:16px;right:16px}.lb .pv{left:16px;top:50%}.lb .nx{right:16px;top:50%}
 
-/* contact */
-.contact{display:grid;grid-template-columns:1fr 1.3fr;gap:24px}
-.c-list{display:flex;flex-direction:column;gap:20px;margin:26px 0 30px}
+/* CONTACT */
+.contact{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:24px}
+.c-list{display:flex;flex-direction:column;gap:20px;margin:28px 0 32px}
 .c-list div{display:flex;gap:14px}
-.c-list svg{width:22px;height:22px;flex:none;stroke:var(--sun);fill:none;stroke-width:1.7;margin-top:3px}
-.c-list b{display:block;font-family:var(--fd);font-weight:500}
-.c-list span{color:var(--muted);font-size:.93rem}
-.map{border-radius:24px;overflow:hidden;border:1px solid var(--line);min-height:380px;position:relative;background:#0a1226}
-.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:invert(.92) hue-rotate(185deg) saturate(.8) brightness(.95)}
+.c-list i{width:42px;height:42px;border-radius:14px;background:var(--sunsoft);display:grid;place-items:center;flex:none}
+.c-list svg{width:20px;height:20px;stroke:var(--ink);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.c-list b{display:block;font-family:var(--fd);font-weight:600}
+.c-list span{color:var(--muted);font-size:.94rem}
+.map{border-radius:28px;overflow:hidden;border:1px solid var(--line);min-height:420px;position:relative;background:var(--bg2);box-shadow:var(--sh)}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:saturate(.75) contrast(1.02)}
 
-/* packages */
-.pk-sec{background:linear-gradient(180deg,transparent,#070d1c 30%);border-top:1px solid var(--line)}
-.pk-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:stretch}
-.pk{display:flex;flex-direction:column;padding:32px 28px;border-radius:24px;border:1px solid var(--line);background:rgba(255,255,255,.02);position:relative}
-.pk h3{font-size:1.45rem}
-.pk .price{font-family:var(--fd);font-size:2.3rem;font-weight:600;margin:16px 0 0;letter-spacing:-.02em}
-.pk .mo{color:var(--muted);font-size:.9rem;margin-bottom:22px}
-.pk ul{list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:28px;font-size:.92rem;color:#c3cfe6}
+footer.site{padding:36px 0 40px;color:var(--muted);font-size:.86rem;border-top:1px solid var(--line)}
+footer.site .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center}
+footer.site b{color:var(--ink);font-weight:600}
+
+/* LIBERON: separado do site da empresa */
+.lib{background:#ECEEF2;padding:0 0 120px;border-top:1px solid rgba(0,0,0,.06)}
+.lib-cut{display:flex;align-items:center;gap:16px;justify-content:center;padding:22px 20px;font-size:.76rem;letter-spacing:.08em;text-transform:uppercase;color:#6b7280;font-weight:600;text-align:center}
+.lib-cut::before,.lib-cut::after{content:"";flex:1;max-width:280px;border-top:2px dashed #c5cad3}
+.lib-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:24px;margin:50px 0 44px}
+.lib-mark{display:inline-flex;align-items:center;gap:10px;font-family:var(--fd);font-weight:700;font-size:1.05rem;letter-spacing:.16em;color:#111}
+.lib-mark i{width:26px;height:26px;border-radius:8px;background:#111;color:#fff;display:grid;place-items:center;font-style:normal;font-size:.9rem;letter-spacing:0}
+.lib-head h2{font-size:clamp(2rem,4.4vw,3.1rem);color:#111;margin-top:16px;max-width:660px}
+.lib-head p{color:#4b5563;max-width:420px}
+.pk-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:stretch}
+.pk{display:flex;flex-direction:column;padding:32px 28px;border-radius:20px;background:#fff;border:1px solid #dde1e7;position:relative}
+.pk h3{font-size:1.4rem;color:#111}
+.pk .price{font-family:var(--fd);font-size:2.4rem;font-weight:600;margin-top:14px;letter-spacing:-.03em;color:#111}
+.pk .mo{color:#6b7280;font-size:.9rem;margin-bottom:22px}
+.pk ul{list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:28px;font-size:.93rem;color:#374151}
 .pk li{display:flex;gap:10px}
-.pk li::before{content:"";flex:none;width:16px;height:16px;margin-top:4px;border-radius:50%;background:radial-gradient(circle,var(--cyan) 30%,transparent 34%),rgba(34,227,255,.12)}
-.pk .btn{margin-top:auto}
-.pk.hl{border-color:rgba(255,197,61,.55);background:radial-gradient(100% 60% at 50% 0%,rgba(255,197,61,.12),transparent 70%),linear-gradient(165deg,#0f1a34,#0a1226);box-shadow:0 0 50px -12px rgba(255,197,61,.35)}
-.pk.hl li::before{background:radial-gradient(circle,var(--sun) 30%,transparent 34%),rgba(255,197,61,.14)}
-.badge{position:absolute;top:-13px;left:28px;background:var(--sun);color:#1a1000;font-family:var(--fd);font-weight:600;font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;padding:5px 12px;border-radius:999px;box-shadow:var(--glow-sun)}
-.pk-note{color:#7d8cab;font-size:.85rem;margin-top:26px;text-align:center}
+.pk li::before{content:"";flex:none;width:18px;height:18px;margin-top:3px;background:center/18px no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'%3E%3Ccircle cx='9' cy='9' r='9' fill='%23111'/%3E%3Cpath d='m5 9.2 2.6 2.6L13 6.5' stroke='%23fff' stroke-width='1.8' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")}
+.pk .btn{margin-top:auto;background:#111;color:#fff;border-radius:12px}
+.pk .btn:hover{transform:translateY(-2px);background:#000}
+.pk.cur{border:2px solid #111;box-shadow:0 30px 60px -30px rgba(0,0,0,.35)}
+.badge{position:absolute;top:-13px;left:26px;background:#111;color:#fff;font-weight:600;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;padding:5px 12px;border-radius:999px}
+.pk-note{color:#6b7280;font-size:.85rem;margin-top:24px}
 
-footer{border-top:1px solid var(--line);padding:34px 0 110px;color:var(--muted);font-size:.85rem}
-footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center}
-footer b{color:var(--text);font-weight:500}
-
-/* floating whatsapp */
-.fab{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom));z-index:70;display:flex;align-items:center;gap:10px;background:linear-gradient(135deg,#2ee57a,#18b85a);color:#04210f;font-family:var(--fd);font-weight:600;padding:14px 20px 14px 16px;border-radius:999px;box-shadow:0 10px 30px rgba(0,0,0,.4),0 0 30px rgba(46,229,122,.45);transition:transform .25s}
-.fab:hover{transform:translateY(-3px) scale(1.02)}
+.fab{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom));z-index:70;display:flex;align-items:center;gap:10px;background:#25D366;color:#fff;font-family:var(--fd);font-weight:600;padding:14px 22px 14px 16px;border-radius:999px;box-shadow:0 14px 30px -10px rgba(37,211,102,.7),0 4px 10px rgba(0,0,0,.08);transition:transform .3s var(--ease)}
+.fab:hover{transform:translateY(-3px)}
 .fab svg{width:26px;height:26px}
-.fab::before{content:"";position:absolute;inset:-4px;border-radius:inherit;border:2px solid rgba(46,229,122,.6);animation:ring 2.4s infinite}
-@keyframes ring{0%{opacity:.9;transform:scale(1)}100%{opacity:0;transform:scale(1.25)}}
 
-/* reveal */
-.rv{opacity:0;transform:translateY(34px);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1);transition-delay:var(--d,0s)}
+.rv{opacity:0;transform:translateY(40px);transition:opacity 1s var(--ease),transform 1s var(--ease);transition-delay:var(--d,0s)}
 .rv.in{opacity:1;transform:none}
-.split .w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.08em}
-.split .w>span{display:inline-block;transform:translateY(105%);transition:transform 1s cubic-bezier(.2,.8,.2,1);transition-delay:calc(var(--i)*55ms)}
+.split .w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.1em;margin-bottom:-.1em}
+.split .w>span{display:inline-block;transform:translateY(110%);transition:transform 1.1s var(--ease);transition-delay:calc(var(--i)*60ms)}
 .split.in .w>span{transform:none}
 .no-js .rv{opacity:1;transform:none}
 
-@media (max-width:980px){
-  .links{display:none}
-  .lang{margin-left:auto}
-  .num-grid,.svc-grid,.pk-grid{grid-template-columns:1fr}
+@media (max-width:1020px){
+  .links{display:none}.lang{margin-left:auto}
+  .hero-grid{grid-template-columns:1fr;min-height:0;gap:0}
+  .stage{max-width:520px;margin:0 auto 18px;order:-1}
+  .num-grid{grid-template-columns:1fr}.num+.num{border-left:0;border-top:1px solid var(--line)}
+  .svc-grid,.pk-grid{grid-template-columns:1fr 1fr}
   .why-grid{grid-template-columns:1fr 1fr}
-  .sim,.contact{grid-template-columns:minmax(0,1fr)}
-  .gal{grid-template-columns:1fr 1fr;grid-auto-rows:150px}
-  .gal button:nth-child(n){grid-column:span 1;grid-row:span 1}
-  .gal button:nth-child(1),.gal button:nth-child(6){grid-column:span 2;grid-row:span 2}
-  .gal span{font-size:.68rem;left:8px;bottom:8px;max-width:calc(100% - 16px);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding:4px 10px}
+  .sim,.contact,.faq-wrap{grid-template-columns:minmax(0,1fr)}
+  .faq-wrap{gap:10px}
+  .tl{grid-template-columns:1fr;gap:0}
+  .cable{left:28px;right:auto;top:10px;bottom:60px;width:4px;height:auto}
+  .cable i{transform-origin:top;transform:scaleY(var(--prog,0))}
+  .cable .spark{display:none}
+  .step{display:grid;grid-template-columns:60px 1fr;column-gap:22px;padding-bottom:34px}
+  .step .dot{grid-row:span 2}
+  .step .n{margin-top:4px}
+  .flow svg.flow-d{display:none}.flow svg.flow-m{display:block;max-width:360px;margin:0 auto}
 }
 @media (max-width:640px){
-  section{padding:72px 0}
-  .nav{gap:12px;height:60px}
-  .nav .btn{display:none}
-  .logo small{display:none}
-  .hero{align-items:flex-end;min-height:calc(100svh - 90px);padding:40px 0 56px}
-  .hero::after{background:linear-gradient(0deg,rgba(5,9,20,.97) 0%,rgba(5,9,20,.82) 44%,rgba(5,9,20,.2) 75%,transparent 100%)}
+  section{padding:80px 0}
+  .nav{height:62px;gap:12px}.nav .btn{display:none}.logo small{display:none}
+  .hero{padding:0 0 60px}
+  .stage{aspect-ratio:1/.88;margin-bottom:8px}
+  .hero h1{font-size:2.6rem}
   .hero .cta-row .btn{flex:1 1 100%}
-  .hero h1{font-size:2.55rem}.hero p.lead{font-size:1rem;margin-bottom:26px}.chip{margin-bottom:18px}.cities{margin-top:28px}
-  .why-grid{grid-template-columns:1fr}
-  .card{padding:24px}
-  .money input{font-size:2rem}
-  .sim-specs{grid-template-columns:1fr 1fr 1fr;gap:8px}
-  .sim-specs div{padding:10px}
-  .sim-specs b{font-size:1.05rem}
-  .fab span{display:none}
-  .fab{padding:15px}
-  .faq .a{padding-right:0}
-  .step{grid-template-columns:44px 1fr;gap:18px}
-  .dot{width:44px;height:44px}
-  .tl-line{left:21px}
+  .trust{margin-top:30px}
+  .svc-grid,.pk-grid,.why-grid{grid-template-columns:1fr}
+  .card{padding:26px 22px}
+  .money input{font-size:2.2rem}
+  .specs{gap:8px}.specs div{padding:12px}.specs b{font-size:1.05rem}
+  .cmp-row{grid-template-columns:82px 1fr auto;font-size:.8rem}
+  .gal{grid-template-columns:1fr 1fr;grid-auto-rows:140px}
+  .gal button:nth-child(n){grid-column:span 1;grid-row:span 1}
+  .gal button:nth-child(1),.gal button:nth-child(4){grid-column:span 2;grid-row:span 2}
+  .gal span{font-size:.7rem;left:8px;bottom:8px;padding:4px 10px}
+  .fab span{display:none}.fab{padding:15px}
+  .map{min-height:320px}
+  .tag{font-size:.66rem}.tag i{width:12px}.tag span{padding:4px 8px}
+  .flow{padding:24px 16px 10px}
 }
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
@@ -268,10 +328,10 @@ footer b{color:var(--text);font-weight:500}
 <body class="no-js">
 <div class="demo">Modelo de demonstração - Liberon · <b data-i18n="demoNote">empresa fictícia</b></div>
 
-<header>
+<header id="hdr">
   <div class="wrap nav">
     <a href="#top" class="logo" aria-label="Heliora">
-      <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="6.5" fill="#ffc53d"/><g stroke="#22e3ff" stroke-width="2" stroke-linecap="round"><path d="M16 2.5v4M16 25.5v4M2.5 16h4M25.5 16h4M6.5 6.5l2.8 2.8M22.7 22.7l2.8 2.8M25.5 6.5l-2.8 2.8M9.3 22.7l-2.8 2.8"/></g></svg>
+      <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="6.5" fill="#F5A300"/><g class="rays" stroke="#0B1F3A" stroke-width="2" stroke-linecap="round"><path d="M16 2.5v4M16 25.5v4M2.5 16h4M25.5 16h4M6.5 6.5l2.8 2.8M22.7 22.7l2.8 2.8M25.5 6.5l-2.8 2.8M9.3 22.7l-2.8 2.8"/></g></svg>
       <span>Heliora<small>Energia Solar</small></span>
     </a>
     <nav class="links">
@@ -292,38 +352,48 @@ footer b{color:var(--text);font-weight:500}
 
 <main id="top">
 <section class="hero" id="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-poster"></div>
-  <div class="hero-grid"></div>
-  <canvas id="scene" aria-hidden="true"></canvas>
-  <div class="wrap">
+  <div class="sunbg" aria-hidden="true"></div>
+  <div class="wrap hero-grid">
     <div class="hero-copy">
       <div class="chip"><i></i><span data-i18n="heroChip">Campos · Macaé · Rio das Ostras</span></div>
-      <h1><span data-i18n="heroT1">Sua própria</span><br><span class="grad" data-i18n="heroT2">usina de energia</span><br><span data-i18n="heroT3">no telhado.</span></h1>
+      <h1><span data-i18n="heroT1">Energia do sol,</span><br><span class="s" data-i18n="heroT2">conta lá embaixo.</span></h1>
       <p class="lead" data-i18n="heroLead">Projetos de energia solar fotovoltaica para casas, empresas e propriedades rurais do Norte Fluminense. Do projeto à homologação, com monitoramento em tempo real.</p>
       <div class="cta-row">
         <a class="btn btn-sun" data-wa="waQuote" href="https://wa.me/" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.8 14.1c-.2.7-1.4 1.3-2 1.4-.5 0-1.2.1-3.8-1-3.2-1.4-5.2-4.6-5.4-4.8-.2-.2-1.3-1.7-1.3-3.3s.8-2.3 1.1-2.7c.3-.3.6-.4.8-.4h.6c.2 0 .5 0 .7.6l1 2.4c.1.2.1.4 0 .6l-.4.6-.5.5c-.2.2-.3.4-.1.7.2.3.8 1.4 1.8 2.2 1.3 1.1 2.3 1.5 2.6 1.6.3.2.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l2.3 1.1c.3.1.5.2.6.4.1.1.1.8-.2 1.5Z"/></svg>
           <span data-i18n="ctaQuote">Peça seu orçamento</span></a>
-        <a class="btn btn-ghost" href="#simulador" data-i18n="ctaSim">Simular economia</a>
+        <a class="btn btn-line" href="#simulador" data-i18n="ctaSim">Simular economia</a>
       </div>
-      <div class="cities"><span data-i18n="seg1">Residencial</span><span data-i18n="seg2">Comercial</span><span data-i18n="seg3">Rural</span></div>
+      <div class="trust"><span data-i18n="seg1">Residencial</span><span data-i18n="seg2">Comercial</span><span data-i18n="seg3">Rural</span><span data-i18n="seg4">Homologação inclusa</span></div>
+    </div>
+    <div class="stage" id="stage" aria-label="Painel solar em 3D">
+      <img class="poster" src="img/painel.webp" alt="" width="900" height="900">
+      <canvas id="scene" aria-hidden="true"></canvas>
+      <div class="tags" id="tags">
+        <div class="tag" data-k="glass"><b></b><i></i><span data-i18n="lGlass">Vidro temperado</span></div>
+        <div class="tag" data-k="eva"><b></b><i></i><span data-i18n="lEva">Encapsulante EVA</span></div>
+        <div class="tag" data-k="cells"><b></b><i></i><span data-i18n="lCells">Células fotovoltaicas</span></div>
+        <div class="tag" data-k="back"><b></b><i></i><span data-i18n="lBack">Camada de proteção</span></div>
+        <div class="tag" data-k="frame"><b></b><i></i><span data-i18n="lFrame">Moldura de alumínio</span></div>
+        <div class="tag" data-k="jbox"><b></b><i></i><span data-i18n="lJbox">Caixa de junção</span></div>
+      </div>
+      <div class="hint"><svg viewBox="0 0 24 24"><path d="M12 3v4M12 17v4M3 12h4M17 12h4"/><circle cx="12" cy="12" r="3"/></svg><span id="hintTxt" data-i18n="hint">Passe o mouse para ver por dentro do painel</span></div>
     </div>
   </div>
 </section>
 
 <section class="numbers" id="numeros">
   <div class="wrap">
-    <div class="num-grid">
-      <div class="num rv"><strong><span class="count" data-to="18.4" data-dec="1">0</span><em data-i18n="u1">GWh</em></strong><p data-i18n="n1">de energia limpa gerada pelos sistemas instalados</p></div>
-      <div class="num rv" style="--d:.12s"><strong><span class="count" data-to="9200" data-dec="0">0</span><em data-i18n="u2">t CO₂</em></strong><p data-i18n="n2">de emissões evitadas na atmosfera</p></div>
-      <div class="num rv" style="--d:.24s"><strong><span data-i18n="upTo">até</span> <span class="count" data-to="95" data-dec="0">0</span><em>%</em></strong><p data-i18n="n3">de economia na conta de luz</p></div>
+    <div class="num-grid rv">
+      <div class="num"><strong><span class="count" data-to="18.4" data-dec="1">0</span><em>GWh</em></strong><p data-i18n="n1">de energia limpa gerada pelos sistemas instalados</p><div class="bar"><i style="--w:84%"></i></div></div>
+      <div class="num"><strong><span class="count" data-to="9200" data-dec="0">0</span><em>t CO₂</em></strong><p data-i18n="n2">de emissões evitadas na atmosfera</p><div class="bar"><i style="--w:68%"></i></div></div>
+      <div class="num"><strong><small data-i18n="upTo">até</small><span class="count" data-to="95" data-dec="0">0</span><em>%</em></strong><p data-i18n="n3">de economia na conta de luz</p><div class="bar"><i style="--w:95%"></i></div></div>
     </div>
-    <p class="note rv" data-i18n="numNote">Números ilustrativos deste modelo de demonstração.</p>
+    <p class="note" data-i18n="numNote">Números ilustrativos deste modelo de demonstração.</p>
   </div>
 </section>
 
-<section id="simulador">
+<section class="sim-sec" id="simulador">
   <div class="wrap">
     <div class="sec-head">
       <span class="eyebrow rv" data-i18n="simEy">Simulador</span>
@@ -336,17 +406,24 @@ footer b{color:var(--text);font-weight:500}
         <div class="money"><span>R$</span><input id="bill" type="text" inputmode="numeric" autocomplete="off" value="500" aria-describedby="simDisc"></div>
         <input id="billRange" type="range" min="100" max="5000" step="10" value="500" aria-label="R$">
         <div class="range-l"><span>R$ 100</span><span>R$ 5.000+</span></div>
-        <div class="sim-specs">
-          <div><b id="oKwp">–</b><small data-i18n="sKwp">potência do sistema</small></div>
-          <div><b id="oPan">–</b><small data-i18n="sPan">placas solares</small></div>
-          <div><b id="oArea">–</b><small data-i18n="sArea">área de telhado</small></div>
+        <div class="specs">
+          <div><b id="oKwp">–</b><small data-i18n="sKwp">potência</small></div>
+          <div><b id="oPan">–</b><small data-i18n="sPan">placas</small></div>
+          <div><b id="oArea">–</b><small data-i18n="sArea">de telhado</small></div>
         </div>
       </div>
-      <div class="card sim-out rv" style="--d:.12s" aria-live="polite">
-        <div class="res big"><span data-i18n="rMonth">Economia por mês</span><b id="oMonth">–</b></div>
-        <div class="res"><span data-i18n="rYear">Economia por ano</span><b id="oYear">–</b></div>
-        <div class="res pay"><span data-i18n="rPay">O sistema se paga em</span><b id="oPay">–</b></div>
-        <p class="disc" id="simDisc" data-i18n="simDisc">Estimativa simplificada, só para ter uma ideia. Considera tarifa média de R$ 1,05/kWh, boa insolação da região e a taxa mínima que continua na conta. O valor real depende do seu consumo, telhado e equipamentos: peça um orçamento sem compromisso.</p>
+      <div class="card sim-out rv" style="--d:.1s" aria-live="polite">
+        <p class="big-l" data-i18n="rMonth">Economia estimada por mês</p>
+        <div class="big" id="oMonth">–</div>
+        <div class="cmp">
+          <div class="cmp-row"><span data-i18n="cToday">Conta hoje</span><div class="track a"><i style="width:100%"></i></div><b id="oToday">–</b></div>
+          <div class="cmp-row"><span data-i18n="cSolar">Com solar</span><div class="track b"><i id="barB" style="width:100%"></i></div><b id="oAfter">–</b></div>
+        </div>
+        <div class="kpis">
+          <div><small data-i18n="rYear">Por ano</small><b id="oYear">–</b></div>
+          <div class="pay"><small data-i18n="rPay">Se paga em</small><b id="oPay">–</b></div>
+        </div>
+        <p class="disc" id="simDisc" data-i18n="simDisc">Estimativa simplificada, só para ter uma ideia.</p>
         <a class="btn btn-sun" id="simCta" href="https://wa.me/" target="_blank" rel="noopener"><span data-i18n="simCta">Quero meu orçamento real</span></a>
       </div>
     </div>
@@ -361,41 +438,23 @@ footer b{color:var(--text);font-weight:500}
       <p class="rv" data-i18n="svcP">Projeto sob medida, equipamentos certificados e equipe própria de instalação.</p>
     </div>
     <div class="svc-grid">
-      <article class="svc rv">
-        <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg></div>
-        <h3 data-i18n="s1t">Residencial</h3><p data-i18n="s1p">Sistemas para casas e condomínios que cortam a conta de luz e valorizam o imóvel.</p>
-        <ul><li data-i18n="s1a">Telhado cerâmico e metálico</li><li data-i18n="s1b">Projeto em 3D</li></ul>
-      </article>
-      <article class="svc rv" style="--d:.1s">
-        <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 21V9l6 3V9l6 3V5l6 3v13Z"/><path d="M7 17h2M12 17h2M17 17h0"/></svg></div>
-        <h3 data-i18n="s2t">Comercial e indústria</h3><p data-i18n="s2p">Usinas para lojas, pousadas, galpões e empresas que querem previsibilidade de custo.</p>
-        <ul><li data-i18n="s2a">Laje e galpão</li><li data-i18n="s2b">Média tensão</li></ul>
-      </article>
-      <article class="svc rv" style="--d:.2s">
-        <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 21v-8"/><path d="M12 13c0-4 3-7 8-7 0 4-3 7-8 7Z"/><path d="M12 15c0-3-2.5-5.5-7-5.5 0 3 2.5 5.5 7 5.5Z"/><path d="M4 21h16"/></svg></div>
-        <h3 data-i18n="s3t">Rural e agro</h3><p data-i18n="s3p">Sistemas em solo para sítios e fazendas: irrigação, bombeamento, resfriamento e sede.</p>
-        <ul><li data-i18n="s3a">Estrutura em solo</li><li data-i18n="s3b">Bombeamento solar</li></ul>
-      </article>
-      <article class="svc rv">
-        <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 12h4l3-7 4 14 3-7h4"/></svg></div>
-        <h3 data-i18n="s4t">Monitoramento</h3><p data-i18n="s4p">Acompanhe a geração pelo celular. Nossa equipe recebe alertas se algo sair do normal.</p>
-        <ul><li data-i18n="s4a">App em tempo real</li><li data-i18n="s4b">Relatório mensal</li></ul>
-      </article>
-      <article class="svc rv" style="--d:.1s">
-        <div class="ic"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4Z"/></svg></div>
-        <h3 data-i18n="s5t">Manutenção e limpeza</h3><p data-i18n="s5p">Limpeza das placas, revisão elétrica e inspeção para manter a geração no máximo.</p>
-        <ul><li data-i18n="s5a">Planos anuais</li><li data-i18n="s5b">Sistemas de outras empresas</li></ul>
-      </article>
-      <article class="svc rv" style="--d:.2s">
-        <div class="ic"><svg viewBox="0 0 24 24"><rect x="6" y="4" width="12" height="17" rx="2"/><path d="M10 2h4"/><path d="m13 8-3 5h4l-3 5"/></svg></div>
-        <h3 data-i18n="s6t">Baterias e híbridos</h3><p data-i18n="s6p">Armazenamento para manter o essencial ligado quando falta energia da rede.</p>
-        <ul><li data-i18n="s6a">Backup</li><li data-i18n="s6b">Sistemas off-grid</li></ul>
-      </article>
+      <article class="svc rv"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg></div>
+        <h3 data-i18n="s1t">Residencial</h3><p data-i18n="s1p"></p><ul><li data-i18n="s1a"></li><li data-i18n="s1b"></li></ul></article>
+      <article class="svc rv" style="--d:.08s"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 21V9l6 3V9l6 3V5l6 3v13Z"/></svg></div>
+        <h3 data-i18n="s2t">Comercial e indústria</h3><p data-i18n="s2p"></p><ul><li data-i18n="s2a"></li><li data-i18n="s2b"></li></ul></article>
+      <article class="svc rv" style="--d:.16s"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 21v-8"/><path d="M12 13c0-4 3-7 8-7 0 4-3 7-8 7Z"/><path d="M12 15c0-3-2.5-5.5-7-5.5 0 3 2.5 5.5 7 5.5Z"/><path d="M4 21h16"/></svg></div>
+        <h3 data-i18n="s3t">Rural e agro</h3><p data-i18n="s3p"></p><ul><li data-i18n="s3a"></li><li data-i18n="s3b"></li></ul></article>
+      <article class="svc rv"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 12h4l3-7 4 14 3-7h4"/></svg></div>
+        <h3 data-i18n="s4t">Monitoramento</h3><p data-i18n="s4p"></p><ul><li data-i18n="s4a"></li><li data-i18n="s4b"></li></ul></article>
+      <article class="svc rv" style="--d:.08s"><div class="ic"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4Z"/></svg></div>
+        <h3 data-i18n="s5t">Manutenção e limpeza</h3><p data-i18n="s5p"></p><ul><li data-i18n="s5a"></li><li data-i18n="s5b"></li></ul></article>
+      <article class="svc rv" style="--d:.16s"><div class="ic"><svg viewBox="0 0 24 24"><rect x="6" y="4" width="12" height="17" rx="2"/><path d="M10 2h4"/><path d="m13 8-3 5h4l-3 5"/></svg></div>
+        <h3 data-i18n="s6t">Baterias e híbridos</h3><p data-i18n="s6p"></p><ul><li data-i18n="s6a"></li><li data-i18n="s6b"></li></ul></article>
     </div>
   </div>
 </section>
 
-<section id="como">
+<section class="how" id="como">
   <div class="wrap">
     <div class="sec-head">
       <span class="eyebrow rv" data-i18n="howEy">Como funciona</span>
@@ -403,12 +462,12 @@ footer b{color:var(--text);font-weight:500}
       <p class="rv" data-i18n="howP">Cuidamos de todas as etapas, inclusive da papelada com a concessionária.</p>
     </div>
     <div class="tl" id="tl">
-      <div class="tl-line"><i></i></div>
-      <div class="step"><div class="dot">01</div><div class="rv"><span class="when" data-i18n="t1w">Etapa 1</span><h3 data-i18n="t1t">Visita técnica</h3><p data-i18n="t1p">Analisamos telhado, sombreamento, padrão de entrada e seu histórico de consumo.</p></div></div>
-      <div class="step"><div class="dot">02</div><div class="rv"><span class="when" data-i18n="t2w">Etapa 2</span><h3 data-i18n="t2t">Projeto</h3><p data-i18n="t2p">Dimensionamos o sistema e mostramos o projeto em 3D com a geração prevista mês a mês.</p></div></div>
-      <div class="step"><div class="dot">03</div><div class="rv"><span class="when" data-i18n="t3w">Etapa 3</span><h3 data-i18n="t3t">Homologação na concessionária</h3><p data-i18n="t3p">Enviamos a documentação e acompanhamos o pedido até a aprovação.</p></div></div>
-      <div class="step"><div class="dot">04</div><div class="rv"><span class="when" data-i18n="t4w">Etapa 4</span><h3 data-i18n="t4t">Instalação</h3><p data-i18n="t4p">Equipe própria e treinada instala placas, estrutura e inversor com segurança.</p></div></div>
-      <div class="step"><div class="dot">05</div><div class="rv"><span class="when" data-i18n="t5w">Etapa 5</span><h3 data-i18n="t5t">Monitoramento</h3><p data-i18n="t5p">Com o medidor trocado, o sistema entra em operação e você acompanha tudo pelo app.</p></div></div>
+      <div class="cable"><i></i><span class="spark"></span></div>
+      <div class="step"><div class="dot"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg></div><span class="n">01</span><div class="rv"><h3 data-i18n="t1t">Visita técnica</h3><p data-i18n="t1p"></p></div></div>
+      <div class="step"><div class="dot"><svg viewBox="0 0 24 24"><path d="M12 3 3 8l9 5 9-5Z"/><path d="m3 13 9 5 9-5"/></svg></div><span class="n">02</span><div class="rv"><h3 data-i18n="t2t">Projeto</h3><p data-i18n="t2p"></p></div></div>
+      <div class="step"><div class="dot"><svg viewBox="0 0 24 24"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9Z"/><path d="M14 3v6h6"/><path d="m9 15 2 2 4-4"/></svg></div><span class="n">03</span><div class="rv"><h3 data-i18n="t3t">Homologação</h3><p data-i18n="t3p"></p></div></div>
+      <div class="step"><div class="dot"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4Z"/></svg></div><span class="n">04</span><div class="rv"><h3 data-i18n="t4t">Instalação</h3><p data-i18n="t4p"></p></div></div>
+      <div class="step"><div class="dot"><svg viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7Z"/></svg></div><span class="n">05</span><div class="rv"><h3 data-i18n="t5t">Monitoramento</h3><p data-i18n="t5p"></p></div></div>
     </div>
   </div>
 </section>
@@ -417,29 +476,65 @@ footer b{color:var(--text);font-weight:500}
   <div class="wrap">
     <div class="sec-head">
       <span class="eyebrow rv" data-i18n="whyEy">Por que energia solar</span>
-      <h2 class="split" data-i18n="whyT">O sol do Norte Fluminense trabalha para você</h2>
+      <h2 class="split" data-i18n="whyT">Do sol até a sua tomada</h2>
+      <p class="rv" data-i18n="whyP"></p>
+    </div>
+    <div class="flow rv" id="flow">
+      <svg class="flow-d" viewBox="0 0 1100 220" role="img" aria-label="Sol, placas, inversor, casa e rede">
+        <path class="wire" d="M140 90 H316"/><path class="pulse p-sun" d="M140 90 H316"/>
+        <path class="wire" d="M404 90 H526"/><path class="pulse p-sun" d="M404 90 H526"/>
+        <path class="wire" d="M614 90 H746"/><path class="pulse p-volt" d="M614 90 H746"/>
+        <path class="wire" d="M834 90 H966"/><path class="pulse p-volt" d="M834 82 H966" style="stroke-width:3"/><path class="pulse p-sun p-back" d="M834 98 H966" style="stroke-width:3"/>
+        <g transform="translate(90 90)"><circle class="ring" r="44"/><circle class="bg" r="44"/><g class="rays"><line x1="0" y1="-34" x2="0" y2="-27"/><line x1="0" y1="34" x2="0" y2="27"/><line x1="-34" y1="0" x2="-27" y2="0"/><line x1="34" y1="0" x2="27" y2="0"/><line x1="-24" y1="-24" x2="-19" y2="-19"/><line x1="24" y1="24" x2="19" y2="19"/><line x1="24" y1="-24" x2="19" y2="-19"/><line x1="-24" y1="24" x2="-19" y2="19"/></g><circle r="16" fill="#F5A300"/></g>
+        <g transform="translate(360 90)"><circle class="bg" r="44"/><g transform="skewX(-12)"><rect x="-22" y="-18" width="44" height="32" rx="3" fill="#1d4596"/><path d="M-22 -7.3h44M-22 3.3h44M-7.3 -18v32M7.3 -18v32" stroke="#9cc0f2" stroke-width="1.3"/></g><path d="M-4 14v12M4 14v12" stroke="#0B1F3A" stroke-width="2"/></g>
+        <g transform="translate(570 90)"><circle class="bg" r="44"/><rect x="-17" y="-22" width="34" height="44" rx="6" fill="#fff" stroke="#0B1F3A" stroke-width="2"/><path d="M-9 -5q4.5 -8 9 0t9 0" stroke="#0091C2" stroke-width="2.2" fill="none"/><circle cx="0" cy="10" r="3.5" fill="#25c06a"/></g>
+        <g transform="translate(790 90)"><circle class="bg" r="44"/><path d="M-16 -3v22h32V-3" stroke="#0B1F3A" stroke-width="2.4" fill="#fff" stroke-linejoin="round"/><path d="M-22 2 0 -18 22 2" stroke="#0B1F3A" stroke-width="2.4" fill="none" stroke-linejoin="round" stroke-linecap="round"/><path d="M2 2l-6 9h6l-4 8" stroke="#F5A300" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+        <g transform="translate(1010 90)"><circle class="bg" r="44"/><path d="M0 -24 -12 22M0 -24 12 22M-9 8h18M-6 -6h12M-16 -12h32" stroke="#0B1F3A" stroke-width="2.2" fill="none" stroke-linecap="round"/></g>
+        <text x="90" y="166" text-anchor="middle" data-i18n="f1">Sol</text><text class="s" x="90" y="188" text-anchor="middle" data-i18n="f1s">luz gratuita</text>
+        <text x="360" y="166" text-anchor="middle" data-i18n="f2">Placas</text><text class="s" x="360" y="188" text-anchor="middle" data-i18n="f2s">geram energia</text>
+        <text x="570" y="166" text-anchor="middle" data-i18n="f3">Inversor</text><text class="s" x="570" y="188" text-anchor="middle" data-i18n="f3s">converte para a casa</text>
+        <text x="790" y="166" text-anchor="middle" data-i18n="f4">Sua casa</text><text class="s" x="790" y="188" text-anchor="middle" data-i18n="f4s">usa na hora</text>
+        <text x="1010" y="166" text-anchor="middle" data-i18n="f5">Rede</text><text class="s" x="1010" y="188" text-anchor="middle" data-i18n="f5s">o excedente vira crédito</text>
+      </svg>
+      <svg class="flow-m" viewBox="0 0 320 560" role="img" aria-label="Sol, placas, inversor, casa e rede">
+        <path class="wire" d="M60 86 V146"/><path class="pulse p-sun" d="M60 86 V146"/>
+        <path class="wire" d="M60 198 V258"/><path class="pulse p-sun" d="M60 198 V258"/>
+        <path class="wire" d="M60 310 V370"/><path class="pulse p-volt" d="M60 310 V370"/>
+        <path class="wire" d="M60 422 V482"/><path class="pulse p-volt" d="M60 422 V482"/>
+        <g transform="translate(60 52)"><circle class="ring" r="34"/><circle class="bg" r="34"/><circle r="14" fill="#F5A300"/></g>
+        <g transform="translate(60 172)"><circle class="bg" r="26"/><rect x="-14" y="-10" width="28" height="20" rx="2" fill="#1d4596"/><path d="M-14 0h28M0 -10v20" stroke="#9cc0f2"/></g>
+        <g transform="translate(60 284)"><circle class="bg" r="26"/><rect x="-10" y="-13" width="20" height="26" rx="4" fill="#fff" stroke="#0B1F3A" stroke-width="2"/></g>
+        <g transform="translate(60 396)"><circle class="bg" r="26"/><path d="M-9 -1v12h18V-1M-13 2 0 -10 13 2" stroke="#0B1F3A" stroke-width="2.2" fill="#fff" stroke-linejoin="round"/></g>
+        <g transform="translate(60 508)"><circle class="bg" r="26"/><path d="M0 -14 -8 14M0 -14 8 14M-6 4h12M-10 -8h20" stroke="#0B1F3A" stroke-width="2" fill="none"/></g>
+        <text x="112" y="48" data-i18n="f1">Sol</text><text class="s" x="112" y="68" data-i18n="f1s">luz gratuita</text>
+        <text x="112" y="168" data-i18n="f2">Placas</text><text class="s" x="112" y="188" data-i18n="f2s">geram energia</text>
+        <text x="112" y="280" data-i18n="f3">Inversor</text><text class="s" x="112" y="300" data-i18n="f3s">converte para a casa</text>
+        <text x="112" y="392" data-i18n="f4">Sua casa</text><text class="s" x="112" y="412" data-i18n="f4s">usa na hora</text>
+        <text x="112" y="504" data-i18n="f5">Rede</text><text class="s" x="112" y="524" data-i18n="f5s">o excedente vira crédito</text>
+      </svg>
     </div>
     <div class="why-grid">
-      <div class="why rv"><b>01</b><h3 data-i18n="w1t">Conta mais leve</h3><p data-i18n="w1p">A energia gerada vira créditos que abatem a conta todo mês.</p></div>
-      <div class="why rv" style="--d:.1s"><b>02</b><h3 data-i18n="w2t">Proteção contra aumentos</h3><p data-i18n="w2p">Quem gera a própria energia sente menos os reajustes da tarifa.</p></div>
-      <div class="why rv" style="--d:.2s"><b>03</b><h3 data-i18n="w3t">Imóvel valorizado</h3><p data-i18n="w3p">Um sistema solar é um diferencial na venda ou no aluguel.</p></div>
-      <div class="why rv" style="--d:.3s"><b>04</b><h3 data-i18n="w4t">Energia limpa</h3><p data-i18n="w4p">Menos emissões, sem barulho e com vida útil longa das placas.</p></div>
+      <div class="why rv"><span class="k">−95%</span><h3 data-i18n="w1t"></h3><p data-i18n="w1p"></p></div>
+      <div class="why rv" style="--d:.08s"><span class="k">↗</span><h3 data-i18n="w2t"></h3><p data-i18n="w2p"></p></div>
+      <div class="why rv" style="--d:.16s"><span class="k">+</span><h3 data-i18n="w3t"></h3><p data-i18n="w3p"></p></div>
+      <div class="why rv" style="--d:.24s"><span class="k">CO₂</span><h3 data-i18n="w4t"></h3><p data-i18n="w4p"></p></div>
     </div>
   </div>
 </section>
 
-<section id="faq">
-  <div class="wrap">
-    <div class="sec-head">
+<section id="faq" style="background:var(--bg2)">
+  <div class="wrap faq-wrap">
+    <div class="sec-head" style="margin-bottom:0">
       <span class="eyebrow rv" data-i18n="faqEy">Perguntas frequentes</span>
       <h2 class="split" data-i18n="faqT">Tire suas dúvidas</h2>
+      <p class="rv" data-i18n="faqP"></p>
     </div>
     <div class="faq rv">
-      <details><summary data-i18n="q1">Dá para financiar o sistema?</summary><p class="a" data-i18n="a1">Sim. Trabalhamos com linhas de financiamento solar de bancos e cooperativas. Em muitos casos a parcela fica perto do valor que você já paga de luz.</p></details>
-      <details><summary data-i18n="q2">Precisa de muita manutenção?</summary><p class="a" data-i18n="a2">Pouca. Recomendamos limpeza das placas e uma revisão por ano. O monitoramento avisa se a geração cair.</p></details>
-      <details><summary data-i18n="q3">E em dias nublados ou de chuva?</summary><p class="a" data-i18n="a3">As placas continuam gerando, só que menos. O sistema é dimensionado pela média do ano, e os créditos dos dias de sol compensam os dias nublados.</p></details>
-      <details><summary data-i18n="q4">Quanto tempo leva a instalação?</summary><p class="a" data-i18n="a4">A instalação em uma casa costuma levar de 1 a 3 dias. O processo completo, com projeto e homologação na concessionária, leva em média algumas semanas.</p></details>
-      <details><summary data-i18n="q5">Funciona quando falta luz?</summary><p class="a" data-i18n="a5">Sistemas ligados à rede desligam por segurança quando falta energia. Para ter energia nesses momentos, existe a opção com baterias.</p></details>
+      <details><summary data-i18n="q1"></summary><p class="a" data-i18n="a1"></p></details>
+      <details><summary data-i18n="q2"></summary><p class="a" data-i18n="a2"></p></details>
+      <details><summary data-i18n="q3"></summary><p class="a" data-i18n="a3"></p></details>
+      <details><summary data-i18n="q4"></summary><p class="a" data-i18n="a4"></p></details>
+      <details><summary data-i18n="q5"></summary><p class="a" data-i18n="a5"></p></details>
     </div>
   </div>
 </section>
@@ -448,79 +543,76 @@ footer b{color:var(--text);font-weight:500}
   <div class="wrap">
     <div class="sec-head">
       <span class="eyebrow rv" data-i18n="galEy">Galeria</span>
-      <h2 class="split" data-i18n="galT">Projetos em 3D</h2>
-      <p class="rv" data-i18n="galP">Imagens ilustrativas. No site do cliente, entram as fotos das obras reais.</p>
+      <h2 class="split" data-i18n="galT">Projetos que geram</h2>
     </div>
     <div class="gal rv" id="gal">
-      <button type="button" data-full="img/residencial.webp" data-cap="g1"><img src="img/residencial-p.webp" alt="" loading="lazy" width="640" height="457"><span data-i18n="g1">Residencial · Rio das Ostras</span></button>
-      <button type="button" data-full="img/modulos.webp" data-cap="g2"><img src="img/modulos-p.webp" alt="" loading="lazy" width="640" height="457"><span data-i18n="g2">Módulos de alta eficiência</span></button>
-      <button type="button" data-full="img/comercial.webp" data-cap="g3"><img src="img/comercial-p.webp" alt="" loading="lazy" width="640" height="457"><span data-i18n="g3">Galpão comercial · Macaé</span></button>
-      <button type="button" data-full="img/rural.webp" data-cap="g4"><img src="img/rural-p.webp" alt="" loading="lazy" width="640" height="457"><span data-i18n="g4">Usina rural · Campos</span></button>
-      <button type="button" data-full="img/noite.webp" data-cap="g5"><img src="img/noite-p.webp" alt="" loading="lazy" width="640" height="457"><span data-i18n="g5">Sistema híbrido com bateria</span></button>
-      <button type="button" data-full="img/por-do-sol.webp" data-cap="g6"><img src="img/por-do-sol.webp" alt="" loading="lazy" width="1200" height="857" style="object-position:50% 40%"><span data-i18n="g6">Estrutura em solo ao entardecer</span></button>
+      <button type="button" data-id="photo-1655300256335-beef51a914fe" data-cap="g1"><img src="https://images.unsplash.com/photo-1655300256335-beef51a914fe?w=1000&q=70&auto=format&fit=crop" alt="" loading="lazy"><span data-i18n="g1"></span></button>
+      <button type="button" data-id="photo-1624397640148-949b1732bb0a" data-cap="g2"><img src="https://images.unsplash.com/photo-1624397640148-949b1732bb0a?w=700&q=70&auto=format&fit=crop" alt="" loading="lazy"><span data-i18n="g2"></span></button>
+      <button type="button" data-id="photo-1613665813446-82a78c468a1d" data-cap="g3"><img src="https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=700&q=70&auto=format&fit=crop" alt="" loading="lazy"><span data-i18n="g3"></span></button>
+      <button type="button" data-id="photo-1780922576207-7eb4b93a4b9e" data-cap="g4"><img src="https://images.unsplash.com/photo-1780922576207-7eb4b93a4b9e?w=700&q=70&auto=format&fit=crop" alt="" loading="lazy"><span data-i18n="g4"></span></button>
+      <button type="button" data-id="photo-1724041875334-0a6397111c7e" data-cap="g5"><img src="https://images.unsplash.com/photo-1724041875334-0a6397111c7e?w=700&q=70&auto=format&fit=crop" alt="" loading="lazy"><span data-i18n="g5"></span></button>
+      <button type="button" data-id="photo-1770936994282-8811fb7129ac" data-cap="g6"><img src="https://images.unsplash.com/photo-1770936994282-8811fb7129ac?w=700&q=70&auto=format&fit=crop" alt="" loading="lazy"><span data-i18n="g6"></span></button>
     </div>
+    <p class="credit" data-i18n="galCredit"></p>
   </div>
 </section>
 
-<section id="contato">
+<section id="contato" style="padding-top:30px">
   <div class="wrap contact">
     <div class="rv">
       <span class="eyebrow" data-i18n="ctEy">Contato</span>
-      <h2 style="font-size:clamp(2rem,4.6vw,3rem);margin-top:14px" data-i18n="ctT">Vamos projetar a sua usina?</h2>
+      <h2 style="font-size:clamp(2.1rem,4.6vw,3.3rem);margin-top:16px" data-i18n="ctT">Vamos projetar a sua usina?</h2>
       <div class="c-list">
-        <div><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg><p><b data-i18n="ctArea">Área de atendimento</b><span>Campos dos Goytacazes, Macaé, Rio das Ostras <span data-i18n="ctRegion">e região</span></span></p></div>
-        <div><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><p><b data-i18n="ctHours">Horário</b><span data-i18n="ctHoursV">Segunda a sexta, 8h às 18h · Sábado, 8h às 12h</span></p></div>
-        <div><svg viewBox="0 0 24 24"><path d="M4 5h16v12H8l-4 4Z"/></svg><p><b>WhatsApp</b><span data-i18n="ctWa">Atendimento em português, inglês e espanhol</span></p></div>
+        <div><i><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg></i><p><b data-i18n="ctArea"></b><span>Campos dos Goytacazes, Macaé, Rio das Ostras <span data-i18n="ctRegion"></span></span></p></div>
+        <div><i><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></i><p><b data-i18n="ctHours"></b><span data-i18n="ctHoursV"></span></p></div>
+        <div><i><svg viewBox="0 0 24 24"><path d="M4 5h16v12H8l-4 4Z"/></svg></i><p><b>WhatsApp</b><span data-i18n="ctWa"></span></p></div>
       </div>
       <div class="cta-row">
         <a class="btn btn-sun" data-wa="waQuote" href="https://wa.me/" target="_blank" rel="noopener"><span data-i18n="ctaQuote">Peça seu orçamento</span></a>
-        <a class="btn btn-ghost" href="https://www.google.com/maps/dir/?api=1&destination=Maca%C3%A9%2C%20RJ" target="_blank" rel="noopener" data-i18n="ctDir">Como chegar</a>
+        <a class="btn btn-line" href="https://www.google.com/maps/dir/?api=1&destination=Maca%C3%A9%2C%20RJ" target="_blank" rel="noopener" data-i18n="ctDir">Como chegar</a>
       </div>
     </div>
-    <div class="map rv" style="--d:.12s"><iframe title="Mapa" loading="lazy" referrerpolicy="no-referrer-when-downgrade" data-src="https://maps.google.com/maps?q=Maca%C3%A9%2C%20RJ&z=9&output=embed"></iframe></div>
-  </div>
-</section>
-
-<section class="pk-sec" id="pacotes">
-  <div class="wrap">
-    <div class="sec-head">
-      <span class="eyebrow rv" data-i18n="pkEy">Liberon · Sites para o seu negócio</span>
-      <h2 class="split" data-i18n="pkT">Escolha seu pacote</h2>
-      <p class="rv" data-i18n="pkP">Gostou deste modelo? Ele é do pacote Premium. Veja o que entra em cada um.</p>
-    </div>
-    <div class="pk-grid">
-      <div class="pk rv">
-        <h3>Essencial</h3><p class="price">R$ 880</p><p class="mo"><span data-i18n="pkMo">+ R$ 88/mês</span></p>
-        <ul><li data-i18n="e1">Uma página em português</li><li data-i18n="e2">Topo com foto, sobre, serviços e galeria</li><li data-i18n="e3">Horários e nota do Google</li><li data-i18n="e4">Mapa com botão "Como chegar"</li><li data-i18n="e5">Botão fixo de WhatsApp (ou ligar)</li></ul>
-        <a class="btn btn-ghost" data-wa="waPk1" href="https://wa.me/" target="_blank" rel="noopener" data-i18n="pkBtn">Quero este</a>
-      </div>
-      <div class="pk rv" style="--d:.1s">
-        <h3>Profissional</h3><p class="price">R$ 1.390</p><p class="mo"><span data-i18n="pkMo2">+ R$ 139/mês</span></p>
-        <ul><li data-i18n="p1">Tudo do Essencial</li><li data-i18n="p2">Páginas separadas: Início, Sobre, Serviços e Contato</li><li data-i18n="p3">Formulário que envia para o WhatsApp</li><li data-i18n="p4">Perguntas frequentes</li><li data-i18n="p5">SEO local e link do Instagram</li></ul>
-        <a class="btn btn-ghost" data-wa="waPk2" href="https://wa.me/" target="_blank" rel="noopener" data-i18n="pkBtn">Quero este</a>
-      </div>
-      <div class="pk hl rv" style="--d:.2s">
-        <span class="badge" data-i18n="pkBadge">Este modelo</span>
-        <h3>Premium</h3><p class="price">R$ 1.590</p><p class="mo"><span data-i18n="pkMo3">+ R$ 159/mês</span></p>
-        <ul><li data-i18n="r1">Tudo do Profissional</li><li data-i18n="r2">Site em português, inglês e espanhol</li><li data-i18n="r3">WhatsApp com mensagem pronta no idioma do visitante</li><li data-i18n="r4">Perguntas frequentes para turistas</li><li data-i18n="r5">Visual caprichado com animações e galeria em tela cheia</li></ul>
-        <a class="btn btn-sun" data-wa="waPk3" href="https://wa.me/" target="_blank" rel="noopener" data-i18n="pkBtn">Quero este</a>
-      </div>
-    </div>
-    <p class="pk-note rv" data-i18n="pkNote">A mensalidade cobre hospedagem e pequenos ajustes. Agendamento, reservas e sistemas são vendidos à parte.</p>
+    <div class="map rv" style="--d:.1s"><iframe title="Mapa" loading="lazy" referrerpolicy="no-referrer-when-downgrade" data-src="https://maps.google.com/maps?q=Maca%C3%A9%2C%20RJ&z=9&output=embed"></iframe></div>
   </div>
 </section>
 </main>
 
-<footer>
+<footer class="site">
   <div class="wrap">
     <span>© Heliora Energia Solar · <span data-i18n="ftFict">empresa fictícia para demonstração</span></span>
     <b>Site feito pela Liberon</b>
   </div>
 </footer>
 
+<!-- Daqui para baixo é a Liberon, não a empresa do site -->
+<aside class="lib" id="pacotes" aria-label="Liberon">
+  <div class="lib-cut" data-i18n="libCut">Fim do site de exemplo · a seção abaixo é da Liberon</div>
+  <div class="wrap">
+    <div class="lib-head">
+      <div>
+        <span class="lib-mark"><i>L</i>LIBERON</span>
+        <h2 data-i18n="pkT">Quer um site assim para a sua empresa? Escolha seu pacote</h2>
+      </div>
+      <p data-i18n="pkP"></p>
+    </div>
+    <div class="pk-grid">
+      <div class="pk"><h3>Essencial</h3><p class="price">R$ 880</p><p class="mo" data-i18n="pkMo1"></p>
+        <ul><li data-i18n="e1"></li><li data-i18n="e2"></li><li data-i18n="e3"></li><li data-i18n="e4"></li><li data-i18n="e5"></li></ul>
+        <a class="btn" data-wa="waPk1" href="https://wa.me/" target="_blank" rel="noopener" data-i18n="pkB1">Quero o Essencial</a></div>
+      <div class="pk"><h3>Profissional</h3><p class="price">R$ 1.390</p><p class="mo" data-i18n="pkMo2"></p>
+        <ul><li data-i18n="p1"></li><li data-i18n="p2"></li><li data-i18n="p3"></li><li data-i18n="p4"></li><li data-i18n="p5"></li></ul>
+        <a class="btn" data-wa="waPk2" href="https://wa.me/" target="_blank" rel="noopener" data-i18n="pkB2">Quero o Profissional</a></div>
+      <div class="pk cur"><span class="badge" data-i18n="pkBadge">Modelo desta página</span><h3>Premium</h3><p class="price">R$ 1.590</p><p class="mo" data-i18n="pkMo3"></p>
+        <ul><li data-i18n="r1"></li><li data-i18n="r2"></li><li data-i18n="r3"></li><li data-i18n="r4"></li><li data-i18n="r5"></li></ul>
+        <a class="btn" data-wa="waPk3" href="https://wa.me/" target="_blank" rel="noopener" data-i18n="pkB3">Quero o Premium</a></div>
+    </div>
+    <p class="pk-note" data-i18n="pkNote"></p>
+  </div>
+</aside>
+
 <a class="fab" data-wa="waQuote" href="https://wa.me/" target="_blank" rel="noopener" aria-label="WhatsApp">
   <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.8 14.1c-.2.7-1.4 1.3-2 1.4-.5 0-1.2.1-3.8-1-3.2-1.4-5.2-4.6-5.4-4.8-.2-.2-1.3-1.7-1.3-3.3s.8-2.3 1.1-2.7c.3-.3.6-.4.8-.4h.6c.2 0 .5 0 .7.6l1 2.4c.1.2.1.4 0 .6l-.4.6-.5.5c-.2.2-.3.4-.1.7.2.3.8 1.4 1.8 2.2 1.3 1.1 2.3 1.5 2.6 1.6.3.2.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l2.3 1.1c.3.1.5.2.6.4.1.1.1.8-.2 1.5Z"/></svg>
-  <span data-i18n="fab">Fale no WhatsApp</span>
+  <span>WhatsApp</span>
 </a>
 
 <dialog class="lb" id="lb" aria-label="Galeria">
@@ -529,361 +621,293 @@ footer b{color:var(--text);font-weight:500}
 </dialog>
 
 <script>
-/* ===== Número de WhatsApp da Liberon: troque só aqui (formato 55 + DDD + número, só dígitos) ===== */
+/* ===== Número de WhatsApp da Liberon: troque só aqui (55 + DDD + número) ===== */
 const LIBERON_WHATSAPP = "5522988320874";
 
-const T={
-pt:{demoNote:"empresa fictícia",navSim:"Simulador",navSvc:"Serviços",navHow:"Como funciona",navFaq:"Dúvidas",navContact:"Contato",ctaShort:"Orçamento",
-heroChip:"Campos · Macaé · Rio das Ostras",heroT1:"Sua própria",heroT2:"usina de energia",heroT3:"no telhado.",
-heroLead:"Projetos de energia solar fotovoltaica para casas, empresas e propriedades rurais do Norte Fluminense. Do projeto à homologação, com monitoramento em tempo real.",
-ctaQuote:"Peça seu orçamento",ctaSim:"Simular economia",seg1:"Residencial",seg2:"Comercial",seg3:"Rural",
-u1:"GWh",u2:"t CO₂",upTo:"até",n1:"de energia limpa gerada pelos sistemas instalados",n2:"de emissões evitadas na atmosfera",n3:"de economia na conta de luz",numNote:"Números ilustrativos deste modelo de demonstração.",
-simEy:"Simulador",simT:"Quanto você economiza com o sol?",simP:"Digite o valor médio da sua conta de luz e veja uma estimativa na hora.",simLabel:"Valor médio da conta de luz por mês",
-sKwp:"potência do sistema",sPan:"placas solares",sArea:"área de telhado",rMonth:"Economia por mês",rYear:"Economia por ano",rPay:"O sistema se paga em",
-simDisc:"Estimativa simplificada, só para ter uma ideia. Considera tarifa média de R$ 1,05/kWh, boa insolação da região e a taxa mínima que continua na conta. O valor real depende do seu consumo, telhado e equipamentos: peça um orçamento sem compromisso.",
-simCta:"Quero meu orçamento real",years:n=>n<=1?"1 ano":n.toLocaleString("pt-BR",{maximumFractionDigits:1})+" anos",
-svcEy:"Serviços",svcT:"Energia solar para cada tipo de imóvel",svcP:"Projeto sob medida, equipamentos certificados e equipe própria de instalação.",
-s1t:"Residencial",s1p:"Sistemas para casas e condomínios que cortam a conta de luz e valorizam o imóvel.",s1a:"Telhado cerâmico e metálico",s1b:"Projeto em 3D",
-s2t:"Comercial e indústria",s2p:"Usinas para lojas, pousadas, galpões e empresas que querem previsibilidade de custo.",s2a:"Laje e galpão",s2b:"Média tensão",
-s3t:"Rural e agro",s3p:"Sistemas em solo para sítios e fazendas: irrigação, bombeamento, resfriamento e sede.",s3a:"Estrutura em solo",s3b:"Bombeamento solar",
-s4t:"Monitoramento",s4p:"Acompanhe a geração pelo celular. Nossa equipe recebe alertas se algo sair do normal.",s4a:"App em tempo real",s4b:"Relatório mensal",
-s5t:"Manutenção e limpeza",s5p:"Limpeza das placas, revisão elétrica e inspeção para manter a geração no máximo.",s5a:"Planos anuais",s5b:"Sistemas de outras empresas",
-s6t:"Baterias e híbridos",s6p:"Armazenamento para manter o essencial ligado quando falta energia da rede.",s6a:"Backup",s6b:"Sistemas off-grid",
-howEy:"Como funciona",howT:"Do primeiro contato à energia gerada",howP:"Cuidamos de todas as etapas, inclusive da papelada com a concessionária.",
-t1w:"Etapa 1",t1t:"Visita técnica",t1p:"Analisamos telhado, sombreamento, padrão de entrada e seu histórico de consumo.",
-t2w:"Etapa 2",t2t:"Projeto",t2p:"Dimensionamos o sistema e mostramos o projeto em 3D com a geração prevista mês a mês.",
-t3w:"Etapa 3",t3t:"Homologação na concessionária",t3p:"Enviamos a documentação e acompanhamos o pedido até a aprovação.",
-t4w:"Etapa 4",t4t:"Instalação",t4p:"Equipe própria e treinada instala placas, estrutura e inversor com segurança.",
-t5w:"Etapa 5",t5t:"Monitoramento",t5p:"Com o medidor trocado, o sistema entra em operação e você acompanha tudo pelo app.",
-whyEy:"Por que energia solar",whyT:"O sol do Norte Fluminense trabalha para você",
-w1t:"Conta mais leve",w1p:"A energia gerada vira créditos que abatem a conta todo mês.",w2t:"Proteção contra aumentos",w2p:"Quem gera a própria energia sente menos os reajustes da tarifa.",
-w3t:"Imóvel valorizado",w3p:"Um sistema solar é um diferencial na venda ou no aluguel.",w4t:"Energia limpa",w4p:"Menos emissões, sem barulho e com vida útil longa das placas.",
-faqEy:"Perguntas frequentes",faqT:"Tire suas dúvidas",
-q1:"Dá para financiar o sistema?",a1:"Sim. Trabalhamos com linhas de financiamento solar de bancos e cooperativas. Em muitos casos a parcela fica perto do valor que você já paga de luz.",
-q2:"Precisa de muita manutenção?",a2:"Pouca. Recomendamos limpeza das placas e uma revisão por ano. O monitoramento avisa se a geração cair.",
-q3:"E em dias nublados ou de chuva?",a3:"As placas continuam gerando, só que menos. O sistema é dimensionado pela média do ano, e os créditos dos dias de sol compensam os dias nublados.",
-q4:"Quanto tempo leva a instalação?",a4:"A instalação em uma casa costuma levar de 1 a 3 dias. O processo completo, com projeto e homologação na concessionária, leva em média algumas semanas.",
-q5:"Funciona quando falta luz?",a5:"Sistemas ligados à rede desligam por segurança quando falta energia. Para ter energia nesses momentos, existe a opção com baterias.",
-galEy:"Galeria",galT:"Projetos em 3D",galP:"Imagens ilustrativas. No site do cliente, entram as fotos das obras reais.",
-g1:"Residencial · Rio das Ostras",g2:"Módulos de alta eficiência",g3:"Galpão comercial · Macaé",g4:"Usina rural · Campos",g5:"Sistema híbrido com bateria",g6:"Estrutura em solo ao entardecer",
-ctEy:"Contato",ctT:"Vamos projetar a sua usina?",ctArea:"Área de atendimento",ctRegion:"e região",ctHours:"Horário",ctHoursV:"Segunda a sexta, 8h às 18h · Sábado, 8h às 12h",ctWa:"Atendimento em português, inglês e espanhol",ctDir:"Como chegar",
-pkEy:"Liberon · Sites para o seu negócio",pkT:"Escolha seu pacote",pkP:"Gostou deste modelo? Ele é do pacote Premium. Veja o que entra em cada um.",
-pkMo:"+ R$ 88/mês",pkMo2:"+ R$ 139/mês",pkMo3:"+ R$ 159/mês",pkBtn:"Quero este",pkBadge:"Este modelo",
-e1:"Uma página em português",e2:"Topo com foto, sobre, serviços e galeria",e3:"Horários e nota do Google",e4:"Mapa com botão \"Como chegar\"",e5:"Botão fixo de WhatsApp (ou ligar)",
-p1:"Tudo do Essencial",p2:"Páginas separadas: Início, Sobre, Serviços e Contato",p3:"Formulário que envia para o WhatsApp",p4:"Perguntas frequentes",p5:"SEO local e link do Instagram",
-r1:"Tudo do Profissional",r2:"Site em português, inglês e espanhol",r3:"WhatsApp com mensagem pronta no idioma do visitante",r4:"Perguntas frequentes para turistas",r5:"Visual caprichado com animações e galeria em tela cheia",
-pkNote:"A mensalidade cobre hospedagem e pequenos ajustes. Agendamento, reservas e sistemas são vendidos à parte.",
-ftFict:"empresa fictícia para demonstração",fab:"Fale no WhatsApp",
-waQuote:"Olá! Vi o site da Heliora e quero um orçamento de energia solar.",
-waSim:v=>`Olá! Fiz a simulação no site: minha conta de luz é de ${v} por mês. Quero um orçamento real.`,
-waPk1:"Olá, Liberon! Vi a vitrine de energia solar e quero o pacote Essencial.",waPk2:"Olá, Liberon! Vi a vitrine de energia solar e quero o pacote Profissional.",waPk3:"Olá, Liberon! Vi a vitrine de energia solar e quero o pacote Premium."},
-
-en:{demoNote:"fictional company",navSim:"Calculator",navSvc:"Services",navHow:"How it works",navFaq:"FAQ",navContact:"Contact",ctaShort:"Get a quote",
-heroChip:"Campos · Macaé · Rio das Ostras",heroT1:"Your own",heroT2:"power plant",heroT3:"on your roof.",
-heroLead:"Solar PV systems for homes, businesses and farms in northern Rio de Janeiro state. From design to utility approval, with real-time monitoring.",
-ctaQuote:"Get your quote",ctaSim:"Estimate savings",seg1:"Residential",seg2:"Commercial",seg3:"Rural",
-u1:"GWh",u2:"t CO₂",upTo:"up to",n1:"of clean energy generated by installed systems",n2:"of emissions kept out of the air",n3:"savings on the electricity bill",numNote:"Illustrative figures for this demo template.",
-simEy:"Savings calculator",simT:"How much can the sun save you?",simP:"Enter your average electricity bill and get an instant estimate.",simLabel:"Average monthly electricity bill",
-sKwp:"system size",sPan:"solar panels",sArea:"roof area",rMonth:"Monthly savings",rYear:"Yearly savings",rPay:"Payback period",
-simDisc:"Simplified estimate, just to give you an idea. Assumes an average rate of R$ 1.05/kWh, the region's strong sunshine and the minimum fee that stays on the bill. Actual figures depend on your usage, roof and equipment: ask for a free quote.",
-simCta:"Get my real quote",years:n=>n<=1?"1 year":n.toLocaleString("en-US",{maximumFractionDigits:1})+" years",
-svcEy:"Services",svcT:"Solar power for every kind of property",svcP:"Custom design, certified equipment and our own installation team.",
-s1t:"Residential",s1p:"Systems for houses and condos that cut the power bill and add value to the property.",s1a:"Tile and metal roofs",s1b:"3D design",
-s2t:"Commercial & industrial",s2p:"Plants for shops, guesthouses, warehouses and companies that want predictable costs.",s2a:"Flat roofs & warehouses",s2b:"Medium voltage",
-s3t:"Rural & agribusiness",s3p:"Ground-mounted systems for farms: irrigation, pumping, cooling and the main house.",s3a:"Ground mount",s3b:"Solar pumping",
-s4t:"Monitoring",s4p:"Track generation on your phone. Our team gets alerts if anything looks off.",s4a:"Real-time app",s4b:"Monthly report",
-s5t:"Maintenance & cleaning",s5p:"Panel cleaning, electrical checks and inspections to keep output at its best.",s5a:"Yearly plans",s5b:"Systems by other installers",
-s6t:"Batteries & hybrid",s6p:"Storage to keep the essentials running during grid outages.",s6a:"Backup",s6b:"Off-grid systems",
-howEy:"How it works",howT:"From first contact to clean power",howP:"We handle every step, including the paperwork with the utility.",
-t1w:"Step 1",t1t:"Site visit",t1p:"We check the roof, shading, electrical entry and your usage history.",
-t2w:"Step 2",t2t:"Design",t2p:"We size the system and show you a 3D design with expected generation month by month.",
-t3w:"Step 3",t3t:"Utility approval",t3p:"We file the paperwork and follow the request until it is approved.",
-t4w:"Step 4",t4t:"Installation",t4p:"Our own trained crew installs panels, racking and inverter safely.",
-t5w:"Step 5",t5t:"Monitoring",t5p:"Once the meter is swapped, the system goes live and you follow everything in the app.",
-whyEy:"Why solar",whyT:"Let the northern Rio sun work for you",
-w1t:"Lower bills",w1p:"The energy you generate becomes credits that reduce your bill every month.",w2t:"Shield from rate hikes",w2p:"Generating your own power softens tariff increases.",
-w3t:"Higher property value",w3p:"A solar system is a selling point for sale or rent.",w4t:"Clean energy",w4p:"Fewer emissions, no noise and long-lasting panels.",
-faqEy:"FAQ",faqT:"Your questions answered",
-q1:"Can I finance the system?",a1:"Yes. We work with solar financing lines from banks and credit unions. In many cases the installment is close to what you already pay for electricity.",
-q2:"Does it need much maintenance?",a2:"Very little. We recommend cleaning the panels and a check-up once a year. Monitoring alerts us if output drops.",
-q3:"What about cloudy or rainy days?",a3:"Panels keep generating, just less. The system is sized on the yearly average, and credits from sunny days make up for cloudy ones.",
-q4:"How long does installation take?",a4:"Installing on a house usually takes 1 to 3 days. The full process, including design and utility approval, typically takes a few weeks.",
-q5:"Does it work during a blackout?",a5:"Grid-tied systems shut down for safety when the grid is down. To keep power in those moments, there is the battery option.",
-galEy:"Gallery",galT:"Projects in 3D",galP:"Illustrative images. On the client's site, photos of real installations go here.",
-g1:"Residential · Rio das Ostras",g2:"High-efficiency modules",g3:"Commercial warehouse · Macaé",g4:"Rural plant · Campos",g5:"Hybrid system with battery",g6:"Ground mount at sunset",
-ctEy:"Contact",ctT:"Shall we design your solar plant?",ctArea:"Service area",ctRegion:"and surroundings",ctHours:"Hours",ctHoursV:"Mon to Fri, 8 am to 6 pm · Sat, 8 am to 12 pm",ctWa:"We speak Portuguese, English and Spanish",ctDir:"Directions",
-pkEy:"Liberon · Websites for your business",pkT:"Choose your package",pkP:"Like this template? It is the Premium package. See what each one includes.",
-pkMo:"+ R$ 88/month",pkMo2:"+ R$ 139/month",pkMo3:"+ R$ 159/month",pkBtn:"I want this one",pkBadge:"This template",
-e1:"One page in Portuguese",e2:"Hero photo, about, services and gallery",e3:"Opening hours and Google rating",e4:"Map with a Directions button",e5:"Floating WhatsApp (or call) button",
-p1:"Everything in Essencial",p2:"Separate pages: Home, About, Services and Contact",p3:"Form that sends to WhatsApp",p4:"FAQ",p5:"Local SEO and Instagram link",
-r1:"Everything in Profissional",r2:"Site in Portuguese, English and Spanish",r3:"WhatsApp with a ready message in the visitor's language",r4:"FAQ for tourists",r5:"Polished design with animations and full-screen gallery",
-pkNote:"The monthly fee covers hosting and small tweaks. Booking, reservations and custom systems are sold separately.",
-ftFict:"fictional company for demonstration",fab:"Chat on WhatsApp",
-waQuote:"Hi! I saw the Heliora website and would like a solar quote.",
-waSim:v=>`Hi! I used the calculator on your site: my electricity bill is ${v} per month. I'd like a real quote.`,
-waPk1:"Hi Liberon! I saw the solar showcase and want the Essencial package.",waPk2:"Hi Liberon! I saw the solar showcase and want the Profissional package.",waPk3:"Hi Liberon! I saw the solar showcase and want the Premium package."},
-
-es:{demoNote:"empresa ficticia",navSim:"Simulador",navSvc:"Servicios",navHow:"Cómo funciona",navFaq:"Preguntas",navContact:"Contacto",ctaShort:"Presupuesto",
-heroChip:"Campos · Macaé · Rio das Ostras",heroT1:"Tu propia",heroT2:"planta de energía",heroT3:"en el techo.",
-heroLead:"Proyectos de energía solar fotovoltaica para casas, empresas y campos del norte del estado de Río de Janeiro. Del proyecto a la aprobación, con monitoreo en tiempo real.",
-ctaQuote:"Pide tu presupuesto",ctaSim:"Simular ahorro",seg1:"Residencial",seg2:"Comercial",seg3:"Rural",
-u1:"GWh",u2:"t CO₂",upTo:"hasta",n1:"de energía limpia generada por los sistemas instalados",n2:"de emisiones evitadas",n3:"de ahorro en la factura de luz",numNote:"Cifras ilustrativas de este modelo de demostración.",
-simEy:"Simulador",simT:"¿Cuánto ahorras con el sol?",simP:"Escribe el valor medio de tu factura de luz y mira una estimación al instante.",simLabel:"Valor medio de la factura de luz por mes",
-sKwp:"potencia del sistema",sPan:"paneles solares",sArea:"área de techo",rMonth:"Ahorro por mes",rYear:"Ahorro por año",rPay:"El sistema se paga en",
-simDisc:"Estimación simplificada, solo para darte una idea. Considera una tarifa media de R$ 1,05/kWh, la buena radiación de la región y la tasa mínima que sigue en la factura. El valor real depende de tu consumo, techo y equipos: pide un presupuesto sin compromiso.",
-simCta:"Quiero mi presupuesto real",years:n=>n<=1?"1 año":n.toLocaleString("es-ES",{maximumFractionDigits:1})+" años",
-svcEy:"Servicios",svcT:"Energía solar para cada tipo de inmueble",svcP:"Proyecto a medida, equipos certificados y equipo propio de instalación.",
-s1t:"Residencial",s1p:"Sistemas para casas y condominios que reducen la factura y valorizan el inmueble.",s1a:"Techo de teja y metálico",s1b:"Proyecto en 3D",
-s2t:"Comercial e industria",s2p:"Plantas para tiendas, posadas, galpones y empresas que buscan costos previsibles.",s2a:"Losa y galpón",s2b:"Media tensión",
-s3t:"Rural y agro",s3p:"Sistemas en suelo para chacras y haciendas: riego, bombeo, refrigeración y casa principal.",s3a:"Estructura en suelo",s3b:"Bombeo solar",
-s4t:"Monitoreo",s4p:"Sigue la generación desde el celular. Nuestro equipo recibe alertas si algo sale de lo normal.",s4a:"App en tiempo real",s4b:"Informe mensual",
-s5t:"Mantenimiento y limpieza",s5p:"Limpieza de paneles, revisión eléctrica e inspección para mantener la generación al máximo.",s5a:"Planes anuales",s5b:"Sistemas de otras empresas",
-s6t:"Baterías e híbridos",s6p:"Almacenamiento para mantener lo esencial encendido cuando falta la red.",s6a:"Respaldo",s6b:"Sistemas off-grid",
-howEy:"Cómo funciona",howT:"Del primer contacto a la energía generada",howP:"Nos ocupamos de todas las etapas, incluso del papeleo con la distribuidora.",
-t1w:"Etapa 1",t1t:"Visita técnica",t1p:"Analizamos techo, sombras, acometida eléctrica y tu historial de consumo.",
-t2w:"Etapa 2",t2t:"Proyecto",t2p:"Dimensionamos el sistema y te mostramos el proyecto en 3D con la generación prevista mes a mes.",
-t3w:"Etapa 3",t3t:"Aprobación en la distribuidora",t3p:"Enviamos la documentación y seguimos el pedido hasta la aprobación.",
-t4w:"Etapa 4",t4t:"Instalación",t4p:"Nuestro equipo capacitado instala paneles, estructura e inversor con seguridad.",
-t5w:"Etapa 5",t5t:"Monitoreo",t5p:"Con el medidor cambiado, el sistema entra en operación y sigues todo desde la app.",
-whyEy:"Por qué energía solar",whyT:"El sol del norte fluminense trabaja para ti",
-w1t:"Factura más liviana",w1p:"La energía generada se convierte en créditos que reducen la factura cada mes.",w2t:"Protección ante aumentos",w2p:"Quien genera su propia energía siente menos los ajustes de tarifa.",
-w3t:"Inmueble valorizado",w3p:"Un sistema solar es un diferencial para vender o alquilar.",w4t:"Energía limpia",w4p:"Menos emisiones, sin ruido y paneles de larga vida útil.",
-faqEy:"Preguntas frecuentes",faqT:"Resuelve tus dudas",
-q1:"¿Se puede financiar el sistema?",a1:"Sí. Trabajamos con líneas de financiamiento solar de bancos y cooperativas. En muchos casos la cuota queda cerca de lo que ya pagas de luz.",
-q2:"¿Necesita mucho mantenimiento?",a2:"Poco. Recomendamos limpiar los paneles y una revisión al año. El monitoreo avisa si la generación baja.",
-q3:"¿Y en días nublados o de lluvia?",a3:"Los paneles siguen generando, solo que menos. El sistema se dimensiona por la media del año, y los créditos de los días de sol compensan los nublados.",
-q4:"¿Cuánto tarda la instalación?",a4:"La instalación en una casa suele llevar de 1 a 3 días. El proceso completo, con proyecto y aprobación de la distribuidora, lleva en promedio algunas semanas.",
-q5:"¿Funciona cuando se corta la luz?",a5:"Los sistemas conectados a la red se apagan por seguridad durante un corte. Para tener energía en esos momentos, existe la opción con baterías.",
-galEy:"Galería",galT:"Proyectos en 3D",galP:"Imágenes ilustrativas. En el sitio del cliente van las fotos de las obras reales.",
-g1:"Residencial · Rio das Ostras",g2:"Módulos de alta eficiencia",g3:"Galpón comercial · Macaé",g4:"Planta rural · Campos",g5:"Sistema híbrido con batería",g6:"Estructura en suelo al atardecer",
-ctEy:"Contacto",ctT:"¿Diseñamos tu planta solar?",ctArea:"Zona de atención",ctRegion:"y alrededores",ctHours:"Horario",ctHoursV:"Lunes a viernes, 8 a 18 h · Sábado, 8 a 12 h",ctWa:"Atendemos en portugués, inglés y español",ctDir:"Cómo llegar",
-pkEy:"Liberon · Sitios para tu negocio",pkT:"Elige tu paquete",pkP:"¿Te gustó este modelo? Es del paquete Premium. Mira qué incluye cada uno.",
-pkMo:"+ R$ 88/mes",pkMo2:"+ R$ 139/mes",pkMo3:"+ R$ 159/mes",pkBtn:"Quiero este",pkBadge:"Este modelo",
-e1:"Una página en portugués",e2:"Portada con foto, sobre, servicios y galería",e3:"Horarios y nota de Google",e4:"Mapa con botón \"Cómo llegar\"",e5:"Botón fijo de WhatsApp (o llamar)",
-p1:"Todo lo del Essencial",p2:"Páginas separadas: Inicio, Sobre, Servicios y Contacto",p3:"Formulario que envía al WhatsApp",p4:"Preguntas frecuentes",p5:"SEO local y enlace de Instagram",
-r1:"Todo lo del Profissional",r2:"Sitio en portugués, inglés y español",r3:"WhatsApp con mensaje listo en el idioma del visitante",r4:"Preguntas frecuentes para turistas",r5:"Diseño cuidado con animaciones y galería a pantalla completa",
-pkNote:"La mensualidad cubre hosting y pequeños ajustes. Agenda, reservas y sistemas se venden aparte.",
-ftFict:"empresa ficticia de demostración",fab:"Habla por WhatsApp",
-waQuote:"¡Hola! Vi el sitio de Heliora y quiero un presupuesto de energía solar.",
-waSim:v=>`¡Hola! Hice la simulación en el sitio: mi factura de luz es de ${v} por mes. Quiero un presupuesto real.`,
-waPk1:"¡Hola, Liberon! Vi la vitrina de energía solar y quiero el paquete Essencial.",waPk2:"¡Hola, Liberon! Vi la vitrina de energía solar y quiero el paquete Profissional.",waPk3:"¡Hola, Liberon! Vi la vitrina de energía solar y quiero el paquete Premium."}
+/* textos: [português, inglês, espanhol] */
+const D={
+demoNote:["empresa fictícia","fictional company","empresa ficticia"],
+navSim:["Simulador","Calculator","Simulador"],navSvc:["Serviços","Services","Servicios"],navHow:["Como funciona","How it works","Cómo funciona"],navFaq:["Dúvidas","FAQ","Preguntas"],navContact:["Contato","Contact","Contacto"],ctaShort:["Orçamento","Get a quote","Presupuesto"],
+heroChip:["Campos · Macaé · Rio das Ostras","Campos · Macaé · Rio das Ostras","Campos · Macaé · Rio das Ostras"],
+heroT1:["Energia do sol,","Power from the sun,","Energía del sol,"],heroT2:["conta lá embaixo.","bills way down.","factura por el piso."],
+heroLead:["Projetos de energia solar fotovoltaica para casas, empresas e propriedades rurais do Norte Fluminense. Do projeto à homologação, com monitoramento em tempo real.","Solar PV systems for homes, businesses and farms in northern Rio de Janeiro state. From design to utility approval, with real-time monitoring.","Proyectos de energía solar fotovoltaica para casas, empresas y campos del norte del estado de Río de Janeiro. Del proyecto a la aprobación, con monitoreo en tiempo real."],
+ctaQuote:["Peça seu orçamento","Get your quote","Pide tu presupuesto"],ctaSim:["Simular economia","Estimate savings","Simular ahorro"],
+seg1:["Residencial","Residential","Residencial"],seg2:["Comercial","Commercial","Comercial"],seg3:["Rural","Rural","Rural"],seg4:["Homologação inclusa","Utility approval included","Aprobación incluida"],
+lGlass:["Vidro temperado","Tempered glass","Vidrio templado"],lEva:["Encapsulante EVA","EVA encapsulant","Encapsulante EVA"],lCells:["Células fotovoltaicas","Solar cells","Células fotovoltaicas"],lBack:["Camada de proteção","Protective backsheet","Capa de protección"],lFrame:["Moldura de alumínio","Aluminum frame","Marco de aluminio"],lJbox:["Caixa de junção","Junction box","Caja de conexiones"],
+hint:["Passe o mouse para ver por dentro do painel","Hover to see inside the panel","Pasa el mouse para ver el panel por dentro"],
+hintT:["Toque no painel para ver por dentro","Tap the panel to see inside","Toca el panel para verlo por dentro"],
+upTo:["até","up to","hasta"],
+n1:["de energia limpa gerada pelos sistemas instalados","of clean energy generated by installed systems","de energía limpia generada por los sistemas instalados"],
+n2:["de emissões evitadas na atmosfera","of emissions kept out of the air","de emisiones evitadas"],n3:["de economia na conta de luz","savings on the electricity bill","de ahorro en la factura de luz"],
+numNote:["Números ilustrativos deste modelo de demonstração.","Illustrative figures for this demo template.","Cifras ilustrativas de este modelo de demostración."],
+simEy:["Simulador","Savings calculator","Simulador"],simT:["Quanto você economiza com o sol?","How much can the sun save you?","¿Cuánto ahorras con el sol?"],
+simP:["Digite o valor médio da sua conta de luz e veja uma estimativa na hora.","Enter your average electricity bill and get an instant estimate.","Escribe el valor medio de tu factura de luz y mira una estimación al instante."],
+simLabel:["Valor médio da conta de luz por mês","Average monthly electricity bill","Valor medio de la factura de luz por mes"],
+sKwp:["potência","system size","potencia"],sPan:["placas","panels","paneles"],sArea:["de telhado","of roof","de techo"],
+rMonth:["Economia estimada por mês","Estimated monthly savings","Ahorro estimado por mes"],cToday:["Conta hoje","Bill today","Factura hoy"],cSolar:["Com solar","With solar","Con solar"],
+rYear:["Por ano","Per year","Por año"],rPay:["Se paga em","Pays for itself in","Se paga en"],
+simDisc:["Estimativa simplificada, só para ter uma ideia. Considera tarifa média de R$ 1,05/kWh, boa insolação da região e a taxa mínima que continua na conta. O valor real depende do seu consumo, telhado e equipamentos: peça um orçamento sem compromisso.","Simplified estimate, just to give you an idea. Assumes an average rate of R$ 1.05/kWh, the region's strong sunshine and the minimum fee that stays on the bill. Actual figures depend on your usage, roof and equipment: ask for a free quote.","Estimación simplificada, solo para darte una idea. Considera una tarifa media de R$ 1,05/kWh, la buena radiación de la región y la tasa mínima que sigue en la factura. El valor real depende de tu consumo, techo y equipos: pide un presupuesto sin compromiso."],
+simCta:["Quero meu orçamento real","Get my real quote","Quiero mi presupuesto real"],
+svcEy:["Serviços","Services","Servicios"],svcT:["Energia solar para cada tipo de imóvel","Solar power for every kind of property","Energía solar para cada tipo de inmueble"],
+svcP:["Projeto sob medida, equipamentos certificados e equipe própria de instalação.","Custom design, certified equipment and our own installation team.","Proyecto a medida, equipos certificados y equipo propio de instalación."],
+s1t:["Residencial","Residential","Residencial"],s1p:["Sistemas para casas e condomínios que cortam a conta de luz e valorizam o imóvel.","Systems for houses and condos that cut the power bill and add value to the property.","Sistemas para casas y condominios que reducen la factura y valorizan el inmueble."],s1a:["Telhado cerâmico e metálico","Tile and metal roofs","Techo de teja y metálico"],s1b:["Projeto em 3D","3D design","Proyecto en 3D"],
+s2t:["Comercial e indústria","Commercial & industrial","Comercial e industria"],s2p:["Usinas para lojas, pousadas, galpões e empresas que querem previsibilidade de custo.","Plants for shops, guesthouses, warehouses and companies that want predictable costs.","Plantas para tiendas, posadas, galpones y empresas que buscan costos previsibles."],s2a:["Laje e galpão","Flat roofs & warehouses","Losa y galpón"],s2b:["Média tensão","Medium voltage","Media tensión"],
+s3t:["Rural e agro","Rural & agribusiness","Rural y agro"],s3p:["Sistemas em solo para sítios e fazendas: irrigação, bombeamento, resfriamento e sede.","Ground-mounted systems for farms: irrigation, pumping, cooling and the main house.","Sistemas en suelo para chacras y haciendas: riego, bombeo, refrigeración y casa principal."],s3a:["Estrutura em solo","Ground mount","Estructura en suelo"],s3b:["Bombeamento solar","Solar pumping","Bombeo solar"],
+s4t:["Monitoramento","Monitoring","Monitoreo"],s4p:["Acompanhe a geração pelo celular. Nossa equipe recebe alertas se algo sair do normal.","Track generation on your phone. Our team gets alerts if anything looks off.","Sigue la generación desde el celular. Nuestro equipo recibe alertas si algo sale de lo normal."],s4a:["App em tempo real","Real-time app","App en tiempo real"],s4b:["Relatório mensal","Monthly report","Informe mensual"],
+s5t:["Manutenção e limpeza","Maintenance & cleaning","Mantenimiento y limpieza"],s5p:["Limpeza das placas, revisão elétrica e inspeção para manter a geração no máximo.","Panel cleaning, electrical checks and inspections to keep output at its best.","Limpieza de paneles, revisión eléctrica e inspección para mantener la generación al máximo."],s5a:["Planos anuais","Yearly plans","Planes anuales"],s5b:["Sistemas de outras empresas","Systems by other installers","Sistemas de otras empresas"],
+s6t:["Baterias e híbridos","Batteries & hybrid","Baterías e híbridos"],s6p:["Armazenamento para manter o essencial ligado quando falta energia da rede.","Storage to keep the essentials running during grid outages.","Almacenamiento para mantener lo esencial encendido cuando falta la red."],s6a:["Backup","Backup","Respaldo"],s6b:["Sistemas off-grid","Off-grid systems","Sistemas off-grid"],
+howEy:["Como funciona","How it works","Cómo funciona"],howT:["Do primeiro contato à energia gerada","From first contact to clean power","Del primer contacto a la energía generada"],
+howP:["Cuidamos de todas as etapas, inclusive da papelada com a concessionária.","We handle every step, including the paperwork with the utility.","Nos ocupamos de todas las etapas, incluso del papeleo con la distribuidora."],
+t1t:["Visita técnica","Site visit","Visita técnica"],t1p:["Analisamos telhado, sombreamento, padrão de entrada e seu histórico de consumo.","We check the roof, shading, electrical entry and your usage history.","Analizamos techo, sombras, acometida eléctrica y tu historial de consumo."],
+t2t:["Projeto","Design","Proyecto"],t2p:["Dimensionamos o sistema e mostramos o projeto em 3D com a geração prevista mês a mês.","We size the system and show you a 3D design with expected generation month by month.","Dimensionamos el sistema y te mostramos el proyecto en 3D con la generación prevista mes a mes."],
+t3t:["Homologação","Utility approval","Aprobación"],t3p:["Enviamos a documentação à concessionária e acompanhamos até a aprovação.","We file the paperwork with the utility and follow it until approval.","Enviamos la documentación a la distribuidora y la seguimos hasta la aprobación."],
+t4t:["Instalação","Installation","Instalación"],t4p:["Equipe própria e treinada instala placas, estrutura e inversor com segurança.","Our own trained crew installs panels, racking and inverter safely.","Nuestro equipo capacitado instala paneles, estructura e inversor con seguridad."],
+t5t:["Monitoramento","Monitoring","Monitoreo"],t5p:["Com o medidor trocado, o sistema entra em operação e você acompanha tudo pelo app.","Once the meter is swapped, the system goes live and you follow everything in the app.","Con el medidor cambiado, el sistema entra en operación y sigues todo desde la app."],
+whyEy:["Por que energia solar","Why solar","Por qué energía solar"],whyT:["Do sol até a sua tomada","From the sun to your socket","Del sol a tu enchufe"],
+whyP:["As placas transformam luz em energia, o inversor deixa pronta para a casa e o que sobra vira crédito na concessionária.","Panels turn light into power, the inverter makes it ready for your home, and any surplus becomes credit with the utility.","Los paneles transforman la luz en energía, el inversor la deja lista para la casa y lo que sobra se convierte en crédito con la distribuidora."],
+f1:["Sol","Sun","Sol"],f1s:["luz gratuita","free light","luz gratuita"],f2:["Placas","Panels","Paneles"],f2s:["geram energia","generate power","generan energía"],f3:["Inversor","Inverter","Inversor"],f3s:["converte para a casa","converts for the home","convierte para la casa"],f4:["Sua casa","Your home","Tu casa"],f4s:["usa na hora","uses it right away","la usa al instante"],f5:["Rede","Grid","Red"],f5s:["o excedente vira crédito","surplus becomes credit","el excedente se vuelve crédito"],
+w1t:["Conta mais leve","Lower bills","Factura más liviana"],w1p:["A energia gerada vira créditos que abatem a conta todo mês.","The energy you generate becomes credits that reduce your bill every month.","La energía generada se convierte en créditos que reducen la factura cada mes."],
+w2t:["Proteção contra aumentos","Shield from rate hikes","Protección ante aumentos"],w2p:["Quem gera a própria energia sente menos os reajustes da tarifa.","Generating your own power softens tariff increases.","Quien genera su propia energía siente menos los ajustes de tarifa."],
+w3t:["Imóvel valorizado","Higher property value","Inmueble valorizado"],w3p:["Um sistema solar é um diferencial na venda ou no aluguel.","A solar system is a selling point for sale or rent.","Un sistema solar es un diferencial para vender o alquilar."],
+w4t:["Energia limpa","Clean energy","Energía limpia"],w4p:["Menos emissões, sem barulho e com vida útil longa das placas.","Fewer emissions, no noise and long-lasting panels.","Menos emisiones, sin ruido y paneles de larga vida útil."],
+faqEy:["Perguntas frequentes","FAQ","Preguntas frecuentes"],faqT:["Tire suas dúvidas","Your questions answered","Resuelve tus dudas"],faqP:["Não achou sua pergunta? Chame no WhatsApp.","Can't find your question? Message us on WhatsApp.","¿No encontraste tu pregunta? Escríbenos por WhatsApp."],
+q1:["Dá para financiar o sistema?","Can I finance the system?","¿Se puede financiar el sistema?"],a1:["Sim. Trabalhamos com linhas de financiamento solar de bancos e cooperativas. Em muitos casos a parcela fica perto do valor que você já paga de luz.","Yes. We work with solar financing lines from banks and credit unions. In many cases the installment is close to what you already pay for electricity.","Sí. Trabajamos con líneas de financiamiento solar de bancos y cooperativas. En muchos casos la cuota queda cerca de lo que ya pagas de luz."],
+q2:["Precisa de muita manutenção?","Does it need much maintenance?","¿Necesita mucho mantenimiento?"],a2:["Pouca. Recomendamos limpeza das placas e uma revisão por ano. O monitoramento avisa se a geração cair.","Very little. We recommend cleaning the panels and a check-up once a year. Monitoring alerts us if output drops.","Poco. Recomendamos limpiar los paneles y una revisión al año. El monitoreo avisa si la generación baja."],
+q3:["E em dias nublados ou de chuva?","What about cloudy or rainy days?","¿Y en días nublados o de lluvia?"],a3:["As placas continuam gerando, só que menos. O sistema é dimensionado pela média do ano, e os créditos dos dias de sol compensam os dias nublados.","Panels keep generating, just less. The system is sized on the yearly average, and credits from sunny days make up for cloudy ones.","Los paneles siguen generando, solo que menos. El sistema se dimensiona por la media del año, y los créditos de los días de sol compensan los nublados."],
+q4:["Quanto tempo leva a instalação?","How long does installation take?","¿Cuánto tarda la instalación?"],a4:["A instalação em uma casa costuma levar de 1 a 3 dias. O processo completo, com projeto e homologação na concessionária, leva em média algumas semanas.","Installing on a house usually takes 1 to 3 days. The full process, including design and utility approval, typically takes a few weeks.","La instalación en una casa suele llevar de 1 a 3 días. El proceso completo, con proyecto y aprobación de la distribuidora, lleva en promedio algunas semanas."],
+q5:["Funciona quando falta luz?","Does it work during a blackout?","¿Funciona cuando se corta la luz?"],a5:["Sistemas ligados à rede desligam por segurança quando falta energia. Para ter energia nesses momentos, existe a opção com baterias.","Grid-tied systems shut down for safety when the grid is down. To keep power in those moments, there is the battery option.","Los sistemas conectados a la red se apagan por seguridad durante un corte. Para tener energía en esos momentos, existe la opción con baterías."],
+galEy:["Galeria","Gallery","Galería"],galT:["Projetos que geram","Projects that generate","Proyectos que generan"],
+g1:["Residencial · Rio das Ostras","Residential · Rio das Ostras","Residencial · Rio das Ostras"],g2:["Instalação em telhado","Rooftop installation","Instalación en techo"],g3:["Comercial · Macaé","Commercial · Macaé","Comercial · Macaé"],g4:["Usina rural · Campos","Rural plant · Campos","Planta rural · Campos"],g5:["Módulos de alta eficiência","High-efficiency modules","Módulos de alta eficiencia"],g6:["Estrutura em solo","Ground mount","Estructura en suelo"],
+galCredit:["Fotos ilustrativas (Unsplash). No site do cliente, entram as fotos das obras reais.","Illustrative photos (Unsplash). On the client's site, photos of real installations go here.","Fotos ilustrativas (Unsplash). En el sitio del cliente van las fotos de las obras reales."],
+ctEy:["Contato","Contact","Contacto"],ctT:["Vamos projetar a sua usina?","Shall we design your solar plant?","¿Diseñamos tu planta solar?"],ctArea:["Área de atendimento","Service area","Zona de atención"],ctRegion:["e região","and surroundings","y alrededores"],ctHours:["Horário","Hours","Horario"],
+ctHoursV:["Segunda a sexta, 8h às 18h · Sábado, 8h às 12h","Mon to Fri, 8 am to 6 pm · Sat, 8 am to 12 pm","Lunes a viernes, 8 a 18 h · Sábado, 8 a 12 h"],ctWa:["Atendimento em português, inglês e espanhol","We speak Portuguese, English and Spanish","Atendemos en portugués, inglés y español"],ctDir:["Como chegar","Directions","Cómo llegar"],
+ftFict:["empresa fictícia para demonstração","fictional company for demonstration","empresa ficticia de demostración"],
+libCut:["Fim do site de exemplo · a seção abaixo é da Liberon","End of the sample site · the section below is by Liberon","Fin del sitio de ejemplo · la sección de abajo es de Liberon"],
+pkT:["Quer um site assim para a sua empresa? Escolha seu pacote","Want a site like this for your business? Choose your package","¿Quieres un sitio así para tu empresa? Elige tu paquete"],
+pkP:["Este modelo é do pacote Premium. A Heliora não existe: o site serve para você ver como o seu pode ficar.","This template is the Premium package. Heliora isn't real: the site shows what yours could look like.","Este modelo es del paquete Premium. Heliora no existe: el sitio sirve para que veas cómo puede quedar el tuyo."],
+pkMo1:["+ R$ 88/mês","+ R$ 88/month","+ R$ 88/mes"],pkMo2:["+ R$ 139/mês","+ R$ 139/month","+ R$ 139/mes"],pkMo3:["+ R$ 159/mês","+ R$ 159/month","+ R$ 159/mes"],
+pkB1:["Quero o Essencial","I want Essencial","Quiero el Essencial"],pkB2:["Quero o Profissional","I want Profissional","Quiero el Profissional"],pkB3:["Quero o Premium","I want Premium","Quiero el Premium"],pkBadge:["Modelo desta página","This page's template","Modelo de esta página"],
+e1:["Uma página em português","One page in Portuguese","Una página en portugués"],e2:["Topo com foto, sobre, serviços e galeria","Hero photo, about, services and gallery","Portada con foto, sobre, servicios y galería"],e3:["Horários e nota do Google","Opening hours and Google rating","Horarios y nota de Google"],e4:["Mapa com botão \"Como chegar\"","Map with a Directions button","Mapa con botón \"Cómo llegar\""],e5:["Botão fixo de WhatsApp (ou ligar)","Floating WhatsApp (or call) button","Botón fijo de WhatsApp (o llamar)"],
+p1:["Tudo do Essencial","Everything in Essencial","Todo lo del Essencial"],p2:["Páginas separadas: Início, Sobre, Serviços e Contato","Separate pages: Home, About, Services and Contact","Páginas separadas: Inicio, Sobre, Servicios y Contacto"],p3:["Formulário que envia para o WhatsApp","Form that sends to WhatsApp","Formulario que envía al WhatsApp"],p4:["Perguntas frequentes","FAQ","Preguntas frecuentes"],p5:["SEO local e link do Instagram","Local SEO and Instagram link","SEO local y enlace de Instagram"],
+r1:["Tudo do Profissional","Everything in Profissional","Todo lo del Profissional"],r2:["Site em português, inglês e espanhol","Site in Portuguese, English and Spanish","Sitio en portugués, inglés y español"],r3:["WhatsApp com mensagem pronta no idioma do visitante","WhatsApp with a ready message in the visitor's language","WhatsApp con mensaje listo en el idioma del visitante"],r4:["Perguntas frequentes para turistas","FAQ for tourists","Preguntas frecuentes para turistas"],r5:["Visual caprichado com animações e galeria em tela cheia","Polished design with animations and full-screen gallery","Diseño cuidado con animaciones y galería a pantalla completa"],
+pkNote:["A mensalidade cobre hospedagem e pequenos ajustes. Agendamento, reservas e sistemas são vendidos à parte.","The monthly fee covers hosting and small tweaks. Booking, reservations and custom systems are sold separately.","La mensualidad cubre hosting y pequeños ajustes. Agenda, reservas y sistemas se venden aparte."],
+waQuote:["Olá! Vi o site da Heliora e quero um orçamento de energia solar.","Hi! I saw the Heliora website and would like a solar quote.","¡Hola! Vi el sitio de Heliora y quiero un presupuesto de energía solar."],
+waPk1:["Olá, Liberon! Vi a vitrine de energia solar e quero o pacote Essencial.","Hi Liberon! I saw the solar showcase and want the Essencial package.","¡Hola, Liberon! Vi la vitrina de energía solar y quiero el paquete Essencial."],
+waPk2:["Olá, Liberon! Vi a vitrine de energia solar e quero o pacote Profissional.","Hi Liberon! I saw the solar showcase and want the Profissional package.","¡Hola, Liberon! Vi la vitrina de energía solar y quiero el paquete Profissional."],
+waPk3:["Olá, Liberon! Vi a vitrine de energia solar e quero o pacote Premium.","Hi Liberon! I saw the solar showcase and want the Premium package.","¡Hola, Liberon! Vi la vitrina de energía solar y quiero el paquete Premium."]
 };
-const LOC={pt:"pt-BR",en:"en-US",es:"es-ES"};
-let lang="pt";
+const F={
+ years:[n=>n<=1?"1 ano":fmt(n,1)+" anos",n=>n<=1?"1 year":fmt(n,1)+" years",n=>n<=1?"1 año":fmt(n,1)+" años"],
+ waSim:[v=>`Olá! Fiz a simulação no site: minha conta de luz é de ${v} por mês. Quero um orçamento real.`,v=>`Hi! I used the calculator on your site: my electricity bill is ${v} per month. I'd like a real quote.`,v=>`¡Hola! Hice la simulación en el sitio: mi factura de luz es de ${v} por mes. Quiero un presupuesto real.`]
+};
+const LANGS=["pt","en","es"],LOC={pt:"pt-BR",en:"en-US",es:"es-ES"};
+let lang="pt",L=0;
+const t=k=>(D[k]||[])[L];
 const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
+const coarse=matchMedia("(hover: none), (pointer: coarse)").matches;
 document.body.classList.remove("no-js");
-
+function fmt(n,d=0){return n.toLocaleString(LOC[lang],{minimumFractionDigits:0,maximumFractionDigits:d})}
+function brl(v){return "R$ "+Math.round(v).toLocaleString(LOC[lang])}
 function waLink(text){return "https://wa.me/"+LIBERON_WHATSAPP.replace(/\D/g,"")+"?text="+encodeURIComponent(text)}
-function brl(v,d=0){return "R$ "+v.toLocaleString(LOC[lang],{minimumFractionDigits:d,maximumFractionDigits:d})}
+const $=id=>document.getElementById(id);
+const lb=$("lb"),lbImg=$("lbImg"),lbCap=$("lbCap"),items=[...document.querySelectorAll("#gal button")];let gi=0;
 
-function splitTitle(el){ // wrap words for the reveal
-  if(reduce){return}
-  const words=el.textContent.trim().split(/\s+/);
-  el.innerHTML=words.map((w,i)=>`<span class="w"><span style="--i:${i}">${w}</span></span>`).join(" ");
-}
+function splitTitle(el){if(reduce)return;const w=el.textContent.trim().split(/\s+/);el.innerHTML=w.map((x,i)=>`<span class="w"><span style="--i:${i}">${x}</span></span>`).join(" ")}
 function setLang(l){
-  lang=T[l]?l:"pt";const d=T[lang];
-  document.documentElement.lang=LOC[lang];
-  document.querySelectorAll("[data-i18n]").forEach(el=>{const v=d[el.dataset.i18n];if(typeof v!=="string")return;
-    if(el.classList.contains("split")){el.textContent=v;splitTitle(el)}else el.textContent=v;});
-  document.querySelectorAll("[data-wa]").forEach(a=>a.href=waLink(d[a.dataset.wa]));
+  lang=LANGS.includes(l)?l:"pt";L=LANGS.indexOf(lang);document.documentElement.lang=LOC[lang];
+  document.querySelectorAll("[data-i18n]").forEach(el=>{const v=t(el.dataset.i18n);if(typeof v!=="string")return;el.textContent=v;if(el.classList.contains("split"))splitTitle(el)});
+  if(coarse)$("hintTxt").textContent=t("hintT");
+  document.querySelectorAll("[data-wa]").forEach(a=>a.href=waLink(t(a.dataset.wa)));
   document.querySelectorAll(".lang button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.lang===lang));
   try{localStorage.setItem("heliora-lang",lang)}catch(e){}
-  calc();
-  document.querySelectorAll(".count.done").forEach(fmtCount);
+  calc();document.querySelectorAll(".count.done").forEach(fmtCount);
+  if(lb.open)show(gi);
 }
 document.querySelectorAll(".lang button").forEach(b=>b.addEventListener("click",()=>setLang(b.dataset.lang)));
+addEventListener("scroll",()=>$("hdr").classList.toggle("sc",scrollY>10),{passive:true});
 
-/* ---------- simulator ---------- */
-const bill=document.getElementById("bill"),range=document.getElementById("billRange");
+/* simulador */
+const bill=$("bill"),range=$("billRange");
 const TARIFA=1.05,ECON=0.90,KWH_KWP=120,PAINEL=0.58,M2=2.6;
 function calc(){
-  const v=Math.max(0,parseInt(String(bill.value).replace(/\D/g,""))||0);
-  const p=Math.min(100,Math.max(0,(Math.min(v,5000)-100)/49));range.style.setProperty("--p",p+"%");
-  const o=id=>document.getElementById(id);const d=T[lang];
-  if(v<80){["oKwp","oPan","oArea","oMonth","oYear","oPay"].forEach(i=>o(i).textContent="–");
-    document.getElementById("simCta").href=waLink(d.waQuote);return}
-  const kwh=v/TARIFA, kwp=kwh/KWH_KWP, pan=Math.max(4,Math.ceil(kwp/PAINEL));
-  const kwpR=pan*PAINEL, custo=kwpR*3900+4000, mes=v*ECON, ano=mes*12, pay=custo/ano;
-  o("oKwp").textContent=kwpR.toLocaleString(LOC[lang],{maximumFractionDigits:1})+" kWp";
-  o("oPan").textContent=pan;
-  o("oArea").textContent=Math.round(pan*M2)+" m²";
-  o("oMonth").textContent=brl(Math.round(mes));
-  o("oYear").textContent=brl(Math.round(ano));
-  o("oPay").textContent="~ "+d.years(Math.round(pay*2)/2);
-  document.getElementById("simCta").href=waLink(d.waSim(brl(v)));
+  const v=parseInt(String(bill.value).replace(/\D/g,""))||0;
+  range.style.setProperty("--p",Math.min(100,Math.max(0,(Math.min(v,5000)-100)/49))+"%");
+  if(v<80){["oKwp","oPan","oArea","oMonth","oYear","oPay","oToday","oAfter"].forEach(i=>$(i).textContent="–");$("simCta").href=waLink(t("waQuote"));return}
+  const kwp=v/TARIFA/KWH_KWP,pan=Math.max(4,Math.ceil(kwp/PAINEL)),kwpR=pan*PAINEL,custo=kwpR*3900+4000,mes=v*ECON,ano=mes*12,pay=custo/ano;
+  $("oKwp").textContent=fmt(kwpR,1)+" kWp";$("oPan").textContent=pan;$("oArea").textContent=Math.round(pan*M2)+" m²";
+  $("oMonth").textContent=brl(mes);$("oYear").textContent=brl(ano);$("oPay").textContent="~"+F.years[L](Math.round(pay*2)/2);
+  $("oToday").textContent=brl(v);$("oAfter").textContent=brl(v-mes);
+  $("simCta").href=waLink(F.waSim[L](brl(v)));
 }
 bill.addEventListener("input",()=>{const n=parseInt(bill.value.replace(/\D/g,""))||0;bill.value=n?n.toLocaleString("pt-BR"):"";range.value=Math.min(5000,Math.max(100,n));calc()});
 range.addEventListener("input",()=>{bill.value=(+range.value).toLocaleString("pt-BR");calc()});
 
-/* ---------- counters ---------- */
-function fmtCount(el){const to=+el.dataset.to,dec=+el.dataset.dec;el.textContent=to.toLocaleString(LOC[lang],{minimumFractionDigits:dec,maximumFractionDigits:dec})}
-function runCount(el){
-  if(el.classList.contains("done"))return;el.classList.add("done");
-  if(reduce){fmtCount(el);return}
-  const to=+el.dataset.to,dec=+el.dataset.dec,t0=performance.now(),dur=2000;
-  (function f(t){const k=Math.min(1,(t-t0)/dur),e=1-Math.pow(1-k,4);
-    el.textContent=(to*e).toLocaleString(LOC[lang],{minimumFractionDigits:dec,maximumFractionDigits:dec});if(k<1)requestAnimationFrame(f)})(t0);
-}
+/* contadores */
+function fmtCount(el){const d=+el.dataset.dec;el.textContent=(+el.dataset.to).toLocaleString(LOC[lang],{minimumFractionDigits:d,maximumFractionDigits:d})}
+function runCount(el){if(el.classList.contains("done"))return;el.classList.add("done");if(reduce){fmtCount(el);return}
+  const to=+el.dataset.to,d=+el.dataset.dec,t0=performance.now();
+  (function f(n){const k=Math.min(1,(n-t0)/2200),e=1-Math.pow(1-k,4);el.textContent=(to*e).toLocaleString(LOC[lang],{minimumFractionDigits:d,maximumFractionDigits:d});if(k<1)requestAnimationFrame(f)})(t0)}
 
-/* ---------- reveal on scroll ---------- */
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;const t=e.target;t.classList.add("in");
-  t.querySelectorAll&&t.querySelectorAll(".count").forEach(runCount);
-  if(t.closest(".step"))t.closest(".step").classList.add("on");
-  io.unobserve(t)}),{threshold:.18,rootMargin:"0px 0px -6% 0px"});
-function observe(){document.querySelectorAll(".rv,.split").forEach(el=>{if(!el.classList.contains("in"))io.observe(el)})}
+/* revelar ao rolar */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;const el=e.target;el.classList.add("in");
+  el.querySelectorAll(".count").forEach(runCount);el.querySelectorAll(".num").forEach(n=>n.classList.add("in"));
+  if(el.classList.contains("sim-out"))setTimeout(()=>$("barB").style.width=((1-ECON)*100)+"%",300);
+  io.unobserve(el)}),{threshold:.15,rootMargin:"0px 0px -6% 0px"});
+document.querySelectorAll(".rv,.split").forEach(el=>io.observe(el));
+const stepIO=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add("on")}),{rootMargin:"0px 0px -35% 0px"});
+document.querySelectorAll(".step").forEach(s=>stepIO.observe(s));
 
-/* ---------- timeline progress ---------- */
-const tl=document.getElementById("tl");
-function tlProg(){const r=tl.getBoundingClientRect(),vh=innerHeight;const p=Math.min(1,Math.max(0,(vh*.62-r.top)/r.height));tl.style.setProperty("--prog",reduce?1:p)}
+/* linha do tempo: o cabo enche de energia ao rolar */
+const tl=$("tl");
+function tlProg(){const r=tl.getBoundingClientRect(),vh=innerHeight;const p=reduce?1:Math.min(1,Math.max(0,(vh*.7-r.top)/(r.height*.8)));tl.style.setProperty("--prog",p.toFixed(3));tl.style.setProperty("--sp",p>.05?1:0)}
 addEventListener("scroll",tlProg,{passive:true});addEventListener("resize",tlProg);
 
-/* ---------- tilt cards ---------- */
-if(!reduce&&matchMedia("(hover:hover) and (pointer:fine)").matches){
-  document.querySelectorAll(".svc").forEach(c=>{
-    c.addEventListener("pointermove",e=>{const r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;
-      c.style.transform=`rotateX(${(0.5-y)*14}deg) rotateY(${(x-0.5)*16}deg) translateZ(0)`;c.style.setProperty("--mx",x*100+"%");c.style.setProperty("--my",y*100+"%")});
-    c.addEventListener("pointerleave",()=>{c.style.transform=""});
-  });
-}
+/* cards com inclinação 3D */
+if(!reduce&&!coarse){document.querySelectorAll(".svc").forEach(c=>{
+  c.addEventListener("pointermove",e=>{const r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;
+    c.style.transform=`rotateX(${(.5-y)*12}deg) rotateY(${(x-.5)*14}deg)`;c.style.setProperty("--mx",x*100+"%");c.style.setProperty("--my",y*100+"%")});
+  c.addEventListener("pointerleave",()=>c.style.transform="")})}
 
-/* ---------- gallery lightbox ---------- */
-const lb=document.getElementById("lb"),lbImg=document.getElementById("lbImg"),lbCap=document.getElementById("lbCap");
-const items=[...document.querySelectorAll("#gal button")];let gi=0;
-function show(i){gi=(i+items.length)%items.length;lbImg.src=items[gi].dataset.full;lbCap.textContent=T[lang][items[gi].dataset.cap]}
+/* galeria em tela cheia */
+function show(i){gi=(i+items.length)%items.length;lbImg.src=`https://images.unsplash.com/${items[gi].dataset.id}?w=1600&q=78&auto=format`;lbCap.textContent=t(items[gi].dataset.cap)}
 items.forEach((b,i)=>b.addEventListener("click",()=>{show(i);lb.showModal()}));
 lb.querySelector(".x").onclick=()=>lb.close();lb.querySelector(".pv").onclick=()=>show(gi-1);lb.querySelector(".nx").onclick=()=>show(gi+1);
 lb.addEventListener("click",e=>{if(e.target===lb||e.target.classList.contains("lb-in"))lb.close()});
 lb.addEventListener("keydown",e=>{if(e.key==="ArrowLeft")show(gi-1);if(e.key==="ArrowRight")show(gi+1)});
-let tx=0;lb.addEventListener("touchstart",e=>tx=e.touches[0].clientX,{passive:true});
-lb.addEventListener("touchend",e=>{const dx=e.changedTouches[0].clientX-tx;if(Math.abs(dx)>50)show(gi+(dx<0?1:-1))});
+let tx0=0;lb.addEventListener("touchstart",e=>tx0=e.touches[0].clientX,{passive:true});lb.addEventListener("touchend",e=>{const dx=e.changedTouches[0].clientX-tx0;if(Math.abs(dx)>50)show(gi+(dx<0?1:-1))});
 
-/* ---------- map: load when near ---------- */
-const mapF=document.querySelector(".map iframe");
-new IntersectionObserver((es,o)=>{if(es[0].isIntersecting){mapF.src=mapF.dataset.src;o.disconnect()}},{rootMargin:"400px"}).observe(mapF);
+/* mapa só quando chegar perto */
+const mapF=document.querySelector(".map iframe");new IntersectionObserver((es,o)=>{if(es[0].isIntersecting){mapF.src=mapF.dataset.src;o.disconnect()}},{rootMargin:"500px"}).observe(mapF);
 
-/* ---------- init ---------- */
 let saved=null;try{saved=localStorage.getItem("heliora-lang")}catch(e){}
-const nav=(navigator.language||"pt").slice(0,2);
-setLang(saved||(T[nav]?nav:"pt"));
-observe();tlProg();
-if(reduce)document.querySelectorAll(".count").forEach(runCount);
+const nl=(navigator.language||"pt").slice(0,2);setLang(saved||(LANGS.includes(nl)?nl:"pt"));tlProg();
+if(reduce){document.querySelectorAll(".count").forEach(runCount);document.querySelectorAll(".num").forEach(n=>n.classList.add("in"));$("barB").style.width=((1-ECON)*100)+"%"}
 </script>
 
 <script type="module">
-/* ---------- hero 3D (Three.js) — carrega depois do conteúdo ---------- */
-const hero=document.getElementById("hero"),canvas=document.getElementById("scene");
+/* ===== Painel 3D que se desmonta e remonta (Three.js) ===== */
+const stage=document.getElementById("stage"),canvas=document.getElementById("scene");
 const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
-const small=matchMedia("(max-width: 760px), (pointer: coarse)").matches;
+const coarse=matchMedia("(hover: none), (pointer: coarse)").matches;
+const small=innerWidth<760||coarse;
 const conn=navigator.connection||{};
-const weak=conn.saveData||/(^|-)2g$/.test(conn.effectiveType||"")||(navigator.deviceMemory&&navigator.deviceMemory<=2)||(navigator.hardwareConcurrency&&navigator.hardwareConcurrency<=2);
+const weak=conn.saveData||/2g/.test(conn.effectiveType||"")||(navigator.deviceMemory&&navigator.deviceMemory<=2)||(navigator.hardwareConcurrency&&navigator.hardwareConcurrency<=2);
 function hasGL(){try{const c=document.createElement("canvas");return !!(c.getContext("webgl2")||c.getContext("webgl"))}catch(e){return false}}
-function staticHero(){hero.classList.add("static");hero.querySelector(".hero-poster").style.backgroundImage="url(img/hero.webp)"}
-if(reduce||weak||!hasGL()){staticHero()}
-else{
-  const start=()=>import("https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.min.js").then(init).catch(staticHero);
-  if(document.readyState==="complete")setTimeout(start,60);else addEventListener("load",()=>setTimeout(start,60));
+if(!(reduce||weak||!hasGL())){
+  const go=()=>import("https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.min.js").then(init).catch(()=>{});
+  if(document.readyState==="complete")setTimeout(go,50);else addEventListener("load",()=>setTimeout(go,50));
 }
 function init(THREE){
-  const renderer=new THREE.WebGLRenderer({canvas,antialias:!small,alpha:true,powerPreference:"high-performance"});
-  renderer.setPixelRatio(Math.min(devicePixelRatio,small?1.5:2));
-  renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.outputColorSpace=THREE.SRGBColorSpace;
-  const scene=new THREE.Scene();
-  const cam=new THREE.PerspectiveCamera(40,1,.1,200);cam.position.set(0,1.6,11);
-  const root=new THREE.Group();scene.add(root);
-
-  // painel solar
-  const c=document.createElement("canvas");c.width=512;c.height=768;const g=c.getContext("2d");
-  g.fillStyle="#0a1530";g.fillRect(0,0,512,768);const cols=6,rows=9,cw=512/cols,ch=768/rows;
-  for(let i=0;i<cols;i++)for(let j=0;j<rows;j++){const x=i*cw,y=j*ch,gr=g.createLinearGradient(x,y,x+cw,y+ch);
-    gr.addColorStop(0,"#1f4aa8");gr.addColorStop(.55,"#112a6b");gr.addColorStop(1,"#0a1b48");g.fillStyle=gr;g.fillRect(x+3,y+3,cw-6,ch-6);
-    g.strokeStyle="rgba(150,210,255,.35)";g.lineWidth=1.2;for(let k=1;k<4;k++){g.beginPath();g.moveTo(x+3,y+3+k*(ch-6)/4);g.lineTo(x+cw-3,y+3+k*(ch-6)/4);g.stroke()}
-    g.beginPath();g.moveTo(x+cw/2,y+3);g.lineTo(x+cw/2,y+ch-3);g.strokeStyle="rgba(200,230,255,.18)";g.stroke();}
-  const tex=new THREE.CanvasTexture(c);tex.colorSpace=THREE.SRGBColorSpace;tex.anisotropy=4;
-  const panel=new THREE.Group();
-  const frame=new THREE.Mesh(new THREE.BoxGeometry(3.1,.1,4.6),new THREE.MeshStandardMaterial({color:0xb8c4d6,metalness:.9,roughness:.28}));
-  const face=new THREE.Mesh(new THREE.PlaneGeometry(3,4.5),new THREE.MeshPhysicalMaterial({map:tex,metalness:.35,roughness:.16,clearcoat:1,clearcoatRoughness:.05,emissive:0x0a2a6a,emissiveIntensity:.35}));
-  face.rotation.x=-Math.PI/2;face.position.y=.052;
-  const edge=new THREE.LineSegments(new THREE.EdgesGeometry(new THREE.BoxGeometry(3.12,.11,4.62)),new THREE.LineBasicMaterial({color:0x22e3ff,transparent:true,opacity:.8}));
-  panel.add(frame,face,edge);panel.rotation.x=.95;
-  const tilt=new THREE.Group();tilt.add(panel);
-  const pole=new THREE.Mesh(new THREE.CylinderGeometry(.07,.09,2.2,16),new THREE.MeshStandardMaterial({color:0x8090a8,metalness:.9,roughness:.35}));pole.position.y=-1.2;tilt.add(pole);
-  const ring=new THREE.Mesh(new THREE.RingGeometry(1.9,1.94,96),new THREE.MeshBasicMaterial({color:0x22e3ff,transparent:true,opacity:.55,side:THREE.DoubleSide}));ring.rotation.x=-Math.PI/2;ring.position.y=-2.3;
-  const ring2=new THREE.Mesh(new THREE.RingGeometry(2.6,2.62,96),new THREE.MeshBasicMaterial({color:0x22e3ff,transparent:true,opacity:.2,side:THREE.DoubleSide}));ring2.rotation.x=-Math.PI/2;ring2.position.y=-2.3;
-  root.add(tilt,ring,ring2);
-
-  // luzes
-  scene.add(new THREE.HemisphereLight(0x6f9bff,0x070b18,1.1));
-  const key=new THREE.DirectionalLight(0xffd58a,3.2);key.position.set(4,7,-6);scene.add(key);
-  const fill=new THREE.DirectionalLight(0x22e3ff,1.2);fill.position.set(-6,2,6);scene.add(fill);
-  // reflexos (ambiente simples)
-  const pm=new THREE.PMREMGenerator(renderer);const env=new THREE.Scene();
-  const envSky=new THREE.Mesh(new THREE.SphereGeometry(50,24,12),new THREE.MeshBasicMaterial({color:0x0a1430,side:THREE.BackSide}));env.add(envSky);
-  const envSun=new THREE.Mesh(new THREE.SphereGeometry(6,16,8),new THREE.MeshBasicMaterial({color:0xffc070}));envSun.position.set(20,24,-30);env.add(envSun);
-  const envC=new THREE.Mesh(new THREE.SphereGeometry(5,16,8),new THREE.MeshBasicMaterial({color:0x22a8d8}));envC.position.set(-25,5,20);env.add(envC);
+  const R=new THREE.WebGLRenderer({canvas,antialias:true,alpha:true,powerPreference:"high-performance",preserveDrawingBuffer:!!window.__capture});
+  R.setPixelRatio(Math.min(devicePixelRatio,small?1.5:2));R.toneMapping=THREE.ACESFilmicToneMapping;R.toneMappingExposure=1.05;R.outputColorSpace=THREE.SRGBColorSpace;
+  const scene=new THREE.Scene(),cam=new THREE.PerspectiveCamera(30,1,.1,100);cam.position.set(0,0,small?15.5:14.5);
+  scene.add(new THREE.HemisphereLight(0xffffff,0xe9dcc0,1.0));
+  const key=new THREE.DirectionalLight(0xfff0d0,2.6);key.position.set(5,8,6);scene.add(key);
+  const fill=new THREE.DirectionalLight(0xbfe6ff,.9);fill.position.set(-6,-2,4);scene.add(fill);
+  const pm=new THREE.PMREMGenerator(R),env=new THREE.Scene();
+  env.add(new THREE.Mesh(new THREE.SphereGeometry(40,24,12),new THREE.MeshBasicMaterial({color:0xf4efe4,side:THREE.BackSide})));
+  const e1=new THREE.Mesh(new THREE.SphereGeometry(7,16,8),new THREE.MeshBasicMaterial({color:0xffffff}));e1.position.set(14,18,10);env.add(e1);
+  const e2=new THREE.Mesh(new THREE.BoxGeometry(30,4,1),new THREE.MeshBasicMaterial({color:0xffd27a}));e2.position.set(0,12,-20);env.add(e2);
+  const e3=new THREE.Mesh(new THREE.BoxGeometry(30,6,1),new THREE.MeshBasicMaterial({color:0x8fc8ea}));e3.position.set(0,-14,10);env.add(e3);
   scene.environment=pm.fromScene(env,.04).texture;
 
-  // sol ao fundo
-  function glow(stops,size){const cv=document.createElement("canvas");cv.width=cv.height=256;const x=cv.getContext("2d");const gr=x.createRadialGradient(128,128,0,128,128,128);
-    stops.forEach(([o,col])=>gr.addColorStop(o,col));x.fillStyle=gr;x.fillRect(0,0,256,256);
-    const s=new THREE.Sprite(new THREE.SpriteMaterial({map:new THREE.CanvasTexture(cv),blending:THREE.AdditiveBlending,depthWrite:false,transparent:true,toneMapped:false}));s.scale.set(size,size,1);return s}
-  const sun=new THREE.Group();sun.position.set(3.2,4.4,-9);
-  const halo=glow([[0,"rgba(255,220,140,.55)"],[.25,"rgba(255,170,50,.25)"],[1,"rgba(0,0,0,0)"]],18);
-  const corona=glow([[0,"rgba(255,255,235,1)"],[.18,"rgba(255,214,110,1)"],[.4,"rgba(255,160,40,.45)"],[1,"rgba(0,0,0,0)"]],5.2);
-  const core=new THREE.Mesh(new THREE.SphereGeometry(.85,32,16),new THREE.MeshBasicMaterial({color:0xffe7a0,toneMapped:false}));
-  sun.add(halo,corona,core);scene.add(sun);
+  const W=3.2,Hh=5.0;
+  const P=new THREE.Group();scene.add(P);
+  const parts=[];
+  function add(mesh,base,dir,label){mesh.position.copy(base);P.add(mesh);parts.push({m:mesh,base:base.clone(),dir,label});return mesh}
+  const alu=new THREE.MeshStandardMaterial({color:0xd4d9e0,metalness:.9,roughness:.28});
+  const fl=new THREE.BoxGeometry(.11,.2,Hh+.12),fs=new THREE.BoxGeometry(W+.12,.2,.11);
+  add(new THREE.Mesh(fl,alu),new THREE.Vector3(W/2,0,0),new THREE.Vector3(.95,-.5,0),"frame");
+  add(new THREE.Mesh(fl,alu),new THREE.Vector3(-W/2,0,0),new THREE.Vector3(-.95,-.5,0));
+  add(new THREE.Mesh(fs,alu),new THREE.Vector3(0,0,Hh/2),new THREE.Vector3(0,-.5,.95));
+  add(new THREE.Mesh(fs,alu),new THREE.Vector3(0,0,-Hh/2),new THREE.Vector3(0,-.5,-.95));
+  const glass=new THREE.MeshPhysicalMaterial({color:0xcfe6fb,metalness:0,roughness:.04,transparent:true,opacity:.16,clearcoat:1,clearcoatRoughness:.02,envMapIntensity:2.2,depthWrite:false});
+  const gm=add(new THREE.Mesh(new THREE.BoxGeometry(W,.05,Hh),glass),new THREE.Vector3(0,.09,0),new THREE.Vector3(0,2.7,0),"glass");
+  const edgeM=new THREE.LineBasicMaterial({color:0x6fa8d6,transparent:true,opacity:0});gm.add(new THREE.LineSegments(new THREE.EdgesGeometry(gm.geometry),edgeM));
+  const eva=new THREE.MeshStandardMaterial({color:0xffffff,transparent:true,opacity:.08,roughness:.6,depthWrite:false});
+  const em=add(new THREE.Mesh(new THREE.BoxGeometry(W-.04,.015,Hh-.04),eva),new THREE.Vector3(0,.055,0),new THREE.Vector3(0,2.05,0),"eva");
+  const edgeE=new THREE.LineBasicMaterial({color:0xc9b98f,transparent:true,opacity:0});em.add(new THREE.LineSegments(new THREE.EdgesGeometry(em.geometry),edgeE));
+  add(new THREE.Mesh(new THREE.BoxGeometry(W-.04,.015,Hh-.04),eva),new THREE.Vector3(0,.01,0),new THREE.Vector3(0,-.95,0));
+  const cc=document.createElement("canvas");cc.width=cc.height=128;const g=cc.getContext("2d");
+  const gr=g.createLinearGradient(0,0,128,128);gr.addColorStop(0,"#1f4597");gr.addColorStop(1,"#0b1f52");g.fillStyle=gr;g.fillRect(0,0,128,128);
+  g.fillStyle="rgba(210,225,245,.85)";[32,64,96].forEach(x=>g.fillRect(x-1,0,2,128));g.fillStyle="rgba(180,205,240,.25)";for(let y=4;y<128;y+=6)g.fillRect(0,y,128,.6);
+  g.fillStyle="#f4f6f9";[[0,0],[124,0],[0,124],[124,124]].forEach(([x,y])=>g.fillRect(x,y,4,4));
+  const ctex=new THREE.CanvasTexture(cc);ctex.colorSpace=THREE.SRGBColorSpace;ctex.anisotropy=4;
+  const COLS=6,ROWS=10,cw=(W-.16)/COLS,ch=(Hh-.16)/ROWS;
+  const cellMat=new THREE.MeshPhysicalMaterial({map:ctex,metalness:.45,roughness:.22,clearcoat:.8,envMapIntensity:.8});
+  const cells=new THREE.InstancedMesh(new THREE.BoxGeometry(cw-.03,.02,ch-.03),cellMat,COLS*ROWS);
+  const cellBase=[],dummy=new THREE.Object3D();
+  for(let i=0;i<COLS;i++)for(let j=0;j<ROWS;j++)cellBase.push(new THREE.Vector3((i-(COLS-1)/2)*cw,.035,(j-(ROWS-1)/2)*ch));
+  cells.instanceColor=new THREE.InstancedBufferAttribute(new Float32Array(COLS*ROWS*3).fill(1),3);
+  P.add(cells);
+  add(new THREE.Mesh(new THREE.BoxGeometry(W-.02,.03,Hh-.02),new THREE.MeshStandardMaterial({color:0xf7f7f5,roughness:.75})),new THREE.Vector3(0,-.02,0),new THREE.Vector3(0,-1.9,0),"back");
+  const jb=new THREE.Group();
+  jb.add(new THREE.Mesh(new THREE.BoxGeometry(.7,.16,.46),new THREE.MeshStandardMaterial({color:0x1f2733,roughness:.5})));
+  const cab=new THREE.MeshStandardMaterial({color:0x222a35,roughness:.6});
+  [-.2,.2].forEach((x,k)=>{const c=new THREE.Mesh(new THREE.CylinderGeometry(.035,.035,1.1,10),cab);c.rotation.z=Math.PI/2;c.position.set(x+(k?.6:-.6),0,0);jb.add(c);
+    const tip=new THREE.Mesh(new THREE.CylinderGeometry(.06,.06,.22,12),new THREE.MeshStandardMaterial({color:k?0xd0342c:0x1d4ed8}));tip.rotation.z=Math.PI/2;tip.position.set(x+(k?1.2:-1.2),0,0);jb.add(tip)});
+  add(jb,new THREE.Vector3(0,-.12,-Hh/2+.75),new THREE.Vector3(0,-2.8,0),"jbox");
+  const sc=document.createElement("canvas");sc.width=sc.height=128;const sg=sc.getContext("2d");const rg=sg.createRadialGradient(64,64,0,64,64,64);rg.addColorStop(0,"rgba(11,31,58,.28)");rg.addColorStop(1,"rgba(11,31,58,0)");sg.fillStyle=rg;sg.fillRect(0,0,128,128);
+  const shadow=new THREE.Mesh(new THREE.PlaneGeometry(1,1),new THREE.MeshBasicMaterial({map:new THREE.CanvasTexture(sc),transparent:true,depthWrite:false}));
+  shadow.rotation.x=-Math.PI/2;shadow.scale.set(8,5,1);shadow.position.y=-4.4;scene.add(shadow);
+  const NP=small?40:90,pg=new THREE.BufferGeometry(),pp=new Float32Array(NP*3),ps=new Float32Array(NP);
+  for(let i=0;i<NP;i++){pp[i*3]=(Math.random()-.5)*W;pp[i*3+1]=.1;pp[i*3+2]=(Math.random()-.5)*Hh;ps[i]=Math.random()}
+  pg.setAttribute("position",new THREE.BufferAttribute(pp,3));pg.setAttribute("seed",new THREE.BufferAttribute(ps,1));
+  const pmat=new THREE.ShaderMaterial({transparent:true,depthWrite:false,uniforms:{uT:{value:0},uA:{value:0},uPx:{value:R.getPixelRatio()}},
+    vertexShader:`attribute float seed;uniform float uT;uniform float uPx;varying float vk;void main(){float k=fract(seed+uT*.25);vk=k;vec3 p=position+vec3(0.,k*1.8,0.);vec4 mv=modelViewMatrix*vec4(p,1.);gl_Position=projectionMatrix*mv;gl_PointSize=(5.+seed*6.)*uPx*(14./-mv.z);}`,
+    fragmentShader:`uniform float uA;varying float vk;void main(){float d=length(gl_PointCoord-.5);float a=smoothstep(.5,.0,d);gl_FragColor=vec4(1.,.66,.05,a*uA*sin(vk*3.1416)*.9);}`});
+  const sparks=new THREE.Points(pg,pmat);sparks.frustumCulled=false;P.add(sparks);
 
-  // partículas de luz caindo do sol sobre o painel
-  const N=small?320:1300;
-  const sunW=new THREE.Vector3();sun.getWorldPosition(sunW);
-  const geo=new THREE.BufferGeometry();const tgt=new Float32Array(N*3),seed=new Float32Array(N);
-  for(let i=0;i<N;i++){const a=Math.random()*Math.PI*2,r=Math.sqrt(Math.random())*2.1;tgt[i*3]=Math.cos(a)*r;tgt[i*3+1]=.2+Math.random()*.3;tgt[i*3+2]=Math.sin(a)*r*1.2;seed[i]=Math.random()}
-  geo.setAttribute("position",new THREE.BufferAttribute(tgt,3));geo.setAttribute("seed",new THREE.BufferAttribute(seed,1));
-  const pmat=new THREE.ShaderMaterial({transparent:true,depthWrite:false,blending:THREE.AdditiveBlending,
-    uniforms:{uT:{value:0},uSun:{value:sunW},uPx:{value:renderer.getPixelRatio()}},
-    vertexShader:`attribute float seed;uniform float uT;uniform vec3 uSun;uniform float uPx;varying float vA;varying float vC;
-      void main(){float k=fract(seed*7.13+uT*(.16+seed*.12));vec3 from=uSun+vec3((seed-.5)*2.2,(fract(seed*3.7)-.5)*1.6,(fract(seed*5.3)-.5)*1.4);
-      vec3 p=mix(from,position,k*k*(3.-2.*k)*.35+k*.65);vA=smoothstep(0.,.12,k)*(1.-smoothstep(.86,1.,k));vC=seed;
-      vec4 mv=modelViewMatrix*vec4(p,1.);gl_Position=projectionMatrix*mv;gl_PointSize=(3.+seed*5.)*uPx*(6./-mv.z);}`,
-    fragmentShader:`varying float vA;varying float vC;void main(){float d=length(gl_PointCoord-.5);float a=smoothstep(.5,0.,d);
-      vec3 col=mix(vec3(1.,.82,.35),vec3(.35,.92,1.),step(.78,vC));gl_FragColor=vec4(col,a*a*vA);}`});
-  const pts=new THREE.Points(geo,pmat);pts.frustumCulled=false;root.add(pts);
-  // poeira de fundo
-  const dN=small?120:400,dg=new THREE.BufferGeometry(),dp=new Float32Array(dN*3);
-  for(let i=0;i<dN;i++){dp[i*3]=(Math.random()-.5)*30;dp[i*3+1]=(Math.random()-.3)*14;dp[i*3+2]=-4-Math.random()*16}
-  dg.setAttribute("position",new THREE.BufferAttribute(dp,3));
-  const dust=new THREE.Points(dg,new THREE.PointsMaterial({color:0x7fdcff,size:.05,transparent:true,opacity:.5,depthWrite:false}));scene.add(dust);
-
-  // layout
-  function resize(){const w=hero.clientWidth,h=hero.clientHeight;renderer.setSize(w,h,false);cam.aspect=w/h;
-    const wide=w>900;root.position.set(wide?3.1:.6,wide?-.2:2.9,0);sun.position.set(wide?5.6:2.6,wide?4.2:7.2,-9);root.updateMatrixWorld();sun.getWorldPosition(sunW);root.worldToLocal(sunW);
-    root.scale.setScalar(wide?1:.7);cam.fov=wide?40:52;cam.updateProjectionMatrix()}
+  const baseRot=new THREE.Euler(.92,-.62,.12);P.rotation.copy(baseRot);
+  function resize(){const w=stage.clientWidth,h=stage.clientHeight;R.setSize(w,h,false);cam.aspect=w/h;cam.updateProjectionMatrix()}
   resize();addEventListener("resize",resize);
 
-  // interação: mouse ou giro do aparelho
-  let mx=0,my=0,tx=0,ty=0;
-  addEventListener("pointermove",e=>{tx=e.clientX/innerWidth-.5;ty=e.clientY/innerHeight-.5},{passive:true});
-  if(small)addEventListener("deviceorientation",e=>{if(e.gamma==null)return;tx=Math.max(-.5,Math.min(.5,e.gamma/45));ty=Math.max(-.5,Math.min(.5,(e.beta-45)/60))},{passive:true});
+  const tags={};document.querySelectorAll(".tag").forEach(el=>tags[el.dataset.k]=el);
+  const byL=l=>parts.find(p=>p.label===l);
+  const v=new THREE.Vector3();
+  // ponto de cada etiqueta (coordenadas do painel), em função da abertura e
+  function anchor(k,e){
+    if(k==="cells")return v.set(W/2*(1+e*.16)-.2,.035+e*.55,-.1);
+    if(k==="frame"){const p=byL("frame");return v.set(W/2+p.dir.x*e+.06,p.dir.y*e,Hh/2-.1)}
+    if(k==="jbox"){const p=byL("jbox");return v.set(1.3,p.base.y+p.dir.y*e,p.base.z)}
+    const p=byL(k),z={glass:-Hh/2+.2,eva:-Hh/2+1.1,back:Hh/2-1.2}[k];return v.set(W/2,p.base.y+p.dir.y*e,z)}
 
-  let visible=true,raf=0,last=performance.now(),t=0;
-  new IntersectionObserver(es=>{visible=es[0].isIntersecting;if(visible&&!raf)loop(performance.now())}).observe(hero);
-  document.addEventListener("visibilitychange",()=>{if(!document.hidden&&visible&&!raf){last=performance.now();loop(last)}});
+  let ex=0,target=0,mx=0,my=0,tmx=0,tmy=0,user=false;
+  const open=o=>{target=o?1:0;stage.classList.toggle("open",!!o)};
+  if(!coarse){stage.addEventListener("pointerenter",()=>{user=true;open(1)});stage.addEventListener("pointerleave",()=>open(0));
+    addEventListener("pointermove",e=>{tmx=e.clientX/innerWidth-.5;tmy=e.clientY/innerHeight-.5},{passive:true})}
+  else{stage.addEventListener("click",()=>{user=true;open(target<.5)});
+    addEventListener("deviceorientation",e=>{if(e.gamma==null)return;tmx=Math.max(-.5,Math.min(.5,e.gamma/50));tmy=Math.max(-.5,Math.min(.5,(e.beta-50)/70))},{passive:true})}
+  const demo=()=>{if(user)return;open(1);setTimeout(()=>{if(!user)open(0)},2800)};
+  if(!window.__capture){setTimeout(demo,1400);const di=setInterval(()=>{if(user)clearInterval(di);else demo()},7500)}
+
+  let vis=true,raf=0,last=performance.now(),T=0;
+  new IntersectionObserver(es=>{vis=es[0].isIntersecting;if(vis&&!raf){last=performance.now();loop(last)}}).observe(stage);
+  document.addEventListener("visibilitychange",()=>{if(!document.hidden&&vis&&!raf){last=performance.now();loop(last)}});
+  const ease=x=>x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2;
   function loop(now){
-    if(!visible||document.hidden){raf=0;return}
-    raf=requestAnimationFrame(loop);
-    const dt=Math.min(.05,(now-last)/1000);last=now;t+=dt;
-    mx+=(tx-mx)*.04;my+=(ty-my)*.04;
-    tilt.rotation.y+=dt*.22;tilt.position.y=Math.sin(t*.8)*.12;
-    root.rotation.x=my*.18;root.rotation.z=-mx*.06;
-    cam.position.x=mx*1.6;cam.position.y=1.6-my*.9;cam.lookAt(root.position.x*.55,root.position.y*.5+.4,0);
-    corona.material.rotation=t*.05;const s=5.2+Math.sin(t*1.7)*.18;corona.scale.set(s,s,1);
-    ring.scale.setScalar(1+Math.sin(t*1.3)*.03);ring2.material.opacity=.12+Math.sin(t*1.1)*.08;
-    pmat.uniforms.uT.value=t;dust.rotation.y=t*.01;
-    renderer.render(scene,cam);
-    if(!canvas.classList.contains("ready"))canvas.classList.add("ready");
+    if(!vis||document.hidden){raf=0;return}
+    raf=requestAnimationFrame(loop);const dt=Math.min(.05,(now-last)/1000);last=now;T+=dt;
+    ex+=(target-ex)*Math.min(1,dt*3);const e=ease(Math.min(1,Math.max(0,ex)));
+    mx+=(tmx-mx)*.05;my+=(tmy-my)*.05;
+    P.rotation.set(baseRot.x+my*.35-e*.1,baseRot.y+mx*.6+Math.sin(T*.4)*.05,baseRot.z);
+    P.position.y=Math.sin(T*1.1)*.08-e*.35;P.position.x=small?-e*1.1:e*.25;
+    parts.forEach(p=>p.m.position.copy(p.base).addScaledVector(p.dir,e));
+    const col=cells.instanceColor.array;
+    for(let k=0;k<cellBase.length;k++){const b=cellBase[k];dummy.position.set(b.x*(1+e*.16),b.y+e*.55,b.z*(1+e*.12));dummy.updateMatrix();cells.setMatrixAt(k,dummy.matrix);
+      const wave=Math.max(0,Math.sin((b.x*.5+b.z*.35)-T*2.2));const glow=(1-e)*Math.pow(wave,8)*.6;
+      col[k*3]=1+glow*1.3;col[k*3+1]=1+glow*.8;col[k*3+2]=1+glow*.1}
+    cells.instanceMatrix.needsUpdate=true;cells.instanceColor.needsUpdate=true;
+    pmat.uniforms.uT.value=T;pmat.uniforms.uA.value=(1-e);
+    shadow.scale.set(8+e*2,5+e*1.5,1);shadow.material.opacity=1-e*.35;
+    glass.opacity=.16+e*.22;eva.opacity=.08+e*.5;edgeM.opacity=e*.9;edgeE.opacity=e*.8;
+    R.render(scene,cam);
+    const w=stage.clientWidth,h=stage.clientHeight,op=Math.max(0,(e-.6)/.4);
+    for(const k in tags){anchor(k,e);P.localToWorld(v);v.project(cam);
+      const x=(v.x*.5+.5)*w,y=(-v.y*.5+.5)*h;tags[k].style.transform=`translate(${x-4}px,${y-10}px)`;tags[k].style.opacity=op}
+    if(!canvas.classList.contains("ready")){canvas.classList.add("ready");stage.classList.add("live")}
   }
-  loop(last);
-  window.__heroReady=true;
+  loop(last);window.__heroReady=true;window.__open=open;
 }
 </script>
 </body>
